@@ -36,7 +36,7 @@
   fileSystems."/swap" =
     { device = "/dev/disk/by-uuid/c221fb88-e815-45a0-9733-3c6911939af4";
       fsType = "btrfs";
-      options = [ "subvol=swap""ssd" "noatime" "compress=zstd" ];
+      options = [ "subvol=swap" "ssd" "noatime" "compress=zstd" ];
     };
 
   fileSystems."/boot" =
