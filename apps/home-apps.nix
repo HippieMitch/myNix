@@ -8,8 +8,8 @@ home.packages = with pkgs; [
     ardour
     brave
     gocryptfs
+    master.alacritty
     master.discord
-    master.kitty
     komikku
     krita
     lutris

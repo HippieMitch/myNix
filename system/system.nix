@@ -18,16 +18,16 @@
   # Suspend-then-Hibernate options
   boot.resumeDevice = "/dev/disk/by-uuid/c221fb88-e815-45a0-9733-3c6911939af4";
   systemd.sleep.extraConfig = ''
-    HibernateDelaySec=30m # very low value to test suspend-then-hibernate
+    HibernateDelaySec=120m # very low value to test suspend-then-hibernate
     SuspendState=mem # suspend2idle is buggy :(
     '';
 
   # Hibernate everywhere
   services.logind = {
-    lidSwitch = "suspend";
+    lidSwitch = "suspend-then-hibernate";
     extraConfig = ''
-      HandlePowerKey=hibernate
-      IdleAction=hibernate
+      HandlePowerKey=suspend-then-hibernate
+      IdleAction=suspend-then-hibernate
       IdleActionSec=12m
     '';
   };
