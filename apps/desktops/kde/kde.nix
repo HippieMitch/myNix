@@ -25,7 +25,6 @@
    libsForQt5.kcalc
    libsForQt5.kpmcore
    libsForQt5.kcalc
-#   libsForQt5.plasma-vault
    partition-manager
    qbittorrent
 
