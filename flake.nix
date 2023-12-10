@@ -15,6 +15,9 @@
     # Nixpkgs Master
     nixpkgs-master.url = "github:NixOS/nixpkgs";
 
+    # My Nixpkgs
+  #  mynixpkgs.url = "github:HippieMitch/nixpkgs";
+
     nixpkgs.follows = "nixpkgs-unstable-small"; 
 
     # Home Manager
@@ -26,9 +29,6 @@
     # Chaotic-CX
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
-    # My Chaotic-CX
-  #  my-chaotic.url = "github:HippieMitch/nyx/nyxpkgs-unstable";
-
   };
 
   outputs = { self, 
@@ -37,8 +37,9 @@
               nixpkgs-unstable-small, 
               nixpkgs-stable, 
               nixpkgs-master, 
+            #  mynixpkgs,
               home-manager, 
-              chaotic, 
+              chaotic,
               ... } @ inputs:
     let
       system = "x86_64-linux";
@@ -66,13 +67,24 @@
            config.allowUnfree = true;
          };
       };
+    #  overlay-mynixpkgs = final: prev: {
+    #     mynixpkgs = import mynixpkgs {
+    #       inherit system;
+    #       config.allowUnfree = true;
+    #     };
+    #  };
 
     in {
       nixosConfigurations."luke" = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          # Overlays-module makes "pkgs.unstable" available in configuration.nix
-          ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable overlay-unstable-small overlay-stable overlay-master ]; })
+          ({ config, pkgs, ... }: { nixpkgs.overlays = [
+          overlay-unstable 
+          overlay-unstable-small 
+          overlay-stable 
+          overlay-master
+        #  overlay-mynixpkgs
+           ]; })
           ./system/system.nix
           # Home Manager
           home-manager.nixosModules.home-manager
