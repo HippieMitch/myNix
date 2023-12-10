@@ -24,10 +24,10 @@
 
   # Hibernate everywhere
   services.logind = {
-    lidSwitch = "suspend-then-hibernate";
+    lidSwitch = "suspend";
     extraConfig = ''
-      HandlePowerKey=suspend-then-hibernate
-      IdleAction=suspend-then-hibernate
+      HandlePowerKey=hibernate
+      IdleAction=suspend
       IdleActionSec=12m
     '';
   };

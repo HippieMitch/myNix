@@ -29,6 +29,9 @@
     # Chaotic-CX
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
+    # kde2nix
+    kde2nix.url = "github:nix-community/kde2nix";
+
   };
 
   outputs = { self, 
@@ -40,6 +43,7 @@
             #  mynixpkgs,
               home-manager, 
               chaotic,
+              kde2nix,
               ... } @ inputs:
     let
       system = "x86_64-linux";
@@ -98,6 +102,9 @@
           }
           # Chaotic-CX Module
           chaotic.nixosModules.default
+
+          # kde2nix Module
+          kde2nix.nixosModules.default
         ];
       };
     };

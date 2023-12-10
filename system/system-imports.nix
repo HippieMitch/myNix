@@ -14,7 +14,8 @@
       #./daemons/schedulers/system76-scheduler.nix
       ./daemons/tlp.nix
       #../apps/desktops/gnome/gnome.nix
-      ../apps/desktops/kde/kde.nix
+      #../apps/desktops/plasma/plasma5.nix
+      ../apps/desktops/plasma/plasma6.nix
       #../apps/desktops/xfce/xfce.nix
       #../apps/desktops/pantheon/pantheon.nix
       #../apps/desktops/budgie/budgie.nix
