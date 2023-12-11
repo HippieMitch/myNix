@@ -18,8 +18,10 @@
   # XDG
   xdg.portal.enable = true;
 
-  # KDE Applications.
+  # Applications.
   environment.systemPackages = with pkgs; [
+  
+  # Plasma Apps
    libsForQt5.filelight
    libsForQt5.kate
    libsForQt5.kcalc
