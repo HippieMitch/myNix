@@ -5,18 +5,18 @@
 {
 home.packages = with pkgs; [
     ani-cli
-    ardour
-    brave
+    unstable.ardour
+    unstable.brave
     gocryptfs
     master.alacritty
     master.discord
     komikku
-    krita
+    unstable.krita
     lutris
     obs-studio
     protonup-qt
     qbittorrent
-    thunderbird
+    unstable.thunderbird
     (vscode-with-extensions.override {
       vscode = vscodium;
         vscodeExtensions = with vscode-extensions; [
