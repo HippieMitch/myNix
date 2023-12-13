@@ -26,7 +26,7 @@
   services.logind = {
     lidSwitch = "suspend";
     extraConfig = ''
-      HandlePowerKey=hibernate
+      HandlePowerKey=suspend
       IdleAction=suspend
       IdleActionSec=12m
     '';

@@ -1,4 +1,4 @@
-  # Use Cachy Kernel (BORE w/ EEVDF CPU Schedulers)
+  # Use Cachy Kernel (default)
 
 { pkgs, inputs, ... }:
 
