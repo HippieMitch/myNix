@@ -91,6 +91,10 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  # Chaotic mesa-git
+  chaotic.mesa-git.enable = true;
+  
+
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
