@@ -15,14 +15,14 @@
   # Kernel Parameters
   boot.kernelParams = [ "quiet" "split_lock_detect=off" "preempt=full" "module_blacklist=hid_sensor_hub" "mem_sleep_default=deep" "nvme.noacpi=1" "resume=LABEL=Nix\OS" "resume_offset=533760" "i915.enable_guc=3" ];
 
-  # Suspend-then-Hibernate options
+  # Suspend and Hibernation Options
   boot.resumeDevice = "/dev/disk/by-uuid/c221fb88-e815-45a0-9733-3c6911939af4";
   systemd.sleep.extraConfig = ''
-    HibernateDelaySec=120m # very low value to test suspend-then-hibernate
-    SuspendState=mem # suspend2idle is buggy :(
+    HibernateDelaySec=120m
+    SuspendState=mem
     '';
 
-  # Hibernate everywhere
+  # Suspend and Hibernation Options
   services.logind = {
     lidSwitch = "suspend";
     extraConfig = ''
@@ -47,7 +47,7 @@
 
   # Daemons
   services.mullvad-vpn.enable = true;
-  services.gvfs.enable = true; # Mount, trash, and other functionalities
+  services.gvfs.enable = true;
   services.irqbalance.enable = true;
   services.thermald.enable = true;
   services.fstrim.enable = true;
