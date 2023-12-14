@@ -16,7 +16,7 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/c221fb88-e815-45a0-9733-3c6911939af4";
       fsType = "btrfs";
-      options = [ "subvol=root" "ssd" "noatime" "compress=zstd" ];
+      options = [ "subvol=root" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   boot.initrd.luks.devices."nixcrypt".device = "/dev/disk/by-uuid/812cecb6-1495-4349-8c9f-0cc581cb4ada";
@@ -24,19 +24,19 @@
   fileSystems."/home" =
     { device = "/dev/disk/by-uuid/c221fb88-e815-45a0-9733-3c6911939af4";
       fsType = "btrfs";
-      options = [ "subvol=home" "ssd" "noatime" "compress=zstd" ];
+      options = [ "subvol=home" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/nix" =
     { device = "/dev/disk/by-uuid/c221fb88-e815-45a0-9733-3c6911939af4";
       fsType = "btrfs";
-      options = [ "subvol=nix" "ssd" "noatime" "compress=zstd" ];
+      options = [ "subvol=nix" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/swap" =
     { device = "/dev/disk/by-uuid/c221fb88-e815-45a0-9733-3c6911939af4";
       fsType = "btrfs";
-      options = [ "subvol=swap" "ssd" "noatime" "compress=zstd" ];
+      options = [ "subvol=swap" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/boot" =
