@@ -35,7 +35,7 @@ home.packages = with pkgs; [
     nerdfonts
 
   # Development
-    jetbrains.pycharm-community
+    unstable.jetbrains.pycharm-community
     python3
  ];
 }
