@@ -170,7 +170,7 @@
   hardware.opengl = {
     enable = true;
     extraPackages = with pkgs; [
-      intel-compute-runtime
+      unstable.intel-compute-runtime
       intel-media-driver # LIBVA_DRIVER_NAME=iHD
       vaapiIntel
       vaapiVdpau
