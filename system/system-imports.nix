@@ -11,8 +11,8 @@
       #./kernels/cachy.nix
       #./kernels/cachy-sched-ext.nix
       ./modules/sysctl.nix
-      #./daemons/schedulers/ananicy-cpp.nix
-      ./daemons/schedulers/system76-scheduler.nix
+      ./daemons/schedulers/ananicy-cpp.nix
+      #./daemons/schedulers/system76-scheduler.nix
       ./daemons/tlp.nix
       #../apps/desktops/gnome/gnome.nix
       #../apps/desktops/plasma/plasma5.nix
