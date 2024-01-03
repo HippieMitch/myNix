@@ -9,7 +9,7 @@
    curl
    distrobox
    duf
-   fastfetch
+   master.fastfetch
    firefox_nightly
    fish
    git

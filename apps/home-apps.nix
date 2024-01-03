@@ -4,12 +4,12 @@
 
 {
 home.packages = with pkgs; [
+    unstable.alacritty
     ani-cli
     unstable.ardour
     unstable.brave
-    gocryptfs
-    master.alacritty
     master.discord
+    gocryptfs
     komikku
     unstable.krita
     lutris
