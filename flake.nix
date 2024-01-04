@@ -18,7 +18,7 @@
     # My Nixpkgs
   #  mynixpkgs.url = "github:HippieMitch/nixpkgs";
 
-    nixpkgs.follows = "nixpkgs-unstable-small"; 
+    nixpkgs.follows = "nixpkgs-unstable"; 
 
     # Home Manager
     home-manager = {

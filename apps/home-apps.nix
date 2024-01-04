@@ -4,19 +4,19 @@
 
 {
 home.packages = with pkgs; [
-    unstable.alacritty
+    alacritty
     ani-cli
-    unstable.ardour
-    unstable.brave
+    ardour
+    brave
     master.discord
     gocryptfs
     komikku
-    unstable.krita
+    krita
     lutris
     obs-studio
     protonup-qt
     qbittorrent
-    unstable.thunderbird
+    thunderbird
     (vscode-with-extensions.override {
       vscode = vscodium;
         vscodeExtensions = with vscode-extensions; [
@@ -35,7 +35,7 @@ home.packages = with pkgs; [
     nerdfonts
 
   # Development
-    unstable.jetbrains.pycharm-community
+    jetbrains.pycharm-community
     python3
  ];
 }

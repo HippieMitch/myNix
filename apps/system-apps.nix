@@ -23,7 +23,7 @@
    virt-manager
 
  # Multimedia
-   unstable.ffmpeg_6-full
+   ffmpeg_6-full
    ];
 
  # Remove X Server Packages
