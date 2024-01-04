@@ -11,6 +11,7 @@
       #./kernels/cachy.nix
       #./kernels/cachy-sched-ext.nix
       ./modules/sysctl.nix
+      ./modules/modprobe.nix
       ./daemons/schedulers/ananicy-cpp.nix
       #./daemons/schedulers/system76-scheduler.nix
       ./daemons/tlp.nix
