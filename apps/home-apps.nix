@@ -5,7 +5,7 @@
 {
 home.packages = with pkgs; [
     alacritty
-    ani-cli
+    master.ani-cli
     ardour
     brave
     master.discord
