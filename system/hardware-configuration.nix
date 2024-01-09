@@ -14,34 +14,34 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/c221fb88-e815-45a0-9733-3c6911939af4";
+    { device = "/dev/disk/by-uuid/a0c9ef0c-6ffa-4255-97a8-d4a7f1e91aad";
       fsType = "btrfs";
       options = [ "subvol=root" "ssd" "noatime" "compress=zstd:1" ];
     };
 
-  boot.initrd.luks.devices."nixcrypt".device = "/dev/disk/by-uuid/812cecb6-1495-4349-8c9f-0cc581cb4ada";
+  boot.initrd.luks.devices."ncrypt".device = "/dev/disk/by-uuid/88f0243e-fea1-473b-9562-8230b1f1b49b";
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/FFCA-FB16";
+      fsType = "vfat";
+    };
+
+  fileSystems."/swap" =
+    { device = "/dev/disk/by-uuid/a0c9ef0c-6ffa-4255-97a8-d4a7f1e91aad";
+      fsType = "btrfs";
+      options = [ "subvol=swap" "ssd" "noatime" "compress=zstd:1" ];
+    };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/c221fb88-e815-45a0-9733-3c6911939af4";
+    { device = "/dev/disk/by-uuid/a0c9ef0c-6ffa-4255-97a8-d4a7f1e91aad";
       fsType = "btrfs";
       options = [ "subvol=home" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/c221fb88-e815-45a0-9733-3c6911939af4";
+    { device = "/dev/disk/by-uuid/a0c9ef0c-6ffa-4255-97a8-d4a7f1e91aad";
       fsType = "btrfs";
       options = [ "subvol=nix" "ssd" "noatime" "compress=zstd:1" ];
-    };
-
-  fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/c221fb88-e815-45a0-9733-3c6911939af4";
-      fsType = "btrfs";
-      options = [ "subvol=swap" "ssd" "noatime" "compress=zstd:1" ];
-    };
-
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/7C81-7BDE";
-      fsType = "vfat";
     };
 
   fileSystems."/mnt/secondary" =
@@ -50,7 +50,7 @@
       options = [ "noatime" "nosuid" "nodev" "nofail" "x-gvfs-show" "x-udisks-auth" "x-gvfs-name=Secondary" ];
     };
 
-  swapDevices = [ { device = "/swap/swapfile"; } ];
+swapDevices = [ { device = "/swap/swapfile"; } ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

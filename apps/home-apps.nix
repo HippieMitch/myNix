@@ -4,12 +4,12 @@
 
 {
 home.packages = with pkgs; [
-    alacritty
     master.ani-cli
     ardour
     brave
-    master.discord
+    discord
     gocryptfs
+    kitty
     komikku
     krita
     lutris

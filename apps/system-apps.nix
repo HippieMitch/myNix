@@ -9,10 +9,10 @@
    curl
    distrobox
    duf
-   master.fastfetch
    firefox_nightly
    fish
    git
+   master.macchina
    mediawriter
    mesa-demos
    mpv
