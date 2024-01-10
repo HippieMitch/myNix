@@ -7,12 +7,13 @@
     shellAliases = 
       {
 errors = "journalctl -p err..alert";
+cpu = ''watch -n.1 "grep \"^[c]pu MHz\" /proc/cpuinfo"'';
 anime = "ani-cli";
 alaconf = "nano ~/.config/alacritty/alacritty.yml";
 kittyconf = "nano ~/.config/kitty/kitty.conf";
 inhibitors = "systemd-inhibit --list --mode = block";
 fishconf = "nano /home/sean/.config/fish/config.fish";
-cpu = "watch -n.1 'grep \'^[c]pu MHz\' /proc/cpuinfo'";
+#cpu = ''watch -n.1 'grep \'^[c]pu MHz\' /proc/cpuinfo'''';
 neo = "macchina";
 npkgs = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
 #Run these from ~./html
@@ -26,9 +27,8 @@ simps = "sudo nano /etc/nixos/system/system-imports.nix";
 himps = "sudo nano /etc/nixos/home/home-imports.nix";
 spkg = "sudo nano /etc/nixos/apps/system-apps.nix";
 hpkg = "sudo nano /etc/nixos/apps/home-apps.nix";
-ndryrun = "cd /etc/nixos && sudo nix flake lock --update-input nixpkgs-unstable-small && sudo nix flake lock --update-input nixpkgs-unstable && sudo nix flake lock --update-input nixpkgs-master && sudo nix flake lock --update-input chaotic && sudo nix flake lock --update-input home-manager && sudo nix build '.#nixosConfigurations.$(hostname).config.system.build.toplevel' && nvd diff /run/current-system ./result";
-#ncheck = "cd /etc/nixos && sudo nix flake lock --update-input nixpkgs-unstable-small && sudo nix flake lock --update-input nixpkgs-unstable && sudo nix flake lock --update-input nixpkgs-master && sudo nix flake lock --update-input chaotic && sudo nix flake lock --update-input home-manager && sudo nixos-rebuild dry-run";
-#fcheck = "cd /etc/nixos && sudo nix flake lock --update-input chaotic && sudo nix build ".#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result";
+ncheck = ''cd /etc/nixos && sudo nix flake lock --update-input nixpkgs && sudo nix flake lock --update-input nixpkgs-stable && sudo nix flake lock --update-input home-manager && sudo nixos-rebuild dry-run'';
+ndryrun = ''cd /etc/nixos && sudo nix flake lock --update-input nixpkgs-unstable-small && sudo nix flake lock --update-input nixpkgs-unstable && sudo nix flake lock --update-input nixpkgs-master && sudo nix flake lock --update-input chaotic && sudo nix flake lock --update-input home-manager && sudo nix build "#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result'';
 flakeup = "cd /etc/nixos && sudo nix flake update";
 nup = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch";
 kup = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild boot";
