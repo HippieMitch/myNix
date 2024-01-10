@@ -44,9 +44,9 @@
 	pkgver = "nvd list | grep";
 	streamhop = "sudo nix flake update --override-input nixpkgs github:NixOS/nixpkgs";
     };
-interactiveShellInit = ''
-   set -U "fish_greeting";
-   set -Ux "LIBVA_DRIVER_NAME" "iHD";
+    interactiveShellInit = ''
+      set -U "fish_greeting";
+      set -Ux "LIBVA_DRIVER_NAME" "iHD";
     '';
   };
 }
