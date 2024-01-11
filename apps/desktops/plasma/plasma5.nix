@@ -26,7 +26,7 @@
    libsForQt5.kpmcore
    libsForQt5.kcalc
    partition-manager
-   qbittorrent
+   wayland-utils
 
   # Icon Themes
    qogir-icon-theme
