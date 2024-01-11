@@ -1,5 +1,5 @@
 # Fish Configuration
-{ config, ... }:
+{ config, inputs, ... }:
 
 {
   programs.fish = {
@@ -25,8 +25,8 @@
 	himps = "sudo nano /etc/nixos/home/home-imports.nix";
 	spkg = "sudo nano /etc/nixos/apps/system-apps.nix";
 	hpkg = "sudo nano /etc/nixos/apps/home-apps.nix";
-	ncheck = ''cd /etc/nixos && sudo nix flake lock --update-input nixpkgs && sudo nix flake lock --update-input nixpkgs-stable && sudo nix flake lock --update-input home-manager && sudo nixos-rebuild dry-run'';
-	ndryrun = ''cd /etc/nixos && sudo nix flake lock --update-input nixpkgs-unstable-small && sudo nix flake lock --update-input nixpkgs-unstable && sudo nix flake lock --update-input nixpkgs-master && sudo nix flake lock --update-input chaotic && sudo nix flake lock --update-input home-manager && sudo nix build "#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result'';
+	ncheck = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild dry-run";
+        ndryrun = ''cd /etc/nixos && sudo nix flake update && sudo nix build ".#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result'';
 	flakeup = "cd /etc/nixos && sudo nix flake update";
 	nswitch = "sudo nixos-rebuild switch --flake /etc/nixos/#luke";
 	nboot = "sudo nixos-rebuild boot --flake /etc/nixos/#luke";

@@ -26,12 +26,6 @@
       fsType = "vfat";
     };
 
-  fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/a0c9ef0c-6ffa-4255-97a8-d4a7f1e91aad";
-      fsType = "btrfs";
-      options = [ "subvol=swap" "ssd" "noatime" "compress=zstd:1" ];
-    };
-
   fileSystems."/home" =
     { device = "/dev/disk/by-uuid/a0c9ef0c-6ffa-4255-97a8-d4a7f1e91aad";
       fsType = "btrfs";
@@ -48,6 +42,12 @@
     { device = "/dev/sda1";
       fsType = "ext4";
       options = [ "noatime" "nosuid" "nodev" "nofail" "x-gvfs-show" "x-udisks-auth" "x-gvfs-name=Secondary" ];
+    };
+
+  fileSystems."/swap" =
+    { device = "/dev/disk/by-uuid/a0c9ef0c-6ffa-4255-97a8-d4a7f1e91aad";
+      fsType = "btrfs";
+      options = [ "subvol=swap" "ssd" "noatime" "compress=zstd:1" ];
     };
 
 swapDevices = [ { device = "/swap/swapfile"; } ];
