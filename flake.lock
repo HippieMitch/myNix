@@ -10,11 +10,11 @@
         "yafas": "yafas"
       },
       "locked": {
-        "lastModified": 1704988592,
-        "narHash": "sha256-pyddiuz4w0scDU9Gj56HBrrPV5YSJWIZVHG78q1g5FY=",
+        "lastModified": 1705071468,
+        "narHash": "sha256-O/0oazN14wB/QnkzaXVmai6JSjgET47p4Fl5dWldlQ0=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "6527f419a06825ba94d1ffdf9d7ab46fa2756dfb",
+        "rev": "a4e9fa0795880c3330d9f86cab466a7402d6d4f5",
         "type": "github"
       },
       "original": {
@@ -155,11 +155,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1704977058,
-        "narHash": "sha256-wkYOd2P8JuUTPU5z78YRo/BjHFGvG6AbC0i1oQYEwEk=",
+        "lastModified": 1705053342,
+        "narHash": "sha256-Fmeg769Go6c/0dcBKk5vBr1vpcY8BSINvLf7MVfAOt0=",
         "owner": "nix-community",
         "repo": "kde2nix",
-        "rev": "898b4d16854491194cb3cafcba2759e9f3cc19a6",
+        "rev": "12ac32a11cbb78dd81f1db6cc36b10d4e7b3290d",
         "type": "github"
       },
       "original": {
@@ -184,11 +184,11 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1704996972,
-        "narHash": "sha256-ifkLBRUDkOLoCVMXSLANg65qzCjhwLD57Az019mSt8k=",
+        "lastModified": 1705096769,
+        "narHash": "sha256-sBn0/b1+2oNotEEX+ZYF89gSaKRtWS4OxG6xIIMsRRs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "40dc806acbc01cd9e9ee2d170b5ec2a6dcd91ac4",
+        "rev": "3d0fb3af856a0ee1924f02d14bdaad7cbb63903b",
         "type": "github"
       },
       "original": {
