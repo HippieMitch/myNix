@@ -10,7 +10,7 @@ home.packages = with pkgs; [
     discord
     gocryptfs
     kitty
-    komikku
+    stable.komikku
     krita
     lutris
     obs-studio
