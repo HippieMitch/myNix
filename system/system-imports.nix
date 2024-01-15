@@ -27,9 +27,9 @@
       ./daemons/tlp.nix
 
 # Desktop Environments
-      ../apps/desktops/gnome/gnome.nix
+      #../apps/desktops/gnome/gnome.nix
       #../apps/desktops/plasma/plasma5.nix
-      #../apps/desktops/plasma/plasma6.nix
+      ../apps/desktops/plasma/plasma6.nix
       #../apps/desktops/cosmic/cosmic.nix
       #../apps/desktops/xfce/xfce.nix
       #../apps/desktops/pantheon/pantheon.nix
