@@ -4,10 +4,10 @@
 
 { 	
 	  # Enable Pantheon
-	  services.xserver.enable = lib.mkDefault true;
-	  services.xserver.displayManager.lightdm.enable = lib.mkDefault true;
-	  services.xserver.desktopManager.pantheon.enable = lib.mkDefault true;
+	  services.xserver.displayManager.lightdm.enable = true;
+	  services.xserver.desktopManager.pantheon.enable = true;
 	  services.xserver.desktopManager.pantheon.extraWingpanelIndicators = with pkgs; [ monitor ];
+          services.xserver.displayManager.defaultSession = "pantheon";
           services.pantheon.contractor.enable = true;
           programs.pantheon-tweaks.enable = true;
 

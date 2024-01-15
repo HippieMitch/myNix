@@ -91,9 +91,8 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Chaotic mesa-git
+  # Mesa git
   chaotic.mesa-git.enable = true;
-  
 
   # Configure keymap in X11
   services.xserver = {
@@ -177,9 +176,6 @@
       libvdpau-va-gl
     ];
   };
-
-  # Mesa Git
-  #chaotic.mesa-git.enable = true;
 
   # Automatic /*Garbage*/ Collection
   nix.gc = {
