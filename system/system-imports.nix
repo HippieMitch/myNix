@@ -31,8 +31,12 @@
       #../apps/desktops/plasma/plasma5.nix
       ../apps/desktops/plasma/plasma6.nix
       #../apps/desktops/cosmic/cosmic.nix
+      #../apps/desktops/cinnamon/cinnamon.nix
       #../apps/desktops/xfce/xfce.nix
       #../apps/desktops/pantheon/pantheon.nix
       #../apps/desktops/budgie/budgie.nix
+
+# Window Managers
+      #../apps/window-managers/hyprland/hyprland.nix
     ];
 }

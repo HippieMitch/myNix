@@ -13,6 +13,7 @@ home.packages = with pkgs; [
     stable.komikku
     krita
     lutris
+    macchina
     obs-studio
     protonup-qt
     qbittorrent
