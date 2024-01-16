@@ -1,4 +1,4 @@
-  # Use Cinnamon
+# Use Cinnamon
 
 { pkgs, ... }:
 

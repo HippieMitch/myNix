@@ -1,4 +1,4 @@
-  # Use COSMIC
+# Use COSMIC
 
 { pkgs, inputs, ... }:
 

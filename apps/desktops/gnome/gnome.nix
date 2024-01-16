@@ -1,4 +1,4 @@
-  # Use Gnome
+# Use Gnome
 
 { pkgs, ... }:
 

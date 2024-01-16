@@ -1,4 +1,4 @@
-  # Use KDE Plasma
+# Use KDE Plasma
   
 { pkgs, ... }:
 
