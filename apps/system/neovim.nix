@@ -20,7 +20,6 @@
 	    set hlsearch
         set incsearch
 	    set autoindent
-        set cc=80
         set clipboard=unnamedplus
         filetype plugin on
       '';
