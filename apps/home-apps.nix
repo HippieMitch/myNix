@@ -9,7 +9,6 @@ home.packages = with pkgs; [
     brave
     discord
     gocryptfs
-    kitty
     stable.komikku
     krita
     lutris

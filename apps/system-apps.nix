@@ -10,7 +10,6 @@
    distrobox
    duf
    firefox_nightly
-   fish
    git
    mediawriter
    mesa-demos

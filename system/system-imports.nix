@@ -1,6 +1,6 @@
 # System Imports
 
-{ ... }:
+{ config, ... }:
 
 {
  imports =
@@ -38,5 +38,6 @@
 
 # Window Managers
       #../apps/window-managers/hyprland/hyprland.nix
-    ];
+
+  ];
 }
