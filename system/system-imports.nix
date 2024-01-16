@@ -39,5 +39,7 @@
 # Window Managers
       #../apps/window-managers/hyprland/hyprland.nix
 
+# System Apps
+      ../apps/system/neovim.nix
   ];
 }

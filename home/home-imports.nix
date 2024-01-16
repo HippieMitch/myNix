@@ -16,6 +16,5 @@ imports =
     #../apps/desktops/xfce/xfce-home.nix
     ./home-manager/fish.nix
     ./home-manager/kitty.nix
-    ./home-manager/neovim.nix
   ];
 }
