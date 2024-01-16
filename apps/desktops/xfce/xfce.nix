@@ -1,3 +1,5 @@
+# Use XFCE
+
 { pkgs, ... }:
 
 {
