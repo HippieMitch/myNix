@@ -22,8 +22,8 @@
       ./modules/modprobe.nix
 
 # Daemons
-      ./daemons/schedulers/ananicy-cpp.nix
-      #./daemons/schedulers/system76-scheduler.nix
+      #./daemons/schedulers/ananicy-cpp.nix
+      ./daemons/schedulers/system76-scheduler.nix
       ./daemons/tlp.nix
 
 # Desktop Environments
