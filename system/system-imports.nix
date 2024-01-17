@@ -7,7 +7,7 @@
     [ 
 
 # Hardware Config
-      ./hardware-configuration.nix
+      ./hardware.nix
 
 # System Applications
       ./system-apps.nix
