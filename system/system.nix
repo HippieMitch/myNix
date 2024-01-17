@@ -186,5 +186,4 @@
 
   # Nix Store Optimisation
   nix.settings.auto-optimise-store = true;
-
 }
