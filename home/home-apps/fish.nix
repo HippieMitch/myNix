@@ -20,11 +20,11 @@
 	sconf = "sudo nvim /etc/nixos/system/system.nix";
 	fconf = "sudo nvim /etc/nixos/flake.nix";
 	hconf = "sudo nvim /etc/nixos/home/home.nix";
-	hwconf = "sudo nvim /etc/nixos/system/hardware-configuration.nix";
+	hwconf = "sudo nvim /etc/nixos/system/hardware.nix";
 	simps = "sudo nvim /etc/nixos/system/system-imports.nix";
 	himps = "sudo nvim /etc/nixos/home/home-imports.nix";
-	spkg = "sudo nvim /etc/nixos/apps/system-apps.nix";
-	hpkg = "sudo nvim /etc/nixos/apps/home-apps.nix";
+	spkg = "sudo nvim /etc/nixos/system/system-apps.nix";
+	hpkg = "sudo nvim /etc/nixos/home/home-apps.nix";
 	ncheck = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild dry-run";
     ndryrun = ''cd /etc/nixos && sudo nix flake update && sudo nix build ".#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result'';
 	flakeup = "cd /etc/nixos && sudo nix flake update";

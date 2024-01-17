@@ -22,6 +22,8 @@
         set hlsearch
         set incsearch
         set autoindent
+        set wildmode=longest,list
+        set ttyfast
         set clipboard=unnamedplus
         filetype plugin on
       '';

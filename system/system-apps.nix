@@ -23,8 +23,6 @@
  # Multimedia
    ffmpeg_6-full
 
- # Fish Plugins
-   fzf
    ];
 
  # Remove X Server Packages
