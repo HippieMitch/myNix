@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
 
 # System Applications
-      ../apps/system-apps.nix
+      ./system-apps.nix
 
 # Kernels
       ./kernels/vanilla.nix
@@ -27,19 +27,19 @@
       ./daemons/tlp.nix
 
 # Desktop Environments
-      #../apps/desktops/gnome/gnome.nix
-      #../apps/desktops/plasma/plasma5.nix
-      ../apps/desktops/plasma/plasma6.nix
-      #../apps/desktops/cosmic/cosmic.nix
-      #../apps/desktops/cinnamon/cinnamon.nix
-      #../apps/desktops/xfce/xfce.nix
-      #../apps/desktops/pantheon/pantheon.nix
-      #../apps/desktops/budgie/budgie.nix
+      #./desktops/gnome/gnome.nix
+      #./desktops/plasma/plasma5.nix
+      ./desktops/plasma/plasma6.nix
+      #./desktops/cosmic/cosmic.nix
+      #./desktops/cinnamon/cinnamon.nix
+      #./desktops/xfce/xfce.nix
+      #./desktops/pantheon/pantheon.nix
+      #./desktops/budgie/budgie.nix
 
 # Window Managers
-      #../apps/window-managers/hyprland/hyprland.nix
+      #./window-managers/hyprland/hyprland.nix
 
 # System Apps
-      ../apps/system/neovim.nix
+      ./system-apps/neovim.nix
   ];
 }
