@@ -8,6 +8,7 @@ home.packages = with pkgs; [
     ardour
     brave
     discord
+    element-desktop
     gocryptfs
     stable.komikku
     krita
