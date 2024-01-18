@@ -15,7 +15,7 @@
   };
 
   # Setup Bash
-    programs.bash = {
+  programs.bash = {
     enable = true;
     enableCompletion = true;
     # TODO add your custom bashrc here
@@ -31,6 +31,9 @@
       uris = ["qemu:///system"];
     };
   };
+  
+  # XDG_DATA_DIRS profile update
+  targets.genericLinux.enable = true;
 
   home.stateVersion = "23.11";
 
