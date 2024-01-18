@@ -1,5 +1,5 @@
 # Neovim Configuration
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.neovim = {
@@ -21,12 +21,12 @@
         set ignorecase
         set hlsearch
         set incsearch
-        set autoindent
+        set autoindent smartindent
         set wildmode=longest,list
         set ttyfast
-        set clipboard=unnamedplus
         filetype plugin on
       '';
     };
   };
+  environment.systemPackages = with pkgs; [ wl-clipboard ];
 }
