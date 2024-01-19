@@ -1,5 +1,5 @@
 {
-  description = "Luke Flake";
+  description = "ghostfish";
 
   inputs = {
 
@@ -15,15 +15,12 @@
     # Nixpkgs Master
     nixpkgs-master.url = "github:NixOS/nixpkgs";
 
-    # My Nixpkgs
-  #  mynixpkgs.url = "github:HippieMitch/nixpkgs";
-
     nixpkgs.follows = "nixpkgs-unstable"; 
 
     # Home Manager
     home-manager = {
-    url = "github:nix-community/home-manager";
-    inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Chaotic-CX
@@ -40,7 +37,6 @@
               nixpkgs-unstable-small, 
               nixpkgs-stable, 
               nixpkgs-master, 
-            #  mynixpkgs,
               home-manager, 
               chaotic,
               kde2nix,
@@ -71,12 +67,6 @@
            config.allowUnfree = true;
          };
       };
-    #  overlay-mynixpkgs = final: prev: {
-    #     mynixpkgs = import mynixpkgs {
-    #       inherit system;
-    #       config.allowUnfree = true;
-    #     };
-    #  };
 
     in {
       nixosConfigurations."luke" = nixpkgs.lib.nixosSystem {
@@ -87,7 +77,6 @@
           overlay-unstable-small 
           overlay-stable 
           overlay-master
-        #  overlay-mynixpkgs
            ]; })
           ./system/system.nix
           # Home Manager

@@ -28,8 +28,8 @@
 	ncheck = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild dry-run";
     ndryrun = ''cd /etc/nixos && sudo nix flake update && sudo nix build ".#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result'';
 	flakeup = "cd /etc/nixos && sudo nix flake update";
-	nswitch = "sudo nixos-rebuild switch --flake /etc/nixos/#luke";
-	nboot = "sudo nixos-rebuild boot --flake /etc/nixos/#luke";
+	nswitch = "sudo nixos-rebuild switch --flake /etc/nixos/#ghostfish";
+	nboot = "sudo nixos-rebuild boot --flake /etc/nixos/#ghostfish";
 	nrun = "nix-shell -p";
 	ngens = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
 	nclean = "sudo nix-collect-garbage -d && nix-collect-garbage -d";

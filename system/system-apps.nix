@@ -15,6 +15,7 @@
    mesa-demos
    mpv
    mullvad-vpn
+   nix-search-cli
    nvd
    tree
    wget

@@ -65,7 +65,7 @@
   '';
 
   # Set hostname
-  networking.hostName = "luke"; # Define your hostname.
+  networking.hostName = "ghostfish";
 
   # Enable networking
   networking.networkmanager.enable = true;

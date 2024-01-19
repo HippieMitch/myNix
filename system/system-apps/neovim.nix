@@ -25,6 +25,12 @@
         set wildmode=longest,list
         set ttyfast
         filetype plugin on
+        noremap y "*y
+        noremap yy "*yy
+        noremap Y "*y$
+        noremap x "*x
+        noremap dd "*dd
+        noremap D "*D
       '';
     };
   };
