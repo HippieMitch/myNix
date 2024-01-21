@@ -53,6 +53,7 @@
   services.fstrim.enable = true;
   services.power-profiles-daemon.enable = false;
   services.fwupd.enable = true;
+  services.fprintd.enable = true;
 
   # Limit journal size
   services.journald.extraConfig = ''

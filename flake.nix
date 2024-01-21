@@ -73,22 +73,26 @@
         inherit system;
         modules = [
           ({ config, pkgs, ... }: { nixpkgs.overlays = [
-          overlay-unstable 
-          overlay-unstable-small 
-          overlay-stable 
-          overlay-master
+            overlay-unstable 
+            overlay-unstable-small 
+            overlay-stable 
+            overlay-master
            ]; })
+
+          # System Configuration File
           ./system/system.nix
+          
           # Home Manager
           home-manager.nixosModules.home-manager
           {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            extraSpecialArgs = {inherit inputs;};
-            users.sean = import ./home/home.nix;
-          };
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = {inherit inputs;};
+              users.sean = import ./home/home.nix;
+            };
           }
+
           # Chaotic-CX Module
           chaotic.nixosModules.default
 

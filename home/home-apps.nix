@@ -24,6 +24,7 @@ home.packages = with pkgs; [
           arrterian.nix-env-selector
           github.github-vscode-theme
           ms-python.python
+          rust-lang.rust-analyzer
           vadimcn.vscode-lldb
     ];
   })
@@ -38,6 +39,9 @@ home.packages = with pkgs; [
   # Development
     jetbrains.pycharm-community
     python3
+    rustc
+    cargo
+    gcc
  ];
 }
 

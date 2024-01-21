@@ -35,7 +35,7 @@
 	nclean = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
 	rustsh = "nix shell github:oxalica/rust-overlay";
 	ds = "distrobox-stop -Y arch";
-	cgcache = "rm -rf ~/.config/vivaldi/Default/GPUCache && rm -rf ~/.config/vivaldi/Default/Storage/ext/mpognobbkildjkofajifpdfhcoklimli/def/GPUCache && rm -rf ~/.config/VSCodium/GPUCache";
+	cgcache = "rm -r ~/.config/BraveSoftware/Brave-Browser/Default && rm -rf ~/.config/vivaldi/Default/GPUCache && rm -rf ~/.config/vivaldi/Default/Storage/ext/mpognobbkildjkofajifpdfhcoklimli/def/GPUCache && rm -rf ~/.config/VSCodium/GPUCache";
 	ls = "lsd";
 	ndev = "nix develop";
 	nsea = "nix-search";
