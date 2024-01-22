@@ -16,6 +16,6 @@
       remember_window_size = "no";
       term = "xterm-256color";
     };
-     theme = "Dark Pastel";
+     theme = "Modus Vivendi";
   };
 }

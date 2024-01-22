@@ -66,7 +66,7 @@
   '';
 
   # Set hostname
-  networking.hostName = "ghostfish";
+  networking.hostName = "spaceghost";
 
   # Enable networking
   networking.networkmanager.enable = true;

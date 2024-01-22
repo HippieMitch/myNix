@@ -69,7 +69,7 @@
       };
 
     in {
-      nixosConfigurations."ghostfish" = nixpkgs.lib.nixosSystem {
+      nixosConfigurations."spaceghost" = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ({ config, pkgs, ... }: { nixpkgs.overlays = [
