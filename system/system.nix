@@ -145,13 +145,6 @@
   nixpkgs.config.allowUnfree = true;
 
   # Firewall
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Open kdeconnect ports for gsconnect extension
-  networking.firewall = rec {
-          allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
-          allowedUDPPortRanges = allowedTCPPortRanges;
-        }; 
   networking.firewall.enable = true;
 
   # Initial System State Version
