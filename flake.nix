@@ -15,7 +15,7 @@
     # Nixpkgs Master
     nixpkgs-master.url = "github:NixOS/nixpkgs";
 
-    nixpkgs.follows = "nixpkgs-unstable"; 
+    nixpkgs.follows = "nixpkgs-unstable-small"; 
 
     # Home Manager
     home-manager = {
