@@ -5,21 +5,23 @@
 {
 home.packages = with pkgs; [
     master.ani-cli
-    ardour
-    brave
-    discord
-    element-desktop
+    unstable.ardour
+    unstable.brave
+    unstable.deja-dup
+    unstable.discord
+    unstable.element-desktop
     gocryptfs
     stable.komikku
-    krita
-    lutris
+    unstable.krita
+    unstable.lutris
     macchina
-    obs-studio
+    unstable.obs-studio
     protonup-qt
     qbittorrent
-    thunderbird
+    qpwgraph
+    unstable.thunderbird
     (vscode-with-extensions.override {
-      vscode = vscodium;
+      vscode = unstable.vscodium;
         vscodeExtensions = with vscode-extensions; [
           arrterian.nix-env-selector
           github.github-vscode-theme
@@ -37,7 +39,7 @@ home.packages = with pkgs; [
     nerdfonts
 
   # Development
-    jetbrains.pycharm-community
+    unstable.jetbrains.pycharm-community
     python3
     rustc
     cargo

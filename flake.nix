@@ -29,6 +29,9 @@
     # kde2nix
     kde2nix.url = "github:nix-community/kde2nix";
 
+    # NixVim
+    nixvim.url = "github:nix-community/nixvim";
+
   };
 
   outputs = { self, 
@@ -40,6 +43,7 @@
               home-manager, 
               chaotic,
               kde2nix,
+              nixvim,
               ... } @ inputs:
     let
       system = "x86_64-linux";
@@ -98,6 +102,9 @@
 
           # kde2nix Module
           kde2nix.nixosModules.default
+        
+          # NixVim
+          nixvim.nixosModules.nixvim
         ];
       };
     };
