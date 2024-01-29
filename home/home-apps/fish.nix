@@ -25,8 +25,8 @@
 	himps = "sudo nvim /etc/nixos/home/home-imports.nix";
 	spkg = "sudo nvim /etc/nixos/system/system-apps.nix";
 	hpkg = "sudo nvim /etc/nixos/home/home-apps.nix";
-	ncheck = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild dry-run";
-    ndryrun = ''cd /etc/nixos && sudo nix flake update && sudo nix build ".#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result'';
+	ncheck = "cd /etc/nixos && sudo nixos-rebuild dry-run";
+    ndryrun = ''cd /etc/nixos && sudo nix build ".#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result'';
 	flakeup = "cd /etc/nixos && sudo nix flake update";
 	nswitch = "sudo nixos-rebuild switch --flake /etc/nixos/#spaceghost";
 	nboot = "sudo nixos-rebuild boot --flake /etc/nixos/#spaceghost";

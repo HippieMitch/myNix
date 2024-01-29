@@ -32,7 +32,7 @@
 
   # Icon Themes
    qogir-icon-theme
-   tela-icon-theme
+   tela-icon-theme 
 
    ];
 }
