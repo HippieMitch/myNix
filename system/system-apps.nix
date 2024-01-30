@@ -50,8 +50,13 @@
  # Enable Steam
   programs.steam.enable = true;
 
- # Set Fish Shell as Default
-  programs.zsh.enable = true;
+ # Set ZSH Shell as Default
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+  };
   users.users.sean.shell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
 

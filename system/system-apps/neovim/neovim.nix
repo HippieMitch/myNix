@@ -21,7 +21,7 @@
       vim-nix
     ];
     colorschemes = {
-      kanagawa.enable = true;
+      ayu.enable = true;
     };
     options = {
       number = true;

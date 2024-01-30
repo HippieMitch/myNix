@@ -58,14 +58,6 @@ programs.zsh = {
         src = ./p10k-config;
         file = ".p10k.zsh";
       }
-      {
-        name = "zsh-autocomplete";
-        src = pkgs.zsh-autocomplete;
-      }
-      {
-        name = "zsh-autosuggestions";
-        src = pkgs.zsh-autosuggestions;
-      }
     ];
   };
 }
