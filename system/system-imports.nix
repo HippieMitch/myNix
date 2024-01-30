@@ -40,6 +40,6 @@
       #./window-managers/hyprland/hyprland.nix
 
 # System Apps
-      ./system-apps/neovim.nix
+      ./system-apps/neovim/neovim.nix
   ];
 }

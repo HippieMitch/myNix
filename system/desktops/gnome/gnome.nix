@@ -4,8 +4,10 @@
 
 {
   # Enable the GNOME Desktop Environment
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver = {
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+  };
   environment.gnome.excludePackages = (with pkgs; [
    epiphany
    gnome-console
@@ -23,9 +25,12 @@
    gnome.yelp
   ]);
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
-  services.gnome.tracker-miners.enable = false;
-  services.gnome.tracker.enable = false;
-  
+
+  services.gnome = {
+    tracker-miners.enable = false;
+    tracker.enable = false;
+  };
+
   # XDG
   xdg.portal.enable = true;
 

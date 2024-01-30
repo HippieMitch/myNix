@@ -14,7 +14,8 @@ imports =
 
 # home-manager
     #../system/desktops/xfce/xfce-home.nix
-    ./home-apps/fish.nix
-    ./home-apps/kitty.nix
+    #./home-apps/fish/fish.nix
+    ./home-apps/kitty/kitty.nix
+    ./home-apps/zsh/zsh.nix
   ];
 }

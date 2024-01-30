@@ -51,9 +51,9 @@
   programs.steam.enable = true;
 
  # Set Fish Shell as Default
-  programs.fish.enable = true;
-  users.users.sean.shell = pkgs.fish;
-  environment.shells = with pkgs; [ fish ];
+  programs.zsh.enable = true;
+  users.users.sean.shell = pkgs.zsh;
+  environment.shells = with pkgs; [ zsh ];
 
  # Enable ADB
   programs.adb.enable = true;
