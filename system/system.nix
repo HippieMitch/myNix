@@ -60,7 +60,7 @@
     hostName = "spaceghost";
     networkmanager = {
       enable = true;
-      wifi.backend = "iwd";
+  #    wifi.backend = "iwd";
     };
   };
   # Set your time zone.
