@@ -32,15 +32,6 @@
     '';
   };
 
-  # Prevent waking from the following devices:
-#  services.udev.extraRules = ''
-#    ACTION=="add" SUBSYSTEM=="pci" ATTR{vendor}=="0x8086" ATTR{device}=="0xa73e" ATTR{power/wakeup}="disabled" # TDM0
-#    ACTION=="add" SUBSYSTEM=="pci" ATTR{vendor}=="0x8086" ATTR{device}=="0xa76d" ATTR{power/wakeup}="disabled" # TDM1
-#    ACTION=="add" SUBSYSTEM=="pci" ATTR{vendor}=="0x8086" ATTR{device}=="0xa74d" ATTR{power/wakeup}="disabled" # PEG0
-#    ACTION=="add" SUBSYSTEM=="pci" ATTR{vendor}=="0x8086" ATTR{device}=="0xa76e" ATTR{power/wakeup}="disabled" # TRP0
-#    ACTION=="add" SUBSYSTEM=="pci" ATTR{vendor}=="0x8086" ATTR{device}=="0x51ca" ATTR{power/wakeup}="disabled" # HDAS
-#  '';
-
   # Power Management
   powerManagement.enable = true;
   powerManagement.powertop.enable = true;
@@ -65,12 +56,13 @@
     DefaultTimeoutStopSec=1s
   '';
 
-  # Set hostname
-  networking.hostName = "spaceghost";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-
+  networking = {
+    hostName = "spaceghost";
+    networkmanager = {
+      enable = true;
+      wifi.backend = "iwd";
+    };
+  };
   # Set your time zone.
   time.timeZone = "America/New_York";
 
