@@ -68,6 +68,7 @@
   fonts.packages = with pkgs; [
     dejavu_fonts
     jetbrains-mono
+    nerdfonts
     noto-fonts
     open-sans
     ubuntu_font_family

@@ -13,8 +13,8 @@
       ./system-apps.nix
 
 # Kernels
-      ./kernels/vanilla.nix
-      #./kernels/cachy.nix
+      #./kernels/vanilla.nix
+      ./kernels/cachy.nix
       #./kernels/cachy-sched-ext.nix
 
 # Modules

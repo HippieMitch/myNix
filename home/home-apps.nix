@@ -4,14 +4,14 @@
 
 {
 home.packages = with pkgs; [
-    master.ani-cli
+    ani-cli
     ardour
     brave
     deja-dup
     discord
     element-desktop
     gocryptfs
-    stable.komikku
+    komikku
     krita
     lutris
     macchina
@@ -34,9 +34,6 @@ home.packages = with pkgs; [
 
   # Command Line Tools
     lsd
-
-  # Command Line Fonts
-    nerdfonts
 
   # Development
     jetbrains.pycharm-community
