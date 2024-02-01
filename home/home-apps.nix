@@ -10,6 +10,7 @@ home.packages = with pkgs; [
     deja-dup
     discord
     element-desktop
+    gimp
     gocryptfs
     komikku
     krita
