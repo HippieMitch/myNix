@@ -62,7 +62,7 @@
       enable = true;
       settings = {
         Settings = {
-          AutoConnect = false;
+          AutoConnect = true;
         };
       };
     };
@@ -97,9 +97,9 @@
   chaotic.mesa-git.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
 
   # CUPS Printing Daemonn
