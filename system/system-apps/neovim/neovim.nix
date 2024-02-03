@@ -25,7 +25,13 @@
     };
     options = {
       number = true;
+      showmatch = true;
+      ignorecase = true;
+      hlsearch = true;
+      incsearch = true;
+      expandtab = true;
       shiftwidth = 2;
+      wildmode = "longest,list";
     };
   };
 }
