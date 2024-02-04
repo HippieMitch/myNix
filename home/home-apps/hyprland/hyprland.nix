@@ -15,7 +15,7 @@
   ];
   
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
-  home.file."~/.config/hypr/hyprland.conf".text = ''
+  home.file."/home/sean/.config/hypr/hyprland.conf".text = ''
     # Monitor
     monitor=DP-1,2256x1504@60,auto,1
 
@@ -50,7 +50,7 @@
     general {
 
         gaps_in = 5
-        gaps_out = 20
+        gaps_out = 5
         border_size = 2
         col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
         col.inactive_border = rgba(595959aa)
@@ -61,10 +61,6 @@
     decoration {
 
         rounding = 10
-        blur = true
-        blur_size = 3
-        blur_passes = 1
-        blur_new_optimizations = true
 
         drop_shadow = true
         shadow_range = 4
@@ -110,19 +106,18 @@
     windowrule=size 934 525,^(mpv)$
     windowrule=float,^(mpv)$
     windowrule=center,^(mpv)$
-    #windowrule=pin,^(firefox)$
+    #windowrule=pin,^(firefox-nightly)$
 
     $mainMod = SUPER
     bind = $mainMod, G, fullscreen,
 
 
     #bind = $mainMod, RETURN, exec, cool-retro-term-zsh
-    bind = $mainMod, RETURN, exec, kitty
-    bind = $mainMod, B, exec, opera --no-sandbox
-    bind = $mainMod, L, exec, firefox 
+    bind = $mainMod, T, exec, kitty
+    bind = $mainMod, B, exec, firefox-nightly
     bind = $mainMod, Q, killactive,
     bind = $mainMod, M, exit,
-    bind = $mainMod, F, exec, nautilus
+    bind = $mainMod, F, exec, dolphin
     bind = $mainMod, V, togglefloating,
     bind = $mainMod, w, exec, wofi --show drun
     bind = $mainMod, R, exec, rofiWindow
