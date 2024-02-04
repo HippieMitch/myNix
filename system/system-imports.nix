@@ -37,7 +37,7 @@
       #./desktops/budgie/budgie.nix
 
 # Window Managers
-      #./window-managers/hyprland/hyprland.nix
+      ./window-managers/hyprland/hyprland.nix
 
 # System Apps
       ./system-apps/neovim/neovim.nix

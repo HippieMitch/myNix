@@ -182,5 +182,4 @@
     bindm = $mainMod, mouse:273, resizewindow
     bindm = ALT, mouse:272, resizewindow
     '';
-  };
 }
