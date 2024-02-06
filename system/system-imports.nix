@@ -39,7 +39,11 @@
 # Window Managers
       #./window-managers/hyprland/hyprland.nix
 
-# System Apps
+# Shells
+      ./system-apps/fish/fish.nix
+      #./system-apps/zsh/zsh.nix
+
+# System Applications
       ./system-apps/neovim/neovim.nix
   ];
 }

@@ -165,7 +165,7 @@
     enable = true;
     extraPackages = with pkgs; [
       unstable.intel-compute-runtime
-      intel-media-driver # LIBVA_DRIVER_NAME=iHD
+      intel-media-driver
       vaapiIntel
       vaapiVdpau
       libvdpau-va-gl

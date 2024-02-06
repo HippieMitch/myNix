@@ -1,6 +1,6 @@
 # ZSH
 
-{config, inputs, pkgs, ... }:
+{config, pkgs, ... }:
 
 {
 programs.zsh = {
@@ -46,6 +46,7 @@ programs.zsh = {
 	streamhop = "sudo nix flake update --override-input nixpkgs github:NixOS/nixpkgs";
     };
     
+  completionInit = "autoload -U compinit && compinit -i";
 
   plugins = [
       {

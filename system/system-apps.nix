@@ -50,17 +50,6 @@
  # Enable Steam
   programs.steam.enable = true;
 
- # Set ZSH Shell as Default
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-    histSize = 10000;
-  };
-  users.users.sean.shell = pkgs.zsh;
-  environment.shells = with pkgs; [ zsh ];
-
  # Enable ADB
   programs.adb.enable = true;
 
