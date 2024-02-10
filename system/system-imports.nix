@@ -13,8 +13,8 @@
       ./system-apps.nix
 
 # Kernels
-      #./kernels/vanilla.nix
-      ./kernels/cachy.nix
+      ./kernels/vanilla.nix
+      #./kernels/cachy.nix
       #./kernels/cachy-sched-ext.nix
 
 # Modules
@@ -28,8 +28,8 @@
 
 # Desktop Environments
       #./desktops/gnome/gnome.nix
-      #./desktops/plasma/plasma5.nix
-      ./desktops/plasma/plasma6.nix
+      ./desktops/plasma/plasma5.nix
+      #./desktops/plasma/plasma6.nix
       #./desktops/cosmic/cosmic.nix
       #./desktops/cinnamon/cinnamon.nix
       #./desktops/xfce/xfce.nix

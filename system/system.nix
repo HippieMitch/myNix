@@ -16,7 +16,7 @@
   boot.kernelParams = [ "quiet" "split_lock_detect=off" "preempt=full" "module_blacklist=hid_sensor_hub" "mem_sleep_default=deep" "nvme.noacpi=1" "resume=LABEL=NixOS" "resume_offset=533760" "i915.enable_guc=3" ];
 
   # Suspend and Hibernation Options
-  boot.resumeDevice = "/dev/disk/by-uuid/a0c9ef0c-6ffa-4255-97a8-d4a7f1e91aad";
+  boot.resumeDevice = "/dev/disk/by-uuid/d9206cbd-ebbd-4dd3-b182-cc68bc3744e1";
   systemd.sleep.extraConfig = ''
     HibernateDelaySec=120m
     SuspendState=mem

@@ -30,26 +30,6 @@ with lib.hm.gvariant;
       window-size = [ 720 600 ];
     };
 
-    "io/elementary/desktop/wingpanel/sound" = {
-      preferred-devices = {
-        alsa_card.pci-0000_00_1f.3:analog-output-speaker = 1706741830;
-        alsa_card.pci-0000_00_1f.3:analog-input-internal-mic = 1706496404;
-      };
-    };
-
-    "io/elementary/files/preferences" = {
-      active-tab-position = 0;
-      default-viewmode = "icon";
-      sidebar-width = 191;
-      tab-info-list = [ (mkTuple [ (mkUint32 0) "file:///home/sean" "" ]) ];
-      window-size = mkTuple [ 1395 958 ];
-      window-state = "normal";
-    };
-
-    "net/launchpad/plank/docks/dock1" = {
-      dock-items = [ "gala-multitaskingview.dockitem" "io.elementary.files.dockitem" "io.elementary.tasks.dockitem" "io.elementary.calendar.dockitem" "io.elementary.photos.dockitem" "io.elementary.switchboard.dockitem" "io.elementary.appcenter.dockitem" ];
-    };
-
     "org/gnome/Connections" = {
       first-run = false;
     };
