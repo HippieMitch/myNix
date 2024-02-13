@@ -13,7 +13,7 @@
   boot.loader.timeout = 1;
 
   # Kernel Parameters
-  boot.kernelParams = [ "quiet" "split_lock_detect=off" "preempt=full" "module_blacklist=hid_sensor_hub" "mem_sleep_default=deep" "nvme.noacpi=1" "resume=LABEL=NixOS" "resume_offset=533760" "i915.enable_guc=3" ];
+  boot.kernelParams = [ "quiet" "split_lock_detect=off" "preempt=full" "module_blacklist=hid_sensor_hub" "mem_sleep_default=deep" "nvme.noacpi=1" "resume=LABEL=NixOS" "resume_offset=533760" "i915.enable_guc=3" "i915.enable_psr=1" ];
 
   # Suspend and Hibernation Options
   boot.resumeDevice = "/dev/disk/by-uuid/d9206cbd-ebbd-4dd3-b182-cc68bc3744e1";

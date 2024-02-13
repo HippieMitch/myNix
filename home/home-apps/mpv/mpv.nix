@@ -6,7 +6,6 @@
     config = {
       hwdec = "auto";
       profile = "gpu-hq";
-      force-window = "immediate";
       vo = "gpu";
       gpu-context = "wayland";
       volume = 115;
