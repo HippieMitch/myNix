@@ -29,8 +29,8 @@
 
 # Desktop Environments
       #./desktops/gnome/gnome.nix
-      #./desktops/plasma/plasma5.nix
-      ./desktops/plasma/plasma6.nix
+      ./desktops/plasma/plasma5.nix
+      #./desktops/plasma/plasma6.nix
       #./desktops/cosmic/cosmic.nix
       #./desktops/cinnamon/cinnamon.nix
       #./desktops/xfce/xfce.nix
