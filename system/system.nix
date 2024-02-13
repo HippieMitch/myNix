@@ -164,7 +164,7 @@
   hardware.opengl = {
     enable = true;
     extraPackages = with pkgs; [
-      unstable.intel-compute-runtime
+      intel-compute-runtime
       intel-media-driver
       vaapiIntel
       vaapiVdpau
