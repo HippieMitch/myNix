@@ -17,7 +17,7 @@ home.packages = with pkgs; [
     macchina
     obs-studio
     protonup-qt
-    qbittorrent
+    stable.qbittorrent
     qpwgraph
     thunderbird
     (vscode-with-extensions.override {
