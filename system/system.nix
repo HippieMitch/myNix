@@ -58,17 +58,17 @@
 
   networking = {
     hostName = "spaceghost";
-    wireless.iwd = {
+ /*   wireless.iwd = {
       enable = true;
       settings = {
         Settings = {
           AutoConnect = true;
         };
       };
-    };
+    }; */
     networkmanager = {
       enable = true;
-      wifi.backend = "iwd";
+      wifi.backend = "wpa_supplicant";
   };
 };
 
