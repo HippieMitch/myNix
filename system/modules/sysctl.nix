@@ -16,7 +16,6 @@
     "vm.dirty_writeback_centisecs" = 1500;
     "vm.page-cluster" = 0;
     "vm.max_map_count" = 2147483642;
-    "kernel.nmi_watchdog" = 0;
     "kernel.printk" = "3 3 3 3";    
     "kernel.dmesg_restrict" = 1;
     "kernel.kptr_restrict" = 2;

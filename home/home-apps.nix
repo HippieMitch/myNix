@@ -11,7 +11,6 @@ home.packages = with pkgs; [
     discord
     element-desktop
     gocryptfs
-    komikku
     krita
     lutris
     macchina

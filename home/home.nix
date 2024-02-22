@@ -32,9 +32,6 @@
     };
   };
   
-  # XDG_DATA_DIRS profile update
-  targets.genericLinux.enable = true;
-
   home.stateVersion = "23.11";
 
   # Let home Manager install and manage itself.

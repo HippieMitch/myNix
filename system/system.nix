@@ -13,7 +13,7 @@
   boot.loader.timeout = 1;
 
   # Kernel Parameters
-  boot.kernelParams = [ "quiet" "split_lock_detect=off" "preempt=full" "module_blacklist=hid_sensor_hub" "mem_sleep_default=deep" "nvme.noacpi=1" "resume=LABEL=NixOS" "resume_offset=533760" "i915.enable_guc=3" "i915.enable_psr=1" ];
+  boot.kernelParams = [ "quiet" "preempt=full" "nosplit_lock_detect" "module_blacklist=hid_sensor_hub" "mem_sleep_default=deep" "nvme.noacpi=1" "resume=LABEL=NixOS" "resume_offset=533760" "i915.enable_guc=3" "i915.enable_psr=1" ];
 
   # Suspend and Hibernation Options
   boot.resumeDevice = "/dev/disk/by-uuid/5b6d6d9b-5681-417f-9428-ea978e87850c";
@@ -94,7 +94,7 @@
   services.xserver.enable = true;
 
   # Mesa git
-  chaotic.mesa-git.enable = true;
+  # chaotic.mesa-git.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -164,7 +164,6 @@
   hardware.opengl = {
     enable = true;
     extraPackages = with pkgs; [
-      intel-compute-runtime
       intel-media-driver
       vaapiIntel
       vaapiVdpau
