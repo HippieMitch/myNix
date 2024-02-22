@@ -109,7 +109,10 @@
   services.avahi.enable = false;
 
   # Bluetooth
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -164,6 +167,7 @@
   hardware.opengl = {
     enable = true;
     extraPackages = with pkgs; [
+      intel-compute-runtime
       intel-media-driver
       vaapiIntel
       vaapiVdpau
