@@ -3,7 +3,7 @@
 { pkgs, ... }:
 
 {
-  # Enable the KDE Plasma Desktop Environment.
+  # Enable the KDE Plasma Desktop Environment
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
   environment.plasma5.excludePackages = with pkgs.libsForQt5; [
@@ -12,7 +12,7 @@
   services.xserver.displayManager.defaultSession = "plasmawayland";
   programs.kdeconnect.enable = true;
 
-  # XDG
+  # Portals
   xdg.portal.enable = true;
 
   # Plasma Apps

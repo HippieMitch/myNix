@@ -3,8 +3,9 @@
 { pkgs, inputs, ... }:
 
 {
-home.packages = with pkgs; [
-    ani-cli
+  home.packages = with pkgs; [
+
+  # Programs
     ardour
     brave
     deja-dup
@@ -28,11 +29,12 @@ home.packages = with pkgs; [
           ms-python.python
           rust-lang.rust-analyzer
           vadimcn.vscode-lldb
-    ];
-  })
+      ];
+    })
     wineWowPackages.staging
 
   # Command Line Tools
+    ani-cli
     lsd
 
   # Development
@@ -41,6 +43,6 @@ home.packages = with pkgs; [
     rustc
     cargo
     gcc
- ];
+  ];
 }
 

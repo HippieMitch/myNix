@@ -4,62 +4,68 @@
 
 {
   environment.systemPackages = with pkgs; [
-   android-tools
-   btop
-   curl
-   distrobox
-   duf
-   firefox_nightly
-   git
-   mediawriter
-   mesa-demos
-   mpv
-   mullvad-vpn
-   nix-search-cli
-   nvd
-   tree
-   wget
-   virt-manager
 
- # Multimedia
-   ffmpeg_6-full
+  # Programs
+    firefox_nightly
+    mediawriter
+    mpv
+    mullvad-vpn
+    virt-manager
 
-   ];
+  # Command Line Tools
+    android-tools
+    btop
+    curl
+    distrobox
+    duf
+    git
+    mesa-demos
+    nix-search-cli
+    nvd
+    tree
+    wget
 
- # Remove X Server Packages
-   services.xserver.excludePackages = with pkgs; [
-     xterm
-   ];
+  # Multimedia
+    ffmpeg_6-full
 
- # Enable Virt-Manager
-  virtualisation.libvirtd.enable = true;
-  programs.dconf.enable = true;
+  ];
+
+  # Remove X Server Packages
+    services.xserver.excludePackages = with pkgs; [
+      xterm
+    ];
+
+  # Enable Virt-Manager
+    virtualisation.libvirtd.enable = true;
+    programs.dconf.enable = true;
  
- # Enable Podman
-   virtualisation = {
-    podman = {
-      enable = true;
-      dockerCompat = true;
-      defaultNetwork.settings = {
-        dns_enabled = true;
+  # Enable Podman
+    virtualisation = {
+      podman = {
+        enable = true;
+        dockerCompat = true;
+        defaultNetwork.settings = {
+          dns_enabled = true;
+        };
       };
     };
-  };
-   systemd.enableUnifiedCgroupHierarchy = true; # cgroups v.2
 
- # Enable Steam
-  programs.steam.enable = true;
+  # Enable cgroups v.2
+    systemd.enableUnifiedCgroupHierarchy = true;
 
- # Enable ADB
-  programs.adb.enable = true;
+  # Enable Steam
+    programs.steam.enable = true;
 
- # System Fonts
-  fonts.packages = with pkgs; [
-    dejavu_fonts
-    jetbrains-mono
-    nerdfonts
-    noto-fonts
-    open-sans
-    ubuntu_font_family
-    ];
-  }
+  # Enable ADB
+    programs.adb.enable = true;
+
+  # System Fonts
+    fonts.packages = with pkgs; [
+      dejavu_fonts
+      jetbrains-mono
+      nerdfonts
+      noto-fonts
+      open-sans
+      ubuntu_font_family
+      ];
+    }
