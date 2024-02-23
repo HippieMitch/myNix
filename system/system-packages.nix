@@ -1,4 +1,4 @@
-# System Applications
+# System Packages
 
 { inputs, pkgs, ... }:
 

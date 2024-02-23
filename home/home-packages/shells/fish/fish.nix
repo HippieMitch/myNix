@@ -23,8 +23,8 @@
 	hwconf = "sudo nvim /etc/nixos/system/hardware.nix";
 	simps = "sudo nvim /etc/nixos/system/system-imports.nix";
 	himps = "sudo nvim /etc/nixos/home/home-imports.nix";
-	spkg = "sudo nvim /etc/nixos/system/system-apps.nix";
-	hpkg = "sudo nvim /etc/nixos/home/home-apps.nix";
+	spkg = "sudo nvim /etc/nixos/system/system-packages.nix";
+	hpkg = "sudo nvim /etc/nixos/home/home-packages.nix";
 	ncheck = "cd /etc/nixos && sudo nixos-rebuild dry-run";
     ndryrun = ''cd /etc/nixos && sudo nix build ".#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result'';
 	flakeup = "cd /etc/nixos && sudo nix flake update";

@@ -1,4 +1,4 @@
-# Home Applications
+# Home Packages
 
 { pkgs, inputs, ... }:
 

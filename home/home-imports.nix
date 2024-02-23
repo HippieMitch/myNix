@@ -10,10 +10,10 @@ imports =
     ./home-packages.nix
 
   # dconf
-    #../system/desktops/gnome/dconf/dconf.nix
+    #../system/system-packages/desktops/gnome/dconf/dconf.nix
 
   # home-manager
-    #../system/desktops/xfce/xfce-home.nix
+    #../system/system-packages/desktops/xfce/xfce-home.nix
     ./home-packages/mpv/mpv.nix
     ./home-packages/shells/fish/fish.nix
     #./home-packages/shells/zsh/zsh.nix

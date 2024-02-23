@@ -28,17 +28,17 @@
     ./daemons/tlp.nix
 
   # Desktop Environments
-    #./desktops/gnome/gnome.nix
-    ./desktops/plasma/plasma5.nix
-    #./desktops/plasma/plasma6.nix
-    #./desktops/cosmic/cosmic.nix
-    #./desktops/cinnamon/cinnamon.nix
-    #./desktops/xfce/xfce.nix
-    #./desktops/pantheon/pantheon.nix
-    #./desktops/budgie/budgie.nix
+    #./system-packages/desktops/gnome/gnome.nix
+    ./system-packages/desktops/plasma/plasma5.nix
+    #./system-packages/desktops/plasma/plasma6.nix
+    #./system-packages/desktops/cosmic/cosmic.nix
+    #./system-packages/desktops/cinnamon/cinnamon.nix
+    #./system-packages/desktops/xfce/xfce.nix
+    #./system-packages/desktops/pantheon/pantheon.nix
+    #./system-packages/desktops/budgie/budgie.nix
 
   # Window Managers
-    #./window-managers/hyprland/hyprland.nix
+    #./system-packages/window-managers/hyprland/hyprland.nix
 
   # Shells
     ./system-packages/shells/fish/fish.nix
