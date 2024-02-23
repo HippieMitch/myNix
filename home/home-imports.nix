@@ -6,19 +6,19 @@
 imports =
     [  
 
-# Home Applications
-    ./home-apps.nix
+  # Home Packages
+    ./home-packages.nix
 
-# dconf
+  # dconf
     #../system/desktops/gnome/dconf/dconf.nix
 
-# home-manager
+  # home-manager
     #../system/desktops/xfce/xfce-home.nix
-    ./home-apps/mpv/mpv.nix
-    ./home-apps/shells/fish/fish.nix
-    #./home-apps/shells/zsh/zsh.nix
-    #./home-apps/terminals/alacritty/alacritty.nix
-    ./home-apps/terminals/kitty/kitty.nix
-    #./home-apps/window-managers/hyprland/hyprland.nix
+    ./home-packages/mpv/mpv.nix
+    ./home-packages/shells/fish/fish.nix
+    #./home-packages/shells/zsh/zsh.nix
+    #./home-packages/terminals/alacritty/alacritty.nix
+    ./home-packages/terminals/kitty/kitty.nix
+    #./home-packages/window-managers/hyprland/hyprland.nix
   ];
 }
