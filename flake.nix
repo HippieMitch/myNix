@@ -4,33 +4,33 @@
   inputs = {
 
     # Nixpkgs Unstable
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+      nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Nixpkgs Unstable Small
-    nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
+      nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
 
     # Nixpkgs Stable
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/23.11";
+      nixpkgs-stable.url = "github:NixOS/nixpkgs/23.11";
 
     # Nixpkgs Master
-    nixpkgs-master.url = "github:NixOS/nixpkgs";
+      nixpkgs-master.url = "github:NixOS/nixpkgs";
 
-    nixpkgs.follows = "nixpkgs-unstable"; 
+      nixpkgs.follows = "nixpkgs-unstable"; 
 
     # Home Manager
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+      home-manager = {
+        url = "github:nix-community/home-manager";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
 
     # Chaotic-CX
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+      chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     # kde2nix
-   # kde2nix.url = "github:nix-community/kde2nix";
+      #kde2nix.url = "github:nix-community/kde2nix";
 
     # NixVim
-    nixvim.url = "github:nix-community/nixvim";
+      nixvim.url = "github:nix-community/nixvim";
 
   };
 
@@ -42,7 +42,7 @@
               nixpkgs-master, 
               home-manager, 
               chaotic,
-             # kde2nix,
+              #kde2nix,
               nixvim,
               ... } @ inputs:
     let
@@ -101,7 +101,7 @@
           chaotic.nixosModules.default
 
           # kde2nix Module
-         # kde2nix.nixosModules.default
+          #kde2nix.nixosModules.default
         
           # NixVim
           nixvim.nixosModules.nixvim

@@ -41,8 +41,8 @@
     #./system-packages/window-managers/hyprland/hyprland.nix
 
   # Shells
-    ./system-packages/shells/fish/fish.nix
-    #./system-packages/shells/zsh/zsh.nix
+    #./system-packages/shells/fish/fish.nix
+    ./system-packages/shells/zsh/zsh.nix
 
   # System Applications
     ./system-packages/neovim/neovim.nix
