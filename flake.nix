@@ -27,7 +27,7 @@
       chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     # kde2nix
-      #kde2nix.url = "github:nix-community/kde2nix";
+      kde2nix.url = "github:nix-community/kde2nix";
 
     # NixVim
       nixvim.url = "github:nix-community/nixvim";
@@ -42,7 +42,7 @@
               nixpkgs-master, 
               home-manager, 
               chaotic,
-              #kde2nix,
+              kde2nix,
               nixvim,
               ... } @ inputs:
     let
@@ -101,7 +101,7 @@
           chaotic.nixosModules.default
 
           # kde2nix Module
-          #kde2nix.nixosModules.default
+          kde2nix.nixosModules.default
         
           # NixVim
           nixvim.nixosModules.nixvim
