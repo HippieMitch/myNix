@@ -18,7 +18,7 @@
     macchina
     obs-studio
     protonup-qt
-    stable.qbittorrent
+    qbittorrent
     qpwgraph
     thunderbird
     (vscode-with-extensions.override {

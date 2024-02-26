@@ -86,7 +86,7 @@
           # System Configuration File
           ./system/system.nix
           
-          # Home Manager
+          # Home Manager Module
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -103,7 +103,7 @@
           # kde2nix Module
           kde2nix.nixosModules.default
         
-          # NixVim
+          # NixVim Module
           nixvim.nixosModules.nixvim
         ];
       };
