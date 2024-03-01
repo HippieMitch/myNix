@@ -24,11 +24,10 @@
     ];
     
     environment.systemPackages = with pkgs; [
-      libsForQt5.filelight
-      libsForQt5.kate
-      libsForQt5.kcalc
-      libsForQt5.kpmcore
-      libsForQt5.kcalc
+      kdePackages.filelight
+      kdePackages.kate
+      kdePackages.kcalc
+      kdePackages.kpmcore
       partition-manager
       wayland-utils
 

@@ -30,7 +30,6 @@
 
   # Desktop Environments
     #./system-packages/desktops/gnome/gnome.nix
-    #./system-packages/desktops/plasma/plasma5.nix
     ./system-packages/desktops/plasma/plasma6.nix
     #./system-packages/desktops/cosmic/cosmic.nix
     #./system-packages/desktops/cinnamon/cinnamon.nix
