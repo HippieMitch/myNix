@@ -5,18 +5,24 @@
 {
 
   # Enable the KDE Plasma Desktop Environment
-    services.xserver.displayManager.sddm.enable = true;
+    services.xserver.displayManager = {
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+      };
+      defaultSession = "plasma";
+    };
     services.xserver.desktopManager.plasma6.enable = true;
-    environment.plasma6.excludePackages = with pkgs.libsForQt5; [
-      elisa
-    ];
-    services.xserver.displayManager.defaultSession = "plasma";
     programs.kdeconnect.enable = true;
 
   # Portals
     xdg.portal.enable = true;
 
   # Plasma Packages
+    environment.plasma6.excludePackages = with pkgs.kdePackages; [
+      elisa
+    ];
+    
     environment.systemPackages = with pkgs; [
       libsForQt5.filelight
       libsForQt5.kate
