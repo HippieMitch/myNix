@@ -29,7 +29,9 @@
       kdePackages.kcalc
       kdePackages.kpmcore
       partition-manager
+      clinfo
       wayland-utils
+      vulkan-tools
 
     # Icon Themes
       qogir-icon-theme

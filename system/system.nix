@@ -33,8 +33,10 @@
   };
 
   # Power Management
-  powerManagement.enable = true;
-  powerManagement.powertop.enable = true;
+  powerManagement = {
+    enable = true;
+    powertop.enable = true;
+  };
 
   # Daemons
   services.mullvad-vpn.enable = true;
