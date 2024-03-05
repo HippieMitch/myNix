@@ -20,6 +20,7 @@
     duf
     git
     mesa-demos
+    nh
     nix-search-cli
     nvd
     tree
