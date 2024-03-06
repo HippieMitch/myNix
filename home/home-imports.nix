@@ -20,5 +20,6 @@ imports =
     #./home-packages/terminals/alacritty/alacritty.nix
     ./home-packages/terminals/kitty/kitty.nix
     #./home-packages/window-managers/hyprland/hyprland.nix
+    ./home-packages/virtualization/virt-manager/virt-manager.nix
   ];
 }

@@ -10,7 +10,6 @@
     mediawriter
     mpv
     mullvad-vpn
-    virt-manager
 
   # Command Line Tools
     android-tools
@@ -20,13 +19,15 @@
     duf
     git
     mesa-demos
-    nh
-    nix-search-cli
-    nvd
     tree
     wget
 
-  # Multimedia
+  # Nix Tools
+    nh
+    nix-search-cli
+    nvd
+
+  # Multimedia Codecs
     ffmpeg_6-full
 
   ];
@@ -38,7 +39,7 @@
 
   # Enable Virt-Manager
     virtualisation.libvirtd.enable = true;
-    programs.dconf.enable = true;
+    programs.virt-manager.enable = true;
  
   # Enable Podman
     virtualisation = {
