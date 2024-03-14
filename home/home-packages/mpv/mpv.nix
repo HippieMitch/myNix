@@ -9,6 +9,7 @@
       vo = "gpu";
       gpu-context = "wayland";
       volume = 115;
+      sid = "no";
     };
     bindings = {
       "+" = "add volume 2";
