@@ -22,11 +22,18 @@
     resumeDevice = "/dev/disk/by-uuid/bd7593e5-1681-4dae-9a4b-6fe5ba52e3d8";
   };
 
-  # Sleep Options
-  systemd.sleep.extraConfig = ''
-    HibernateDelaySec=120m
-    SuspendState=mem
-    '';
+  # Systemd
+  systemd = {
+    # systemd-boot timeout
+    extraConfig = ''
+      DefaultTimeoutStopSec=1s
+      '';
+    # Suspend Options
+    sleep.extraConfig = ''
+      HibernateDelaySec=120m
+      SuspendState=mem
+      '';
+  };
 
   # Power Management
   powerManagement = {
@@ -63,6 +70,14 @@
       '';
     };
 
+    # Pipewire
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
+
     # X11
     xserver = {
       enable = true;
@@ -73,11 +88,6 @@
       };
     };
   };
-
-  # Shutdown
-  systemd.extraConfig = ''
-    DefaultTimeoutStopSec=1s
-  '';
 
   # Networking Options
   networking = {
@@ -132,24 +142,30 @@
     # Fonts in Flatpak
     fontDir.enable = true;
   };
-  
-  # Bluetooth
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
 
-  # Enable sound with pipewire.
+  # Enable Sound
   sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    #jack.enable = true;
-    #media-session.enable = true;
+
+  # Hardware
+  hardware = {
+    # Enable Bluetooth
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    # Accelerated Video Playback
+    };
+    opengl = {
+      enable = true;
+      extraPackages = with pkgs; [
+          intel-compute-runtime
+          intel-media-driver
+          vaapiIntel
+          vaapiVdpau
+          libvdpau-va-gl
+        ];
+      };
+    # Disable PulseAudio
+    pulseaudio.enable = false;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -157,33 +173,27 @@
     isNormalUser = true;
     description = "Sean";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-    packages = with pkgs; [
-    ];
   };
 
-  # Limit Sudo
-  security.sudo.execWheelOnly = true;
+  # Security
+  security = {
+    # Limit Sudo
+    sudo.execWheelOnly = true;
+    # Pipewire Setting
+    rtkit.enable = true;
+  };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs Config
+  nixpkgs.config = {
+    allowUnfree = true;
+    # Enable Hybrid Video Playback Codec
+    packageOverrides = pkgs: {
+      vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+    };
+  };
 
   # Initial System State Version
   system.stateVersion = "24.05";
-
-  # Accelerated Video Playback
-  nixpkgs.config.packageOverrides = pkgs: {
-    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
-  };
-  hardware.opengl = {
-    enable = true;
-    extraPackages = with pkgs; [
-      intel-compute-runtime
-      intel-media-driver
-      vaapiIntel
-      vaapiVdpau
-      libvdpau-va-gl
-    ];
-  };
 
   # Nix
   nix = {
