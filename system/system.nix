@@ -8,29 +8,25 @@
   imports = [ ./system-imports.nix ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.timeout = 1;
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+      timeout = 1;
+    };
 
-  # Kernel Parameters
-  boot.kernelParams = [ "quiet" "preempt=full" "split_lock_detect=off" "module_blacklist=hid_sensor_hub" "mem_sleep_default=deep" "nvme.noacpi=1" "resume=LABEL=NixOS" "resume_offset=533760" "i915.enable_guc=3" "i915.enable_psr=1" ];
+    # Kernel Parameters
+    kernelParams = [ "quiet" "preempt=full" "split_lock_detect=off" "module_blacklist=hid_sensor_hub" "mem_sleep_default=deep" "nvme.noacpi=1" "resume=LABEL=NixOS" "resume_offset=533760" "i915.enable_guc=3" "i915.enable_psr=1" ];
 
-  # Suspend and Hibernation Options
-  boot.resumeDevice = "/dev/disk/by-uuid/bd7593e5-1681-4dae-9a4b-6fe5ba52e3d8";
+    # Resume Device
+    resumeDevice = "/dev/disk/by-uuid/bd7593e5-1681-4dae-9a4b-6fe5ba52e3d8";
+  };
+
+  # Sleep Options
   systemd.sleep.extraConfig = ''
     HibernateDelaySec=120m
     SuspendState=mem
     '';
-
-  # Suspend and Hibernation Options
-  services.logind = {
-    lidSwitch = "suspend";
-    extraConfig = ''
-      HandlePowerKey=suspend
-      IdleAction=suspend
-      IdleActionSec=12m
-    '';
-  };
 
   # Power Management
   powerManagement = {
@@ -38,28 +34,56 @@
     powertop.enable = true;
   };
 
-  # Daemons
-  services.mullvad-vpn.enable = true;
-  services.gvfs.enable = true;
-  services.irqbalance.enable = true;
-  services.thermald.enable = true;
-  services.fstrim.enable = true;
-  services.power-profiles-daemon.enable = false;
-  services.fwupd.enable = true;
-  services.fprintd.enable = true;
+  # Daemons/Services
+  services = {
+    avahi.enable = false;
+    flatpak.enable = true;
+    fprintd.enable = true;
+    fstrim.enable = true;
+    fwupd.enable = true;
+    gvfs.enable = true;
+    irqbalance.enable = true;
+    mullvad-vpn.enable = true;
+    power-profiles-daemon.enable = false;
+    printing.enable = false;
+    thermald.enable = true;
 
-  # Limit journal size
-  services.journald.extraConfig = ''
-    SystemMaxUse=50M
-  '';
+    # Limit Journal Size
+    journald.extraConfig = ''
+      SystemMaxUse=50M
+      '';
+
+    # Lid Switch and Power Button Options
+    logind = {
+      lidSwitch = "suspend";
+      extraConfig = ''
+        HandlePowerKey=suspend
+        IdleAction=suspend
+        IdleActionSec=12m
+      '';
+    };
+
+    # X11
+    xserver = {
+      enable = true;
+      videoDrivers = [ "intel" ];
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
+    };
+  };
 
   # Shutdown
   systemd.extraConfig = ''
     DefaultTimeoutStopSec=1s
   '';
 
+  # Networking Options
   networking = {
     hostName = "spaceghost";
+    # Enable Firewall
+    firewall.enable = true;
    /* wireless.iwd = {
       enable = true;
       settings = {
@@ -93,33 +117,22 @@
     };
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
   # Mesa git
   # chaotic.mesa-git.enable = true;
 
   # Font Config
-  fonts.fontconfig = {
-    subpixel = {
-      rgba = "rgb";
-      lcdfilter = "light";
-    };
-  antialias = true;
+  fonts = {
+    fontconfig = {
+      subpixel = {
+        rgba = "rgb";
+        lcdfilter = "light";
+        };
+        antialias = true;
+      };
+    # Fonts in Flatpak
+    fontDir.enable = true;
   };
   
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
-  # CUPS Printing Daemonn
-  services.printing.enable = false;
-  
-  # Avahi
-  services.avahi.enable = false;
-
   # Bluetooth
   hardware.bluetooth = {
     enable = true;
@@ -139,9 +152,6 @@
     #media-session.enable = true;
   };
 
-  # Additional Video Settings
-  services.xserver.videoDrivers = [ "intel" ]; # Wayland
-
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -160,17 +170,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Firewall
-  networking.firewall.enable = true;
-
   # Initial System State Version
   system.stateVersion = "24.05";
-
-  # Use Flatpak
-  services.flatpak.enable = true;
-
-  # Fonts in Flatpak
-  fonts.fontDir.enable = true;
 
   # Accelerated Video Playback
   nixpkgs.config.packageOverrides = pkgs: {
