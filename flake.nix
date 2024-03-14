@@ -15,6 +15,7 @@
     # Nixpkgs Master
       nixpkgs-master.url = "github:NixOS/nixpkgs";
 
+    # Current Branch
       nixpkgs.follows = "nixpkgs-unstable"; 
 
     # Home Manager

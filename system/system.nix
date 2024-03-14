@@ -152,9 +152,6 @@
     #media-session.enable = true;
   };
 
-  # Enable Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.sean = {
     isNormalUser = true;
@@ -188,13 +185,21 @@
     ];
   };
 
-  # Automatic /*Garbage*/ Collection
-  nix.gc = {
+  # Nix
+  nix = {
+    # Nix Settings
+    settings = {
+      # Enable Flakes
+      experimental-features = [ "nix-command" "flakes" ];
+      # Store Optimisation
+      auto-optimise-store = true;
+    };
+
+    # Garbage Collection
+    gc = {
      automatic = true;
      dates = "weekly";
      options = "--delete-older-than 7d";
-        };
-
-  # Nix Store Optimisation
-  nix.settings.auto-optimise-store = true;
+    };
+  };
 }
