@@ -143,9 +143,6 @@
     fontDir.enable = true;
   };
 
-  # Enable Sound
-  sound.enable = true;
-
   # Hardware
   hardware = {
     # Enable Bluetooth
