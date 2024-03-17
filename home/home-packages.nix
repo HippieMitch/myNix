@@ -7,11 +7,11 @@
 
   # Programs
     ardour
-    brave
     deja-dup
     discord
     element-desktop
     gocryptfs
+    google-chrome
     komikku
     krita
     lutris

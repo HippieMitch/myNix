@@ -14,9 +14,9 @@
 
   # Kernels
     #./kernels/cachy.nix
-    ./kernels/cachy-lto.nix
+    #./kernels/cachy-lto.nix
     #./kernels/cachy-sched-ext.nix
-    #./kernels/vanilla.nix
+    ./kernels/vanilla.nix
     #./kernels/xanmod.nix
 
   # Modules
