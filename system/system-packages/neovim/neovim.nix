@@ -10,10 +10,11 @@
       lightline.enable = true;
       neo-tree.enable = true;
       nix.enable = true;
-      noice.enable = true;
       rustaceanvim.enable = true;
+      surround.enable = true;
       telescope.enable = true;
       treesitter.enable = true;
+      which-key.enable = true;
     };
     extraPlugins = with pkgs.vimPlugins; [
       nvim-dap-python
@@ -21,10 +22,11 @@
       vim-nix
     ];
     colorschemes = {
-      ayu.enable = true;
+      catppuccin.enable = true;
     };
     options = {
       number = true;
+      relativenumber = true;
       showmatch = true;
       ignorecase = true;
       hlsearch = true;
@@ -32,6 +34,7 @@
       expandtab = true;
       shiftwidth = 2;
       wildmode = "longest,list";
+      clipboard = "unnamedplus";
     };
   };
 }
