@@ -9,6 +9,9 @@
   # Hardware Config
     ./hardware.nix
 
+  # Overlays
+    ./overlays/fprintd.nix
+
   # System Packages
     ./system-packages.nix
 

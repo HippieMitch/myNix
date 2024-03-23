@@ -17,7 +17,6 @@
     lutris
     macchina
     obs-studio
-    protonup-qt
     qbittorrent
     qpwgraph
     thunderbird
@@ -26,7 +25,6 @@
         vscodeExtensions = with vscode-extensions; [
           arrterian.nix-env-selector
           github.github-vscode-theme
-          ms-python.python
           rust-lang.rust-analyzer
           vadimcn.vscode-lldb
       ];
