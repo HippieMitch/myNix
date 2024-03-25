@@ -30,6 +30,14 @@
     # kde2nix
     #  kde2nix.url = "github:nix-community/kde2nix";
 
+    # Cosmic
+    /* 
+        nixos-cosmic = {
+        url = "github:lilyinstarlight/nixos-cosmic";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
+    */
+
     # NixVim
       nixvim.url = "github:nix-community/nixvim";
 
@@ -44,6 +52,7 @@
               home-manager, 
               chaotic,
              # kde2nix,
+             # nixos-cosmic,
               nixvim,
               ... } @ inputs:
     let
@@ -103,7 +112,18 @@
 
           # kde2nix Module
          # kde2nix.nixosModules.default
-        
+
+          # Cosmic Cache and Module
+          /*
+          {
+          nix.settings = {
+            substituters = [ "https://cosmic.cachix.org/" ];
+            trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+          };
+        }
+          nixos-cosmic.nixosModules.default 
+          */
+
           # NixVim Module
           nixvim.nixosModules.nixvim
         ];
