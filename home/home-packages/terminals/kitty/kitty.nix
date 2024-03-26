@@ -12,7 +12,7 @@
       initial_window_height = "40c";
       initial_window_width = "106c";
       kitty_mod = "ctrl+shift";
-      linux_display_server = "wayland";
+      linux_display_server = "x11";
       remember_window_size = "no";
       term = "xterm-256color";
     };

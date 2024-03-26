@@ -42,10 +42,12 @@
    gnome.dconf-editor
    gnomeExtensions.appindicator
    gnomeExtensions.caffeine
+   gnomeExtensions.clipboard-history
    gnomeExtensions.dash-to-dock
    gnomeExtensions.grand-theft-focus
-#   gnomeExtensions.gsconnect
+   gnomeExtensions.gsconnect
 #   gnomeExtensions.power-profile-switcher
+   gnomeExtensions.pop-shell
 #   gnomeExtensions.system76-scheduler
    gnomeExtensions.vitals
    gnome.gnome-tweaks
