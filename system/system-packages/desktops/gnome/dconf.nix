@@ -103,6 +103,11 @@ with lib.hm.gvariant;
       indicator-position-max = 2;
     };
 
+    "org/gnome/shell/extensions/clipboard-history" = {
+      paste-on-selection = false;
+      toggle-menu = [ "<Shift><Super>v" ];
+    };
+
     "org/gnome/shell/extensions/dash-to-dock" = {
       apply-custom-theme = false;
       background-opacity = 0.7;
@@ -123,7 +128,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/vitals" = {
-      hot-sensors = [ "__network-rx_max__" "__temperature_avg__" ];
+      hot-sensors = [ "__temperature_avg__" ];
     };
 
     "org/gnome/tweaks" = {
