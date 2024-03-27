@@ -48,7 +48,6 @@
    gnomeExtensions.dash-to-dock
    gnomeExtensions.grand-theft-focus
    gnomeExtensions.gsconnect
-   gnomeExtensions.just-perfection
 #   gnomeExtensions.power-profile-switcher
    gnomeExtensions.pop-shell
 #   gnomeExtensions.system76-scheduler

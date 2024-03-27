@@ -27,7 +27,7 @@
 	hpkg = "sudo nvim /etc/nixos/home/home-packages.nix";
 	ncheck = "cd /etc/nixos && sudo nixos-rebuild dry-run";
     ndryrun = ''cd /etc/nixos && sudo nix build ".#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result'';
-	flakeup = "cd /etc/nixos && sudo nix flake update";
+	fupd = "cd /etc/nixos && sudo nix flake update";
 	nswitch = "sudo nixos-rebuild switch --flake /etc/nixos/#spaceghost";
 	nboot = "sudo nixos-rebuild boot --flake /etc/nixos/#spaceghost";
 	nrun = "nix-shell -p";
@@ -39,7 +39,7 @@
 	ls = "lsd";
 	ndev = "nix develop";
 	nsea = "nix-search";
-	dup = "dconf dump / | dconf2nix > dconf.nix && sudo cp /home/sean/dconf.nix /etc/nixos/apps/desktops/gnome/dconf.nix && rm /home/sean/dconf.nix";
+	dup = "dconf dump / | dconf2nix > dconf.nix && sudo cp /home/sean/dconf.nix /etc/nixos/system/system-packages/desktops/gnome/dconf.nix && rm /home/sean/dconf.nix";
 	kconf = "nvim ~/.config/kitty/kitty.conf";
 	pkgver = "nvd list | grep";
 	streamhop = "sudo nix flake update --override-input nixpkgs github:NixOS/nixpkgs";
