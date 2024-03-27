@@ -24,6 +24,7 @@
    gnome-tour
    gnome.totem
    gnome.yelp
+   loupe
   ]);
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
@@ -39,6 +40,7 @@
   environment.systemPackages = with pkgs; [
    dconf2nix
    ffmpegthumbnailer
+   gnome.eog
    gnome.dconf-editor
    gnomeExtensions.appindicator
    gnomeExtensions.caffeine
@@ -46,6 +48,7 @@
    gnomeExtensions.dash-to-dock
    gnomeExtensions.grand-theft-focus
    gnomeExtensions.gsconnect
+   gnomeExtensions.just-perfection
 #   gnomeExtensions.power-profile-switcher
    gnomeExtensions.pop-shell
 #   gnomeExtensions.system76-scheduler

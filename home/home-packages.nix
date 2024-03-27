@@ -7,7 +7,6 @@
 
   # Programs
     ardour
-    deja-dup
     discord
     element-desktop
     gocryptfs

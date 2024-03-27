@@ -24,6 +24,7 @@
     #./kernels/xanmod.nix
 
   # Modules
+    ./modules/fprintd.nix
     ./modules/sysctl.nix
     ./modules/modprobe.nix
 

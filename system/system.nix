@@ -19,7 +19,7 @@
     kernelParams = [ "quiet" "preempt=full" "split_lock_detect=off" "module_blacklist=hid_sensor_hub" "mem_sleep_default=deep" "nvme.noacpi=1" "resume=LABEL=NixOS" "resume_offset=533760" "i915.enable_guc=3" "i915.enable_psr=1" ];
 
     # Resume Device
-    resumeDevice = "/dev/disk/by-uuid/bd7593e5-1681-4dae-9a4b-6fe5ba52e3d8";
+    resumeDevice = "/dev/disk/by-uuid/57cf7475-2118-4b8b-9bd6-82a387bb0e62";
   };
 
   # Systemd
