@@ -6,14 +6,42 @@ with lib.hm.gvariant;
 {
   dconf.settings = {
     "org/gnome/control-center" = {
-      last-panel = "datetime";
+      last-panel = "display";
       window-state = mkTuple [ 1021 887 false ];
+    };
+
+    "org/gnome/desktop/app-folders" = {
+      folder-children = [ "Utilities" "YaST" "Pardus" ];
+    };
+
+    "org/gnome/desktop/app-folders/folders/Pardus" = {
+      categories = [ "X-Pardus-Apps" ];
+      name = "X-Pardus-Apps.directory";
+      translate = true;
+    };
+
+    "org/gnome/desktop/app-folders/folders/Utilities" = {
+      apps = [ "gnome-abrt.desktop" "gnome-system-log.desktop" "nm-connection-editor.desktop" "org.gnome.baobab.desktop" "org.gnome.Connections.desktop" "org.gnome.DejaDup.desktop" "org.gnome.Dictionary.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.Evince.desktop" "org.gnome.FileRoller.desktop" "org.gnome.fonts.desktop" "org.gnome.Loupe.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.tweaks.desktop" "org.gnome.Usage.desktop" "vinagre.desktop" ];
+      categories = [ "X-GNOME-Utilities" ];
+      name = "X-GNOME-Utilities.directory";
+      translate = true;
+    };
+
+    "org/gnome/desktop/app-folders/folders/YaST" = {
+      categories = [ "X-SuSE-YaST" ];
+      name = "suse-yast.directory";
+      translate = true;
     };
 
     "org/gnome/desktop/background" = {
       picture-options = "zoom";
-      picture-uri = "file:///home/sean/.config/background";
-      picture-uri-dark = "file:///home/sean/.config/background";
+      picture-uri = "file:///home/sean/.local/share/eog-wallpaper.jpg";
+      picture-uri-dark = "file:///home/sean/.local/share/eog-wallpaper.jpg";
+    };
+
+    "org/gnome/desktop/input-sources" = {
+      sources = [ (mkTuple [ "xkb" "us" ]) ];
+      xkb-options = [ "terminate:ctrl_alt_bksp" ];
     };
 
     "org/gnome/desktop/interface" = {
@@ -26,6 +54,10 @@ with lib.hm.gvariant;
       font-name = "Ubuntu 11";
       icon-theme = "Tela-nord";
       monospace-font-name = "SauceCodePro Nerd Font 13";
+    };
+
+    "org/gnome/desktop/peripherals/keyboard" = {
+      numlock-state = true;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
@@ -41,9 +73,14 @@ with lib.hm.gvariant;
       titlebar-font = "Ubuntu Bold 11";
     };
 
+    "org/gnome/evolution-data-server" = {
+      migrated = true;
+    };
+
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
       edge-tiling = true;
+      experimental-features = [ "scale-monitor-framebuffer" ];
     };
 
     "org/gnome/nautilus/icon-view" = {
@@ -87,10 +124,11 @@ with lib.hm.gvariant;
     "org/gnome/shell" = {
       enabled-extensions = [ "appindicatorsupport@rgcjonas.gmail.com" "caffeine@patapon.info" "clipboard-history@alexsaveau.dev" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "gsconnect@andyholmes.github.io" "pop-shell@system76.com" "Vitals@CoreCoding.com" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "firefox.desktop" "thunderbird.desktop" "discord.desktop" "element-desktop.desktop" "steam.desktop" "net.lutris.Lutris.desktop" "ardour8.desktop" "com.obsproject.Studio.desktop" "org.kde.krita.desktop" "pycharm-community.desktop" "codium.desktop" "virt-manager.desktop" ];
+      welcome-dialog-last-shown-version = "45.5";
     };
 
     "org/gnome/shell/extensions/caffeine" = {
-      indicator-position-max = 2;
+      indicator-position-max = 1;
     };
 
     "org/gnome/shell/extensions/clipboard-history" = {
@@ -118,6 +156,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/gsconnect" = {
+      enabled = false;
       id = "5e0de846-6771-4879-ba62-8f3f6196dd65";
       name = "spaceghost";
     };
@@ -126,8 +165,17 @@ with lib.hm.gvariant;
       hot-sensors = [ "__temperature_avg__" ];
     };
 
+    "org/gnome/software" = {
+      check-timestamp = mkInt64 1711509213;
+      first-run = false;
+    };
+
     "org/gnome/tweaks" = {
       show-extensions-notice = false;
+    };
+
+    "org/gtk/gtk4/settings/file-chooser" = {
+      show-hidden = false;
     };
 
     "org/gtk/settings/file-chooser" = {
@@ -135,8 +183,8 @@ with lib.hm.gvariant;
     };
 
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" "qemu:///system" ];
-      uris = [ "qemu:///system" "qemu:///system" ];
+      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
     };
 
   };
