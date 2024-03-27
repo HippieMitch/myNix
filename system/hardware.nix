@@ -19,7 +19,12 @@
       options = [ "subvol=root" "ssd" "noatime" "compress=zstd:1" ];
     };
 
-  boot.initrd.luks.devices."nixcrypt".device = "/dev/disk/by-uuid/520ce856-fa1a-4f4f-9a3b-02dc88bb9a08";
+  boot.initrd.luks.devices = {
+    nixcrypt = {
+      device = "/dev/disk/by-uuid/520ce856-fa1a-4f4f-9a3b-02dc88bb9a08";
+      allowDiscards = true;
+    };
+  };
 
   fileSystems."/home" =
     { device = "/dev/disk/by-uuid/57cf7475-2118-4b8b-9bd6-82a387bb0e62";
