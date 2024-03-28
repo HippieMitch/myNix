@@ -1,0 +1,41 @@
+# Use KDE Plasma
+  
+{ pkgs, ... }:
+
+{
+
+  # Enable the KDE Plasma Desktop Environment
+    services.xserver.displayManager = {
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+      };
+      defaultSession = "plasma";
+    };
+    services.xserver.desktopManager.plasma6.enable = true;
+    programs.kdeconnect.enable = true;
+
+  # Portals
+    xdg.portal.enable = true;
+
+  # Plasma Packages
+    environment.plasma6.excludePackages = with pkgs.kdePackages; [
+      elisa
+    ];
+    
+    environment.systemPackages = with pkgs; [
+      kdePackages.filelight
+      kdePackages.kate
+      kdePackages.kcalc
+      kdePackages.kpmcore
+      partition-manager
+      clinfo
+      wayland-utils
+      vulkan-tools
+
+    # Icon Themes
+      qogir-icon-theme
+      tela-icon-theme 
+
+    ];
+}
