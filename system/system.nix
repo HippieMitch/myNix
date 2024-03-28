@@ -65,7 +65,7 @@
     logind = {
       lidSwitch = "suspend";
       extraConfig = ''
-        HandlePowerKey=suspend
+        HandlePowerKey=hibernate
         IdleAction=suspend
         IdleActionSec=12m
       '';
