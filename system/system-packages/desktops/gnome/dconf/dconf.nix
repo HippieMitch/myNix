@@ -5,8 +5,14 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
+    "org/gnome/TextEditor" = {
+      restore-session = false;
+      style-scheme = "classic-dark";
+      style-variant = "dark";
+    };
+
     "org/gnome/control-center" = {
-      last-panel = "display";
+      last-panel = "keyboard";
       window-state = mkTuple [ 1021 887 false ];
     };
 
@@ -51,9 +57,21 @@ with lib.hm.gvariant;
       document-font-name = "Open Sans 12";
       font-antialiasing = "grayscale";
       font-hinting = "slight";
-      font-name = "Ubuntu 11";
+      font-name = "Museo Sans 11";
       icon-theme = "Tela-nord";
       monospace-font-name = "SauceCodePro Nerd Font 13";
+    };
+
+    "org/gnome/desktop/notifications" = {
+      application-children = [ "gnome-network-panel" "org-gnome-texteditor" ];
+    };
+
+    "org/gnome/desktop/notifications/application/gnome-network-panel" = {
+      application-id = "gnome-network-panel.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-gnome-texteditor" = {
+      application-id = "org.gnome.TextEditor.desktop";
     };
 
     "org/gnome/desktop/peripherals/keyboard" = {
@@ -70,7 +88,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/wm/preferences" = {
-      titlebar-font = "Ubuntu Bold 11";
+      titlebar-font = "Museo Sans Bold 11";
     };
 
     "org/gnome/evolution-data-server" = {
@@ -99,7 +117,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" ];
+      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/" ];
       home = [ "<Super>f" ];
     };
 
@@ -119,6 +137,12 @@ with lib.hm.gvariant;
       binding = "<Super>u";
       command = "kitty distrobox-enter arch";
       name = "Arch Container";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+      binding = "<Super>e";
+      command = "gnome-text-editor";
+      name = "Text Editor";
     };
 
     "org/gnome/shell" = {
@@ -142,7 +166,7 @@ with lib.hm.gvariant;
       click-action = "focus-minimize-or-previews";
       custom-background-color = false;
       custom-theme-shrink = true;
-      dash-max-icon-size = 48;
+      dash-max-icon-size = 43;
       disable-overview-on-startup = true;
       dock-position = "BOTTOM";
       height-fraction = 0.9;
@@ -152,7 +176,7 @@ with lib.hm.gvariant;
       scroll-action = "cycle-windows";
       show-apps-at-top = true;
       show-mounts = false;
-      transparency-mode = "FIXED";
+      transparency-mode = "DYNAMIC";
     };
 
     "org/gnome/shell/extensions/gsconnect" = {
@@ -161,12 +185,16 @@ with lib.hm.gvariant;
       name = "spaceghost";
     };
 
+    "org/gnome/shell/extensions/pop-shell" = {
+      tile-by-default = false;
+    };
+
     "org/gnome/shell/extensions/vitals" = {
       hot-sensors = [ "__temperature_avg__" ];
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1711509213;
+      check-timestamp = mkInt64 1711548955;
       first-run = false;
     };
 
@@ -183,8 +211,8 @@ with lib.hm.gvariant;
     };
 
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
-      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
     };
 
   };

@@ -10,7 +10,7 @@
     ./hardware.nix
 
   # Overlays
-    ./overlays/fprintd.nix
+    #./overlays/fprintd.nix
     ./overlays/mutter-triple-buffering.nix
 
   # System Packages
