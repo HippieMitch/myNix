@@ -48,6 +48,7 @@
    gnomeExtensions.dash-to-dock
    gnomeExtensions.grand-theft-focus
    gnomeExtensions.gsconnect
+   gnomeExtensions.hibernate-status-button
 #   gnomeExtensions.power-profile-switcher
    gnomeExtensions.pop-shell
 #   gnomeExtensions.system76-scheduler

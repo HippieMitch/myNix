@@ -9,6 +9,9 @@
   # Hardware Config
     ./hardware.nix
 
+  # Machines
+    ./machines/fw13.nix
+
   # Overlays
     #./overlays/fprintd.nix
     ./overlays/mutter-triple-buffering.nix

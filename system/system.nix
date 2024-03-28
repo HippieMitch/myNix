@@ -16,7 +16,7 @@
     };
 
     # Kernel Parameters
-    kernelParams = [ "quiet" "preempt=full" "split_lock_detect=off" "module_blacklist=hid_sensor_hub" "mem_sleep_default=deep" "nvme.noacpi=1" "resume=LABEL=NixOS" "resume_offset=533760" "i915.enable_guc=3" "i915.enable_psr=1" ];
+    kernelParams = [ "quiet" "preempt=full" "split_lock_detect=off" "resume=LABEL=NixOS" "resume_offset=533760" "i915.enable_guc=3" "i915.enable_psr=1" ];
 
     # Resume Device
     resumeDevice = "/dev/disk/by-uuid/57cf7475-2118-4b8b-9bd6-82a387bb0e62";
@@ -30,8 +30,8 @@
       '';
     # Suspend Options
     sleep.extraConfig = ''
-      HibernateDelaySec=120m
-      SuspendState=mem
+      HibernateDelaySec=480m
+      SuspendState=freeze
       '';
   };
 
@@ -50,7 +50,6 @@
     fstrim.enable = true;
     fwupd.enable = true;
     gvfs.enable = true;
-    irqbalance.enable = true;
     mullvad-vpn.enable = true;
     power-profiles-daemon.enable = false;
     printing.enable = false;
@@ -63,10 +62,10 @@
 
     # Lid Switch and Power Button Options
     logind = {
-      lidSwitch = "suspend";
+      lidSwitch = "suspend-then-hibernate";
       extraConfig = ''
-        HandlePowerKey=hibernate
-        IdleAction=suspend
+        HandlePowerKey=suspend-then-hibernate
+        IdleAction=suspend-then-hibernate
         IdleActionSec=12m
       '';
     };

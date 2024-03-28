@@ -11,6 +11,23 @@ with lib.hm.gvariant;
       style-variant = "dark";
     };
 
+    "org/gnome/calculator" = {
+      accuracy = 9;
+      angle-units = "degrees";
+      base = 10;
+      button-mode = "basic";
+      number-format = "automatic";
+      show-thousands = false;
+      show-zeroes = false;
+      source-currency = "";
+      source-units = "degree";
+      target-currency = "";
+      target-units = "radian";
+      window-maximized = false;
+      window-size = mkTuple [ 360 502 ];
+      word-size = 64;
+    };
+
     "org/gnome/control-center" = {
       last-panel = "info-overview";
       window-state = mkTuple [ 1021 887 false ];
@@ -99,6 +116,25 @@ with lib.hm.gvariant;
       migrated = true;
     };
 
+    "org/gnome/gnome-system-monitor" = {
+      current-tab = "processes";
+      maximized = false;
+      network-total-in-bits = false;
+      show-dependencies = false;
+      show-whose-processes = "all";
+      window-state = mkTuple [ 1227 932 26 23 ];
+    };
+
+    "org/gnome/gnome-system-monitor/disktreenew" = {
+      col-6-visible = true;
+      col-6-width = 0;
+    };
+
+    "org/gnome/gnome-system-monitor/proctree" = {
+      col-11-visible = true;
+      col-11-width = 48;
+    };
+
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
       edge-tiling = true;
@@ -154,13 +190,13 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
-      enabled-extensions = [ "appindicatorsupport@rgcjonas.gmail.com" "caffeine@patapon.info" "clipboard-history@alexsaveau.dev" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "gsconnect@andyholmes.github.io" "pop-shell@system76.com" "Vitals@CoreCoding.com" ];
+      enabled-extensions = [ "appindicatorsupport@rgcjonas.gmail.com" "caffeine@patapon.info" "clipboard-history@alexsaveau.dev" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "gsconnect@andyholmes.github.io" "pop-shell@system76.com" "Vitals@CoreCoding.com" "hibernate-status@dromi" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "firefox.desktop" "thunderbird.desktop" "discord.desktop" "element-desktop.desktop" "steam.desktop" "net.lutris.Lutris.desktop" "ardour8.desktop" "com.obsproject.Studio.desktop" "org.kde.krita.desktop" "pycharm-community.desktop" "codium.desktop" "virt-manager.desktop" ];
       welcome-dialog-last-shown-version = "45.5";
     };
 
     "org/gnome/shell/extensions/caffeine" = {
-      indicator-position-max = 2;
+      indicator-position-max = 1;
     };
 
     "org/gnome/shell/extensions/clipboard-history" = {
@@ -202,7 +238,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1711548955;
+      check-timestamp = mkInt64 1711639717;
       first-run = false;
     };
 
@@ -230,8 +266,8 @@ with lib.hm.gvariant;
     };
 
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
-      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
     };
 
   };
