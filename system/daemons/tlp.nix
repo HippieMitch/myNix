@@ -13,6 +13,8 @@
       CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
       PLATFORM_PROFILE_ON_AC = "performance";
       PLATFORM_PROFILE_ON_BAT = "balanced";
+      PCIE_ASPM_ON_AC = "default";
+      PCIE_ASPM_ON_BAT = "default";
       CPU_BOOST_ON_AC = 1;
       CPU_BOOST_ON_BAT = 1;
       CPU_HWP_DYN_BOOST_ON_AC = 1;
@@ -22,6 +24,7 @@
       CPU_MAX_PERF_ON_AC = 100;
       CPU_MIN_PERF_ON_BAT = 0;
       CPU_MAX_PERF_ON_BAT = 65;
+      RUNTIME_PM_ON_AC = "on";
       RUNTIME_PM_ON_BAT = "auto";
   };
  };

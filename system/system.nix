@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, lib, config, pkgs, ... }:
+{ lib, config, pkgs, ... }:
 
 {
   imports = [ ./system-imports.nix ];
@@ -30,8 +30,7 @@
       '';
     # Suspend Options
     sleep.extraConfig = ''
-      HibernateDelaySec=480m
-      SuspendState=freeze
+      HibernateDelaySec=120m
       '';
   };
 
