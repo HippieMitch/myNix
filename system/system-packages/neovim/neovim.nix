@@ -24,7 +24,7 @@
     colorschemes = {
       catppuccin.enable = true;
     };
-    options = {
+    opts = {
       number = true;
       relativenumber = true;
       showmatch = true;

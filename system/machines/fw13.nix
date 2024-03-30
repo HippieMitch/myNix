@@ -11,6 +11,8 @@
     "acpi_osi=\"!Windows 2020\""
     # For Power consumption
     "nvme.noacpi=1"
+    # Use deep suspension by default
+    "mem_sleep_default=deep"
     ];
 
     # Module is not used for Framework EC but causes boot time error log.
