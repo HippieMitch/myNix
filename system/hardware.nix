@@ -14,32 +14,32 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/9ee13ee7-ddaa-4055-b709-7605eeaea53f";
+    { device = "/dev/disk/by-uuid/a9255e3c-4e1a-4d60-8c52-fd8cad980ac0";
       fsType = "btrfs";
       options = [ "subvol=root" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   boot.initrd.luks.devices = {
-      nixcrypt = {
-        device = "/dev/disk/by-uuid/13eb1068-f6e9-4140-967d-61fbfd52eaca";
-        allowDiscards = true;
-      };
-   };
+    nixcrypt = {
+      device = "/dev/disk/by-uuid/de3dd404-6daf-4c75-bc03-603872878a88";
+      allowDiscards = true;
+    };
+  };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/9ee13ee7-ddaa-4055-b709-7605eeaea53f";
+    { device = "/dev/disk/by-uuid/a9255e3c-4e1a-4d60-8c52-fd8cad980ac0";
       fsType = "btrfs";
       options = [ "subvol=home" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/9ee13ee7-ddaa-4055-b709-7605eeaea53f";
+    { device = "/dev/disk/by-uuid/a9255e3c-4e1a-4d60-8c52-fd8cad980ac0";
       fsType = "btrfs";
       options = [ "subvol=nix" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/ABF7-E2A7";
+    { device = "/dev/disk/by-uuid/F392-94FE";
       fsType = "vfat";
     };
 
@@ -50,7 +50,7 @@
     };
 
   fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/9ee13ee7-ddaa-4055-b709-7605eeaea53f";
+    { device = "/dev/disk/by-uuid/a9255e3c-4e1a-4d60-8c52-fd8cad980ac0";
       fsType = "btrfs";
       options = [ "subvol=swap" ];
     };

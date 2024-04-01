@@ -14,7 +14,7 @@
 
   # Overlays
     #./overlays/fprintd.nix
-    ./overlays/mutter-triple-buffering.nix
+    #./overlays/mutter-triple-buffering.nix
 
   # System Packages
     ./system-packages.nix
