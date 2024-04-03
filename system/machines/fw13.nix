@@ -16,7 +16,7 @@
     ];
 
     # Module is not used for Framework EC but causes boot time error log.
-    blacklistedKernelModules = [ "cros-usbpd-charger" ];
+    blacklistedKernelModules = [ "cros-usbpd-charger" "cros_ec_lcps" ];
 
     # Fix TRRS headphones missing mic
     extraModprobeConfig = lib.mkIf (lib.versionOlder pkgs.linux.version "6.6.8") ''
