@@ -21,7 +21,6 @@
     mesa-demos
     tree
     wget
-    stable.xz
 
   # Nix Tools
     nh

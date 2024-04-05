@@ -27,13 +27,13 @@
     #./kernels/xanmod.nix
 
   # Modules
-    #./modules/fprintd.nix
     ./modules/sysctl.nix
     ./modules/modprobe.nix
 
   # Daemons
     ./daemons/schedulers/ananicy-cpp.nix
     #./daemons/schedulers/system76-scheduler.nix
+    #./daemons/fprintd.nix
     ./daemons/tlp.nix
 
   # Desktop Environments

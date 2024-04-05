@@ -8,10 +8,8 @@
   # Programs
     ardour
     discord
-    element-desktop
     gocryptfs
     google-chrome
-    komikku
     krita
     lutris
     macchina
