@@ -14,7 +14,7 @@
       PLATFORM_PROFILE_ON_AC = "performance";
       PLATFORM_PROFILE_ON_BAT = "balanced";
       PCIE_ASPM_ON_AC = "default";
-      PCIE_ASPM_ON_BAT = "default";
+      PCIE_ASPM_ON_BAT = "powersupersave";
       CPU_BOOST_ON_AC = 1;
       CPU_BOOST_ON_BAT = 1;
       CPU_HWP_DYN_BOOST_ON_AC = 1;

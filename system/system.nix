@@ -60,14 +60,14 @@
       '';
 
     # Lid Switch and Power Button Options
-   # logind = {
-   #   lidSwitch = "suspend-then-hibernate";
-   #   extraConfig = ''
-   #     HandlePowerKey=suspend-then-hibernate
-   #     IdleAction=suspend-then-hibernate
-   #     IdleActionSec=12m
-   #   '';
-   # };
+    logind = {
+      lidSwitch = "suspend-then-hibernate";
+      extraConfig = ''
+        HandlePowerKey=suspend-then-hibernate
+        IdleAction=suspend-then-hibernate
+        IdleActionSec=12m
+      '';
+    };
 
     # Pipewire
     pipewire = {
