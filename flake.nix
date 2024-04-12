@@ -30,6 +30,9 @@
     # kde2nix
     #  kde2nix.url = "github:nix-community/kde2nix";
 
+    # Gnome 46
+    #  nixpkgs-gnome-46.url = "github:NixOS/nixpkgs/gnome-46";
+
     # Cosmic
     /* 
         nixos-cosmic = {
