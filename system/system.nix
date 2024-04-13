@@ -127,7 +127,7 @@
   };
 
   # Mesa git
-  # chaotic.mesa-git.enable = true;
+  chaotic.mesa-git.enable = true;
 
   # Font Config
   fonts = {
