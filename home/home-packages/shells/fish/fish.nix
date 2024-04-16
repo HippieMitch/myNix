@@ -49,4 +49,7 @@
       set -Ux "LIBVA_DRIVER_NAME" "iHD";
     '';
   };
+  programs.direnv = {
+    enableFishIntegration = true;
+  };
 }

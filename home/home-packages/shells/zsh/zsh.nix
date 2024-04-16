@@ -64,4 +64,7 @@ programs.zsh = {
       }
     ];
   };
+  programs.direnv = {
+    enableZshIntegration = true;
+  };
 }
