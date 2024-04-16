@@ -39,4 +39,10 @@
 
   # Hide nixpkgs release check for point release upgrades.
   home.enableNixpkgsReleaseCheck = false;
+
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true; # see note on other shells below
+    nix-direnv.enable = true;
+    };
   }

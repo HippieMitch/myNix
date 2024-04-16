@@ -9,8 +9,8 @@
       confirm_os_window_close = 0;
       font_family = "SauceCodePro NF Medium";
       font_size = 14;
-      initial_window_height = "40c";
-      initial_window_width = "106c";
+      initial_window_height = "38c";
+      initial_window_width = "104c";
       kitty_mod = "ctrl+shift";
       linux_display_server = "x11";
       remember_window_size = "no";

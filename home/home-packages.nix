@@ -24,6 +24,7 @@
           github.github-vscode-theme
           rust-lang.rust-analyzer
           vadimcn.vscode-lldb
+          vscode-extensions.golang.go
       ];
     })
     wineWowPackages.staging
@@ -34,10 +35,6 @@
 
   # Development
     jetbrains.pycharm-community
-    python3
-    rustc
-    cargo
-    gcc
   ];
 }
 
