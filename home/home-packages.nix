@@ -12,7 +12,6 @@
     google-chrome
     krita
     lutris
-    macchina
     obs-studio
     qbittorrent
     qpwgraph
@@ -20,9 +19,7 @@
     (vscode-with-extensions.override {
       vscode = vscodium;
         vscodeExtensions = with vscode-extensions; [
-          arrterian.nix-env-selector
           github.github-vscode-theme
-          rust-lang.rust-analyzer
           vadimcn.vscode-lldb
           vscode-extensions.golang.go
       ];
@@ -31,6 +28,7 @@
 
   # Command Line Tools
     ani-cli
+    fastfetch
     lsd
 
   # Development
