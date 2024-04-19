@@ -13,7 +13,7 @@
     ./machines/fw13.nix
 
   # Overlays
-    #./overlays/fprintd.nix
+    #./overlays/fprintd-bypass-pam-testing.nix
     #./overlays/mutter-triple-buffering.nix
 
   # System Packages

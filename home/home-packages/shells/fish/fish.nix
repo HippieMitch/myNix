@@ -25,11 +25,12 @@
 	himps = "sudo nvim /etc/nixos/home/home-imports.nix";
 	spkg = "sudo nvim /etc/nixos/system/system-packages.nix";
 	hpkg = "sudo nvim /etc/nixos/home/home-packages.nix";
-	ncheck = "cd /etc/nixos && sudo nixos-rebuild dry-run";
-    ndryrun = ''cd /etc/nixos && sudo nix build ".#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result'';
+        #ncheck = "cd /etc/nixos && sudo nixos-rebuild dry-run";
+        ndry = "nh os test --ask /etc/nixos";
+    #ndryrun = ''cd /etc/nixos && sudo nix build ".#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result'';
 	fupd = "cd /etc/nixos && sudo nix flake update";
-	nswitch = "nh os switch --ask /etc/nixos";
-	nboot = "nh os boot --ask /etc/nixos";
+	nswitch = "nh os switch /etc/nixos";
+	nboot = "nh os boot /etc/nixos";
 	nrun = "nix-shell -p";
 	ngens = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
 	nclean = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
