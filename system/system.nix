@@ -37,7 +37,6 @@
   # Power Management
   powerManagement = {
     enable = true;
-    powertop.enable = true;
   };
 
   # Daemons/Services
