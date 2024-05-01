@@ -8,7 +8,6 @@
   # Programs
     ardour
     discord
-    gocryptfs
     google-chrome
     krita
     lutris

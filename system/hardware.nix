@@ -5,8 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+
+    [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "uas" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
@@ -14,44 +14,44 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/74b15833-5094-4ff5-9802-f3fbfafe0e5f";
+    { device = "/dev/disk/by-uuid/214321a5-93d3-4a59-86aa-4c4563ee1450";
       fsType = "btrfs";
       options = [ "subvol=root" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   boot.initrd.luks.devices = {
     nixcrypt = {
-      device = "/dev/disk/by-uuid/96e1d968-648d-46fe-b1aa-877c9fa23742";
+      device = "/dev/disk/by-uuid/13e67072-a392-496f-ba9d-d87f42ea275a";
       allowDiscards = true;
       };
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/74b15833-5094-4ff5-9802-f3fbfafe0e5f";
+    { device = "/dev/disk/by-uuid/214321a5-93d3-4a59-86aa-4c4563ee1450";
       fsType = "btrfs";
       options = [ "subvol=home" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/74b15833-5094-4ff5-9802-f3fbfafe0e5f";
+    { device = "/dev/disk/by-uuid/214321a5-93d3-4a59-86aa-4c4563ee1450";
       fsType = "btrfs";
       options = [ "subvol=nix" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/56D2-8F24";
+    { device = "/dev/disk/by-uuid/1E7A-657C";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  fileSystems."/mnt/secondary" =
+    fileSystems."/mnt/secondary" =
     { device = "/dev/sda1";
       fsType = "ext4";
       options = [ "noatime" "nosuid" "nodev" "nofail" "x-gvfs-show" "x-udisks-auth" "x-gvfs-name=Secondary" ];
     };
 
   fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/74b15833-5094-4ff5-9802-f3fbfafe0e5f";
+    { device = "/dev/disk/by-uuid/214321a5-93d3-4a59-86aa-4c4563ee1450";
       fsType = "btrfs";
       options = [ "subvol=swap" ];
     };
