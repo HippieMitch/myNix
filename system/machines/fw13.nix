@@ -16,7 +16,7 @@
     ];
 
     # Module is not used for Framework EC but causes boot time error log.
-    blacklistedKernelModules = [ "cros-usbpd-charger" "cros_ec_lcps" ];
+    blacklistedKernelModules = [ "cros-usbpd-charger" "cros_ec_lcps" "hid-sensor-hub" ];
 
     # Fix TRRS headphones missing mic
     extraModprobeConfig = lib.mkIf (lib.versionOlder pkgs.linux.version "6.6.8") ''
@@ -28,8 +28,20 @@
   services.udev.extraRules = ''
     # Fix headphone noise when on powersave
     SUBSYSTEM=="pci", ATTR{vendor}=="0x8086", ATTR{device}=="0xa0e0", ATTR{power/control}="on"
+    
     # Ethernet expansion card support
     ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8156", ATTR{power/autosuspend}="20"
+
+    # Power Management
+    SUBSYSTEM!="pci", GOTO="power_runtime_rules_end"
+    ACTION!="add", GOTO="power_runtime_rules_end"
+
+    KERNEL=="????:??:??.?"
+    PROGRAM="/run/current-system/sw/bin/sleep 0.1"
+    
+    ATTR{power/control}=="*", ATTR{power/control}="auto"
+    
+    LABEL="power_runtime_rules_end"
   '';
 
   hardware = {

@@ -29,7 +29,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "info-overview";
+      last-panel = "multitasking";
       window-state = mkTuple [ 1021 887 false ];
     };
 
@@ -72,6 +72,7 @@ with lib.hm.gvariant;
       clock-show-date = false;
       cursor-theme = "Qogir";
       document-font-name = "Open Sans 12";
+      enable-hot-corners = false;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
       font-name = "Museo Sans 11";
@@ -266,8 +267,8 @@ with lib.hm.gvariant;
     };
 
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
-      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
     };
 
   };

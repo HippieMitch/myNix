@@ -33,12 +33,12 @@
   # Daemons
     ./daemons/schedulers/ananicy-cpp.nix
     #./daemons/schedulers/system76-scheduler.nix
-    #./daemons/fprintd.nix
+    ./daemons/fprintd.nix
     ./daemons/tlp.nix
 
   # Desktop Environments
-    #./system-packages/desktops/gnome/gnome.nix
-    ./system-packages/desktops/plasma/plasma6.nix
+    ./system-packages/desktops/gnome/gnome.nix
+    #./system-packages/desktops/plasma/plasma6.nix
     #./system-packages/desktops/cosmic/cosmic.nix
     #./system-packages/desktops/cinnamon/cinnamon.nix
     #./system-packages/desktops/xfce/xfce.nix
