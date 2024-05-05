@@ -5,32 +5,28 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
+    "ca/desrt/dconf-editor" = {
+      saved-pathbar-path = "/org/gnome/mutter/";
+      saved-view = "/org/gnome/mutter/";
+      show-warning = false;
+      window-height = 500;
+      window-is-maximized = false;
+      window-width = 540;
+    };
+
+    "org/gnome/Extensions" = {
+      window-height = 933;
+      window-width = 1067;
+    };
+
     "org/gnome/TextEditor" = {
-      restore-session = false;
-      style-scheme = "classic-dark";
+      style-scheme = "Adwaita-dark";
       style-variant = "dark";
     };
 
-    "org/gnome/calculator" = {
-      accuracy = 9;
-      angle-units = "degrees";
-      base = 10;
-      button-mode = "basic";
-      number-format = "automatic";
-      show-thousands = false;
-      show-zeroes = false;
-      source-currency = "";
-      source-units = "degree";
-      target-currency = "";
-      target-units = "radian";
-      window-maximized = false;
-      window-size = mkTuple [ 360 502 ];
-      word-size = 64;
-    };
-
     "org/gnome/control-center" = {
-      last-panel = "user-accounts";
-      window-state = mkTuple [ 1021 887 false ];
+      last-panel = "privacy";
+      window-state = mkTuple [ 1332 1012 false ];
     };
 
     "org/gnome/desktop/app-folders" = {
@@ -58,8 +54,8 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/background" = {
       picture-options = "zoom";
-      picture-uri = "file:///home/sean/.config/background";
-      picture-uri-dark = "file:///home/sean/.config/background";
+      picture-uri = "file:///home/sean/.local/share/eog-wallpaper.png";
+      picture-uri-dark = "file:///home/sean/.local/share/eog-wallpaper.png";
     };
 
     "org/gnome/desktop/input-sources" = {
@@ -68,41 +64,24 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/interface" = {
-      clock-format = "12h";
-      clock-show-date = false;
       cursor-theme = "Qogir";
-      document-font-name = "Open Sans 12";
+      document-font-name = "Noto Sans 12";
       enable-hot-corners = false;
       font-antialiasing = "rgba";
       font-hinting = "slight";
-      font-name = "Museo Sans 11";
-      icon-theme = "Tela-nord";
+      font-name = "Ubuntu 11";
+      icon-theme = "Tela-nord-light";
       monospace-font-name = "JetBrainsMono Nerd Font Medium 13";
-      show-battery-percentage = true;
+      show-battery-percentage = false;
+      toolkit-accessibility = false;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "gnome-network-panel" "org-gnome-texteditor" "gnome-power-panel" "thunderbird" "org-qbittorrent-qbittorrent" ];
+      application-children = [ "thunderbird" "firefox" ];
     };
 
-    "org/gnome/desktop/notifications/application/gnome-network-panel" = {
-      application-id = "gnome-network-panel.desktop";
-    };
-
-    "org/gnome/desktop/notifications/application/gnome-power-panel" = {
-      application-id = "gnome-power-panel.desktop";
-    };
-
-    "org/gnome/desktop/notifications/application/google-chrome" = {
-      application-id = "google-chrome.desktop";
-    };
-
-    "org/gnome/desktop/notifications/application/org-gnome-texteditor" = {
-      application-id = "org.gnome.TextEditor.desktop";
-    };
-
-    "org/gnome/desktop/notifications/application/org-qbittorrent-qbittorrent" = {
-      application-id = "org.qbittorrent.qBittorrent.desktop";
+    "org/gnome/desktop/notifications/application/firefox" = {
+      application-id = "firefox.desktop";
     };
 
     "org/gnome/desktop/notifications/application/thunderbird" = {
@@ -114,8 +93,23 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
+      disable-while-typing = false;
       tap-to-click = true;
       two-finger-scrolling-enabled = true;
+    };
+
+    "org/gnome/desktop/privacy" = {
+      old-files-age = mkUint32 30;
+      recent-files-max-age = -1;
+    };
+
+    "org/gnome/desktop/search-providers" = {
+      disabled = [ "org.gnome.Software.desktop" ];
+      sort-order = [ "org.gnome.Contacts.desktop" "org.gnome.Documents.desktop" "org.gnome.Nautilus.desktop" ];
+    };
+
+    "org/gnome/desktop/session" = {
+      idle-delay = mkUint32 480;
     };
 
     "org/gnome/desktop/wm/keybindings" = {
@@ -123,30 +117,12 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/wm/preferences" = {
-      titlebar-font = "Museo Sans Bold 11";
+      button-layout = "appmenu:minimize,close";
+      titlebar-font = "Ubuntu Bold 11";
     };
 
     "org/gnome/evolution-data-server" = {
       migrated = true;
-    };
-
-    "org/gnome/gnome-system-monitor" = {
-      current-tab = "processes";
-      maximized = false;
-      network-total-in-bits = false;
-      show-dependencies = false;
-      show-whose-processes = "all";
-      window-state = mkTuple [ 1227 932 26 23 ];
-    };
-
-    "org/gnome/gnome-system-monitor/disktreenew" = {
-      col-6-visible = true;
-      col-6-width = 0;
-    };
-
-    "org/gnome/gnome-system-monitor/proctree" = {
-      col-11-visible = true;
-      col-11-width = 48;
     };
 
     "org/gnome/mutter" = {
@@ -159,6 +135,10 @@ with lib.hm.gvariant;
       default-zoom-level = "small-plus";
     };
 
+    "org/gnome/nautilus/list-view" = {
+      use-tree-view = true;
+    };
+
     "org/gnome/nautilus/preferences" = {
       click-policy = "single";
       default-folder-viewer = "icon-view";
@@ -167,63 +147,44 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nautilus/window-state" = {
-      initial-size = mkTuple [ 1293 966 ];
-      maximized = false;
-    };
-
-    "org/gnome/portal/filechooser/steam" = {
-      last-folder-path = "/mnt/secondary/Games/Steam";
+      initial-size = mkTuple [ 1347 974 ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/" ];
+      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" ];
       home = [ "<Super>f" ];
+      www = [ "<Super>b" ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = "<Super>b";
-      command = "firefox";
-      name = "Firefox";
+      binding = "<Super>u";
+      command = "kitty distrobox enter fedora";
+      name = "Fedora";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
       binding = "<Super>t";
       command = "kitty";
-      name = "Terminal";
-    };
-
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
-      binding = "<Super>u";
-      command = "kitty distrobox-enter fedora";
-      name = "Fedora Container";
-    };
-
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
-      binding = "<Super>e";
-      command = "gnome-text-editor";
-      name = "Text Editor";
+      name = "Kitty";
     };
 
     "org/gnome/shell" = {
-      enabled-extensions = [ "appindicatorsupport@rgcjonas.gmail.com" "caffeine@patapon.info" "clipboard-history@alexsaveau.dev" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "gsconnect@andyholmes.github.io" "pop-shell@system76.com" "Vitals@CoreCoding.com" "hibernate-status@dromi" ];
-      favorite-apps = [ "org.gnome.Nautilus.desktop" "firefox.desktop" "thunderbird.desktop" "discord.desktop" "element-desktop.desktop" "steam.desktop" "net.lutris.Lutris.desktop" "ardour8.desktop" "com.obsproject.Studio.desktop" "org.kde.krita.desktop" "pycharm-community.desktop" "codium.desktop" "virt-manager.desktop" ];
+      disabled-extensions = [ "hibernate-status@dromi" ];
+      enabled-extensions = [ "appindicatorsupport@rgcjonas.gmail.com" "clipboard-history@alexsaveau.dev" "caffeine@patapon.info" "dash-to-dock@micxgx.gmail.com" "grand-theft-focus@zalckos.github.com" "gsconnect@andyholmes.github.io" "pop-shell@system76.com" "Vitals@CoreCoding.com" ];
+      favorite-apps = [ "org.gnome.Nautilus.desktop" "firefox.desktop" "thunderbird.desktop" "discord.desktop" "steam.desktop" "net.lutris.Lutris.desktop" "ardour8.desktop" "org.kde.krita.desktop" "com.obsproject.Studio.desktop" "pycharm-community.desktop" "codium.desktop" "virt-manager.desktop" ];
       welcome-dialog-last-shown-version = "45.5";
     };
 
     "org/gnome/shell/extensions/caffeine" = {
       indicator-position-max = 1;
-    };
-
-    "org/gnome/shell/extensions/clipboard-history" = {
-      paste-on-selection = false;
-      toggle-menu = [ "<Shift><Super>v" ];
+      show-notifications = false;
+      toggle-state = false;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
       apply-custom-theme = false;
-      background-opacity = 0.5;
-      click-action = "focus-minimize-or-previews";
-      custom-background-color = false;
+      background-opacity = 0.8;
+      click-action = "focus-minimize-or-appspread";
       custom-theme-shrink = true;
       dash-max-icon-size = 48;
       disable-overview-on-startup = true;
@@ -232,20 +193,14 @@ with lib.hm.gvariant;
       hot-keys = false;
       preferred-monitor = -2;
       preferred-monitor-by-connector = "eDP-1";
-      scroll-action = "cycle-windows";
-      show-apps-at-top = true;
       show-mounts = false;
       transparency-mode = "DYNAMIC";
     };
 
     "org/gnome/shell/extensions/gsconnect" = {
       enabled = false;
-      id = "5e0de846-6771-4879-ba62-8f3f6196dd65";
+      id = "6d640243-4d67-4080-bd67-d6dec76f494d";
       name = "spaceghost";
-    };
-
-    "org/gnome/shell/extensions/pop-shell" = {
-      tile-by-default = false;
     };
 
     "org/gnome/shell/extensions/vitals" = {
@@ -253,7 +208,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1714832934;
+      check-timestamp = mkInt64 1714877873;
       first-run = false;
     };
 
@@ -262,53 +217,12 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
-      date-format = "regular";
-      location-mode = "path-bar";
       show-hidden = false;
-      show-size-column = true;
-      show-type-column = true;
-      sidebar-width = 282;
-      sort-column = "name";
-      sort-directories-first = true;
-      sort-order = "ascending";
-      type-format = "category";
-      view-type = "list";
-      window-size = mkTuple [ 920 862 ];
-    };
-
-    "org/gtk/settings/file-chooser" = {
-      clock-format = "12h";
-      date-format = "regular";
-      location-mode = "path-bar";
-      show-hidden = false;
-      show-size-column = true;
-      show-type-column = true;
-      sidebar-width = 165;
-      sort-column = "name";
-      sort-directories-first = false;
-      sort-order = "ascending";
-      type-format = "category";
-      window-position = mkTuple [ 26 23 ];
-      window-size = mkTuple [ 1203 902 ];
-    };
-
-    "org/virt-manager/virt-manager" = {
-      manager-window-height = 550;
-      manager-window-width = 550;
     };
 
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
-      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
-    };
-
-    "org/virt-manager/virt-manager/conns/qemu:system" = {
-      window-size = mkTuple [ 800 600 ];
-    };
-
-    "org/virt-manager/virt-manager/vmlist-fields" = {
-      disk-usage = false;
-      network-traffic = false;
+      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
     };
 
   };
