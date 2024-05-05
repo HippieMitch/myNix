@@ -54,8 +54,8 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/background" = {
       picture-options = "zoom";
-      picture-uri = "file:///home/sean/.local/share/eog-wallpaper.png";
-      picture-uri-dark = "file:///home/sean/.local/share/eog-wallpaper.png";
+      picture-uri = "file:///home/sean/.config/background";
+      picture-uri-dark = "file:///home/sean/.config/background";
     };
 
     "org/gnome/desktop/input-sources" = {

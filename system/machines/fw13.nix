@@ -13,6 +13,9 @@
     "nvme.noacpi=1"
     # Use deep suspension by default
     "mem_sleep_default=deep"
+    # Intel GPU configuration
+    "i915.enable_guc=3"
+    "i915.enable_psr=1"
     ];
 
     # Module is not used for Framework EC but causes boot time error log.
