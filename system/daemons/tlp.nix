@@ -38,6 +38,7 @@
       WIFI_PWR_ON_AC = 0;
       WIFI_PWR_ON_BAT = 0;
       WOL_DISABLE = 1;
+      USB_ALLOWLIST = "32ac:0002";
   };
  };
 }

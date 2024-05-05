@@ -10,7 +10,7 @@
       font_family = "JetBrainsMono NF Medium";
       font_size = 14;
       initial_window_height = "40c";
-      initial_window_width = "106c";
+      initial_window_width = "108c";
       kitty_mod = "ctrl+shift";
       linux_display_server = "x11";
       remember_window_size = "no";

@@ -19,7 +19,7 @@
     kernelParams = [ "quiet" "preempt=full" "split_lock_detect=off" "resume=LABEL=NixOS" "resume_offset=533760" "i915.enable_guc=3" "i915.enable_psr=1" ];
 
     # Resume Device
-    resumeDevice = "/dev/disk/by-uuid/26bb98e2-a4bf-4578-9314-d9dff1ad8fea";
+    resumeDevice = "/dev/disk/by-uuid/a74e4b26-a374-4269-86d5-d91cd9a80dff";
   };
 
   # Systemd
@@ -30,7 +30,7 @@
       '';
     # Suspend Options
     sleep.extraConfig = ''
-      HibernateDelaySec=60m
+      HibernateDelaySec=120m
       '';
   };
 

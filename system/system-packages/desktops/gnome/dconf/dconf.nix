@@ -29,7 +29,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "multitasking";
+      last-panel = "user-accounts";
       window-state = mkTuple [ 1021 887 false ];
     };
 
@@ -73,15 +73,16 @@ with lib.hm.gvariant;
       cursor-theme = "Qogir";
       document-font-name = "Open Sans 12";
       enable-hot-corners = false;
-      font-antialiasing = "grayscale";
+      font-antialiasing = "rgba";
       font-hinting = "slight";
       font-name = "Museo Sans 11";
       icon-theme = "Tela-nord";
-      monospace-font-name = "SauceCodePro Nerd Font 13";
+      monospace-font-name = "JetBrainsMono Nerd Font Medium 13";
+      show-battery-percentage = true;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "gnome-network-panel" "org-gnome-texteditor" "gnome-power-panel" ];
+      application-children = [ "gnome-network-panel" "org-gnome-texteditor" "gnome-power-panel" "thunderbird" "org-qbittorrent-qbittorrent" ];
     };
 
     "org/gnome/desktop/notifications/application/gnome-network-panel" = {
@@ -92,8 +93,20 @@ with lib.hm.gvariant;
       application-id = "gnome-power-panel.desktop";
     };
 
+    "org/gnome/desktop/notifications/application/google-chrome" = {
+      application-id = "google-chrome.desktop";
+    };
+
     "org/gnome/desktop/notifications/application/org-gnome-texteditor" = {
       application-id = "org.gnome.TextEditor.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-qbittorrent-qbittorrent" = {
+      application-id = "org.qbittorrent.qBittorrent.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/thunderbird" = {
+      application-id = "thunderbird.desktop";
     };
 
     "org/gnome/desktop/peripherals/keyboard" = {
@@ -154,7 +167,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nautilus/window-state" = {
-      initial-size = mkTuple [ 1322 997 ];
+      initial-size = mkTuple [ 1293 966 ];
+      maximized = false;
     };
 
     "org/gnome/portal/filechooser/steam" = {
@@ -180,8 +194,8 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
       binding = "<Super>u";
-      command = "kitty distrobox-enter arch";
-      name = "Arch Container";
+      command = "kitty distrobox-enter fedora";
+      name = "Fedora Container";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
@@ -211,7 +225,7 @@ with lib.hm.gvariant;
       click-action = "focus-minimize-or-previews";
       custom-background-color = false;
       custom-theme-shrink = true;
-      dash-max-icon-size = 43;
+      dash-max-icon-size = 48;
       disable-overview-on-startup = true;
       dock-position = "BOTTOM";
       height-fraction = 0.9;
@@ -235,11 +249,11 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/vitals" = {
-      hot-sensors = [ "__network-rx_max__" "_temperature_processor_0_" ];
+      hot-sensors = [ "__temperature_avg__" ];
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1711639717;
+      check-timestamp = mkInt64 1714832934;
       first-run = false;
     };
 
@@ -264,11 +278,37 @@ with lib.hm.gvariant;
 
     "org/gtk/settings/file-chooser" = {
       clock-format = "12h";
+      date-format = "regular";
+      location-mode = "path-bar";
+      show-hidden = false;
+      show-size-column = true;
+      show-type-column = true;
+      sidebar-width = 165;
+      sort-column = "name";
+      sort-directories-first = false;
+      sort-order = "ascending";
+      type-format = "category";
+      window-position = mkTuple [ 26 23 ];
+      window-size = mkTuple [ 1203 902 ];
+    };
+
+    "org/virt-manager/virt-manager" = {
+      manager-window-height = 550;
+      manager-window-width = 550;
     };
 
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
-      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+    };
+
+    "org/virt-manager/virt-manager/conns/qemu:system" = {
+      window-size = mkTuple [ 800 600 ];
+    };
+
+    "org/virt-manager/virt-manager/vmlist-fields" = {
+      disk-usage = false;
+      network-traffic = false;
     };
 
   };
