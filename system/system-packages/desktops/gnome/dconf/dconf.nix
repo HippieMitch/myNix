@@ -6,8 +6,8 @@ with lib.hm.gvariant;
 {
   dconf.settings = {
     "ca/desrt/dconf-editor" = {
-      saved-pathbar-path = "/org/gnome/mutter/";
-      saved-view = "/org/gnome/mutter/";
+      saved-pathbar-path = "/org/gnome/tweaks/";
+      saved-view = "/org/gnome/tweaks/";
       show-warning = false;
       window-height = 500;
       window-is-maximized = false;
@@ -25,7 +25,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "privacy";
+      last-panel = "system";
       window-state = mkTuple [ 1332 1012 false ];
     };
 
@@ -54,8 +54,8 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/background" = {
       picture-options = "zoom";
-      picture-uri = "file:///home/sean/.config/background";
-      picture-uri-dark = "file:///home/sean/.config/background";
+      picture-uri = "file:///home/sean/.local/share/eog-wallpaper.jpg";
+      picture-uri-dark = "file:///home/sean/.local/share/eog-wallpaper.jpg";
     };
 
     "org/gnome/desktop/input-sources" = {
@@ -70,7 +70,7 @@ with lib.hm.gvariant;
       font-antialiasing = "rgba";
       font-hinting = "slight";
       font-name = "Ubuntu 11";
-      icon-theme = "Tela-nord-light";
+      icon-theme = "Papirus-Light";
       monospace-font-name = "JetBrainsMono Nerd Font Medium 13";
       show-battery-percentage = false;
       toolkit-accessibility = false;
@@ -82,6 +82,10 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/notifications/application/firefox" = {
       application-id = "firefox.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-qbittorrent-qbittorrent" = {
+      application-id = "org.qbittorrent.qBittorrent.desktop";
     };
 
     "org/gnome/desktop/notifications/application/thunderbird" = {
@@ -150,6 +154,10 @@ with lib.hm.gvariant;
       initial-size = mkTuple [ 1347 974 ];
     };
 
+    "org/gnome/portal/filechooser/kitty" = {
+      last-folder-path = "/home/sean/Pictures/Wallpapers";
+    };
+
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" ];
       home = [ "<Super>f" ];
@@ -178,7 +186,6 @@ with lib.hm.gvariant;
     "org/gnome/shell/extensions/caffeine" = {
       indicator-position-max = 1;
       show-notifications = false;
-      toggle-state = false;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
@@ -203,12 +210,16 @@ with lib.hm.gvariant;
       name = "spaceghost";
     };
 
+    "org/gnome/shell/extensions/pop-shell" = {
+      tile-by-default = false;
+    };
+
     "org/gnome/shell/extensions/vitals" = {
-      hot-sensors = [ "__temperature_avg__" ];
+      hot-sensors = [ "_temperature_processor_0_" ];
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1714877873;
+      check-timestamp = mkInt64 1714938089;
       first-run = false;
     };
 
@@ -217,12 +228,36 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
+      date-format = "regular";
+      location-mode = "path-bar";
       show-hidden = false;
+      sidebar-width = 206;
+      sort-column = "name";
+      sort-directories-first = true;
+      sort-order = "ascending";
+      type-format = "category";
+      view-type = "list";
+      window-size = mkTuple [ 1277 783 ];
+    };
+
+    "org/gtk/settings/file-chooser" = {
+      date-format = "regular";
+      location-mode = "path-bar";
+      show-hidden = false;
+      show-size-column = true;
+      show-type-column = true;
+      sidebar-width = 161;
+      sort-column = "name";
+      sort-directories-first = false;
+      sort-order = "ascending";
+      type-format = "category";
+      window-position = mkTuple [ 26 23 ];
+      window-size = mkTuple [ 1231 902 ];
     };
 
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
-      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
     };
 
   };

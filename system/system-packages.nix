@@ -68,7 +68,7 @@
     fonts.packages = with pkgs; [
       dejavu_fonts
       (nerdfonts.override {
-        fonts = [ "JetBrainsMono" "SourceCodePro" ];
+        fonts = [ "JetBrainsMono" "SourceCodePro" "UbuntuMono" ];
       })
       noto-fonts
       open-sans

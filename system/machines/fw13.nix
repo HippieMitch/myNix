@@ -1,6 +1,6 @@
 # Framework 13
 
-{ lib, pkgs, ... }: 
+{ lib, pkgs, config, ... }: 
 
 {
 
@@ -19,7 +19,7 @@
     ];
 
     # Module is not used for Framework EC but causes boot time error log.
-    blacklistedKernelModules = [ "cros-usbpd-charger" "cros_ec_lcps" "hid-sensor-hub" ];
+    blacklistedKernelModules = [ "cros-usbpd-charger" "hid-sensor-hub" ];
 
     # Fix TRRS headphones missing mic
     extraModprobeConfig = lib.mkIf (lib.versionOlder pkgs.linux.version "6.6.8") ''

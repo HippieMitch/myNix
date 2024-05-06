@@ -57,7 +57,7 @@
    gnome.nautilus-python
 
    # Icon Themes
-   kora-icon-theme
+   papirus-icon-theme
    qogir-icon-theme
    tela-icon-theme
    ];

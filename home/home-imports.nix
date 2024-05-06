@@ -10,7 +10,7 @@ imports =
     ./home-packages.nix
 
   # dconf
-    ../system/system-packages/desktops/gnome/dconf/dconf.nix
+    #../system/system-packages/desktops/gnome/dconf/dconf.nix
 
   # home-manager
     #../system/system-packages/desktops/xfce/xfce-home.nix
