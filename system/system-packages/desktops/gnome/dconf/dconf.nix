@@ -29,6 +29,10 @@ with lib.hm.gvariant;
       window-state = mkTuple [ 1332 1012 false ];
     };
 
+    "org/gnome/desktop/a11y/applications" = {
+      screen-reader-enabled = false;
+    };
+
     "org/gnome/desktop/app-folders" = {
       folder-children = [ "Utilities" "YaST" "Pardus" ];
     };
@@ -54,8 +58,8 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/background" = {
       picture-options = "zoom";
-      picture-uri = "file:///home/sean/.local/share/eog-wallpaper.jpg";
-      picture-uri-dark = "file:///home/sean/.local/share/eog-wallpaper.jpg";
+      picture-uri = "file:///home/sean/.config/background";
+      picture-uri-dark = "file:///home/sean/.config/background";
     };
 
     "org/gnome/desktop/input-sources" = {
@@ -64,24 +68,34 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/interface" = {
+      color-scheme = "default";
+      cursor-size = 24;
       cursor-theme = "Qogir";
       document-font-name = "Noto Sans 12";
+      enable-animations = true;
       enable-hot-corners = false;
       font-antialiasing = "rgba";
       font-hinting = "slight";
       font-name = "Ubuntu 11";
       icon-theme = "Papirus-Light";
       monospace-font-name = "JetBrainsMono Nerd Font Medium 13";
+      scaling-factor = mkUint32 1;
       show-battery-percentage = false;
+      text-scaling-factor = 1.0;
+      toolbar-style = "text";
       toolkit-accessibility = false;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "thunderbird" "firefox" ];
+      application-children = [ "thunderbird" "firefox" "gnome-power-panel" ];
     };
 
     "org/gnome/desktop/notifications/application/firefox" = {
       application-id = "firefox.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/gnome-power-panel" = {
+      application-id = "gnome-power-panel.desktop";
     };
 
     "org/gnome/desktop/notifications/application/org-qbittorrent-qbittorrent" = {
@@ -114,6 +128,10 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/session" = {
       idle-delay = mkUint32 480;
+    };
+
+    "org/gnome/desktop/sound" = {
+      theme-name = "ocean";
     };
 
     "org/gnome/desktop/wm/keybindings" = {
@@ -184,8 +202,10 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/caffeine" = {
-      indicator-position-max = 1;
+      indicator-position-max = 2;
       show-notifications = false;
+      toggle-state = true;
+      user-enabled = true;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
@@ -219,7 +239,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1714938089;
+      check-timestamp = mkInt64 1715040181;
       first-run = false;
     };
 
@@ -256,8 +276,8 @@ with lib.hm.gvariant;
     };
 
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
-      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
     };
 
   };

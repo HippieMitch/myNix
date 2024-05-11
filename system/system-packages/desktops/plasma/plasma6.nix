@@ -34,7 +34,6 @@
       vulkan-tools
 
     # Icon Themes
-      qogir-icon-theme
       tela-icon-theme 
 
     ];
