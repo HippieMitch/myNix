@@ -2,6 +2,8 @@
 { pkgs, nixvim, ... }:
 
 {
+  environment.systemPackages = [ pkgs.wl-clipboard ];
+
   programs.nixvim = {
     enable = true;
     plugins = {

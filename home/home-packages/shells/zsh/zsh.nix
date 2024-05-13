@@ -5,6 +5,9 @@
 {
 programs.zsh = {
   enable = true;
+  sessionVariables = {
+    EDITOR = "/run/current-system/sw/bin/nvim";
+  };
   shellAliases = 
       {
 	errors = "journalctl -p err..alert";
@@ -18,14 +21,14 @@ programs.zsh = {
 	npkgs = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
 	server = "ssh -i 'stonerayphoto.pem' ec2-user@ec2-3-86-84-19.compute-1.amazonaws.com";
 	copy2server = "rsync -zaP -e 'ssh -i /mnt/secondary/Documents/Code/html/stonerayphoto.pem' /mnt/secondary/Documents/Code/html/index.html  ec2-user@3.86.84.19:/home/ec2-user";
-	sconf = "sudo nvim /etc/nixos/system/system.nix";
-	fconf = "sudo nvim /etc/nixos/flake.nix";
-	hconf = "sudo nvim /etc/nixos/home/home.nix";
-	hwconf = "sudo nvim /etc/nixos/system/hardware.nix";
-	simps = "sudo nvim /etc/nixos/system/system-imports.nix";
-	himps = "sudo nvim /etc/nixos/home/home-imports.nix";
-	spkg = "sudo nvim /etc/nixos/system/system-packages.nix";
-        hpkg = "sudo nvim /etc/nixos/home/home-packages.nix";
+	sconf = "sudoedit /etc/nixos/system/system.nix";
+	fconf = "sudoedit /etc/nixos/flake.nix";
+	hconf = "sudoedit /etc/nixos/home/home.nix";
+	hwconf = "sudoedit /etc/nixos/system/hardware.nix";
+	simps = "sudoedit /etc/nixos/system/system-imports.nix";
+	himps = "sudoedit /etc/nixos/home/home-imports.nix";
+	spkg = "sudoedit /etc/nixos/system/system-packages.nix";
+        hpkg = "sudoedit /etc/nixos/home/home-packages.nix";
       #	ncheck = "cd /etc/nixos && sudo nixos-rebuild dry-run";
         ndry = "nh os test --ask /etc/nixos";
       # ndryrun = ''cd /etc/nixos && sudo nix build ".#nixosConfigurations.$(hostname).config.system.build.toplevel" && nvd diff /run/current-system ./result'';
