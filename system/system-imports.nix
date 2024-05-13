@@ -47,6 +47,7 @@
 
   # Window Managers
     #./system-packages/window-managers/hyprland/hyprland.nix
+    #./system-packages/window-managers/sway/sway.nix
 
   # Shells
     #./system-packages/shells/fish/fish.nix

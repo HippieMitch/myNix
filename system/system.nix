@@ -19,7 +19,7 @@
     kernelParams = [ "quiet" "preempt=full" "split_lock_detect=off" "resume=LABEL=NixOS" "resume_offset=533760" ];
 
     # Resume Device
-    resumeDevice = "/dev/disk/by-uuid/62e7f69d-cf80-4516-908d-c415b5457cca";
+    resumeDevice = "/dev/disk/by-uuid/94ebd797-2a31-4934-a922-470e22024a9d";
   };
 
   # Systemd
@@ -132,7 +132,7 @@
   fonts = {
     fontconfig = {
       subpixel = {
-        rgba = "rgb";
+        rgba = "none";
         lcdfilter = "light";
         };
         antialias = true;
