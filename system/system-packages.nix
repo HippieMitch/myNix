@@ -7,7 +7,7 @@
 
   # Programs
     firefox
-    mediawriter
+    kdePackages.isoimagewriter
     mpv
     mullvad-vpn
 
