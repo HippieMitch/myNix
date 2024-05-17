@@ -42,7 +42,7 @@
   # Daemons/Services
   services = {
     avahi.enable = false;
-    bpftune.enable = true;
+    # bpftune.enable = true;
     flatpak.enable = true;
     fprintd.enable = true;
     fstrim.enable = true;
