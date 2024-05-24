@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, inputs, ... }:
 
 {
   imports = [ ./system-imports.nix ];
@@ -19,7 +19,7 @@
     kernelParams = [ "quiet" "preempt=full" "split_lock_detect=off" "resume=LABEL=NixOS" "resume_offset=533760" ];
 
     # Resume Device
-    resumeDevice = "/dev/disk/by-uuid/94ebd797-2a31-4934-a922-470e22024a9d";
+    resumeDevice = "/dev/disk/by-uuid/74d08499-7053-4fbf-9824-bc228e71d2f6";
   };
 
   # Systemd
@@ -42,7 +42,10 @@
   # Daemons/Services
   services = {
     avahi.enable = false;
-    bpftune.enable = true;
+    bpftune = {
+      enable = true;
+      package = pkgs.master.bpftune;
+    };
     flatpak.enable = true;
     fprintd.enable = true;
     fstrim.enable = true;
