@@ -7,6 +7,7 @@ programs.zsh = {
   enable = true;
   sessionVariables = {
     EDITOR = "/run/current-system/sw/bin/nvim";
+    ZSH_DISABLE_COMPFIX=true;
   };
   shellAliases = 
       {
@@ -59,7 +60,7 @@ programs.zsh = {
   oh-my-zsh = {
     enable = true;
     plugins = [ "git" "history" ];
-    theme = "robbyrussell";
+    theme = "fino";
   };
   };
   programs.direnv = {
