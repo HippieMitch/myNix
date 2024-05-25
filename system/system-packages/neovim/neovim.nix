@@ -24,7 +24,7 @@
       vim-nix
     ];
     colorschemes = {
-      catppuccin.enable = true;
+      cyberdream.enable = true;
     };
     opts = {
       number = true;
