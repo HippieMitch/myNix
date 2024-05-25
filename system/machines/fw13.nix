@@ -22,13 +22,13 @@
     blacklistedKernelModules = [ "cros-usbpd-charger" "hid-sensor-hub" ];
 
     # Fix TRRS headphones missing mic
-    extraModprobeConfig = lib.mkIf (lib.versionOlder pkgs.linux.version "6.6.8") ''
-      options snd-hda-intel model=dell-headset-multi
-      '';
+#    extraModprobeConfig = lib.mkIf (lib.versionOlder pkgs.linux.version "6.6.8") ''
+ #     options snd-hda-intel model=dell-headset-multi
+ #     '';
   };
 
   # Custom udev rules
-  services.udev.extraRules = ''
+  /* services.udev.extraRules = ''
     # Fix headphone noise when on powersave
     SUBSYSTEM=="pci", ATTR{vendor}=="0x8086", ATTR{device}=="0xa0e0", ATTR{power/control}="on"
     
@@ -46,7 +46,7 @@
     
     LABEL="power_runtime_rules_end"
   '';
-
+*/
   hardware = {
 
     # Needed for desktop environments to detect/manage display brightness
