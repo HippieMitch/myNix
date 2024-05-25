@@ -27,7 +27,6 @@
 
   # Command Line Tools
     ani-cli
-    fastfetch
     lsd
 
   # Development
