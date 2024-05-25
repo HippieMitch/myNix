@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 
 {
   programs.firefox = {
@@ -153,9 +153,36 @@
     search = {
       force = true;
       default = "DuckDuckGo";
+      privateDefault = "DuckDuckGo";
       order = [ "DuckDuckGo" "Google" ];
-        };
+      engines = {
+       "NixOS Search - Packages" = {
+      urls = [{
+        template = "https://search.nixos.org/packages";
+        params = [
+          { name = "channel"; value = "unstable"; }
+          { name = "type"; value = "packages"; }
+          { name = "query"; value = "{searchTerms}"; }
+        ];
+      }];
+        icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+        definedAliases = [ "npkg" ];
+  };
+         "NixOS Search - Options" = {
+      urls = [{
+        template = "https://search.nixos.org/options";
+        params = [
+          { name = "channel"; value = "unstable"; }
+          { name = "type"; value = "packages"; }
+          { name = "query"; value = "{searchTerms}"; }
+        ];
+      }];
+        icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+        definedAliases = [ "nopt" ];
+  };
+};
       };
     };
   };
+};
 }
