@@ -138,6 +138,7 @@
           "browser.download.always_ask_before_handling_new_types" = true;
           "browser.download.manager.addToRecentDocs" = false;
           "browser.download.open_pdf_attachments_inline" = true;
+          "browser.download.useDownloadDir" = true;
           "browser.bookmarks.openInTabClosesMenu" = false;
           "browser.menu.showViewImageInfo" = true;
           "findbar.highlightAll" = true;
