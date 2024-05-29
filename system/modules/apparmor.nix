@@ -3,5 +3,8 @@
 { config, ... }:
 
 {
-  security.apparmor.enable = true;
+  security.apparmor = {
+    enable = true;
+    killUnconfinedConfinables = true;
+  };
 }
