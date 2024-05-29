@@ -28,8 +28,9 @@
     #./kernels/xanmod.nix
 
   # Modules
-    ./modules/sysctl.nix
+    ./modules/apparmor.nix
     ./modules/modprobe.nix
+    ./modules/sysctl.nix
 
   # Daemons
     ./daemons/schedulers/ananicy-cpp.nix
