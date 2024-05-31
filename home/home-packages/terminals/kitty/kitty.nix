@@ -7,7 +7,7 @@
     settings = {
       background_opacity = "0.80";
       confirm_os_window_close = 0;
-      font_family = "JetBrainsMono NFM Medium";
+      font_family = "JetBrainsMono NFM";
      # font_family = "UbuntuMono Nerd Font";
      # font_family = "SauceCodePro NFM Medium";
       font_size = 14;
@@ -18,6 +18,7 @@
       remember_window_size = "no";
       term = "xterm-256color";
     };
+#    theme = "Catppuccin-Mocha";
     theme = "Modus Vivendi";
 #    theme = "Mishran";
 #    theme = "VSCode_Dark";

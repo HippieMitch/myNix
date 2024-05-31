@@ -30,7 +30,7 @@
       '';
     # Suspend Options
     sleep.extraConfig = ''
-      HibernateDelaySec=120m
+      HibernateDelaySec=180m
       '';
   };
 
