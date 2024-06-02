@@ -19,7 +19,7 @@
     kernelParams = [ "quiet" "preempt=full" "split_lock_detect=off" "resume=LABEL=NixOS" "resume_offset=533760" ];
 
     # Resume Device
-    resumeDevice = "/dev/disk/by-uuid/74d08499-7053-4fbf-9824-bc228e71d2f6";
+    resumeDevice = "/dev/disk/by-uuid/796e67d2-1fc3-41c6-adfa-33f6584a869a";
   };
 
   # Systemd
@@ -91,18 +91,19 @@
   networking = {
     hostName = "spaceghost";
     # Enable Firewall
-    firewall.enable = true;
-   /* wireless.iwd = {
+    nftables.enable = true;
+    wireless.iwd = {
       enable = true;
       settings = {
         Settings = {
           AutoConnect = true;
+          UseDefaultInterface = true;
         };
       };
-    }; */
+    };
     networkmanager = {
       enable = true;
-      wifi.backend = "wpa_supplicant";
+      wifi.backend = "iwd";
   };
 };
 
