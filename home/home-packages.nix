@@ -9,6 +9,7 @@
     ardour
     discord
     google-chrome
+    kdePackages.neochat
     krita
     lutris
     obs-studio

@@ -7,7 +7,7 @@
     enable = true;
     settings = {
     schema =  "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
-    logo = "/etc/nixos/home/home-packages/fastfetch/logos/nix.txt";
+    logo = "/etc/nixos/home/home-packages/fastfetch/logos/linux.ascii";
     display =  {
         size = {
             maxPrefix = "MB";
@@ -15,29 +15,30 @@
         };
     };
     modules =  [
-        "title"
-        "separator"
+       # "title"
+       # "separator"
+        "break"
         "os"
-        "host"
+       # "host"
         "kernel"
-        "uptime"
+       # "uptime"
         "packages"
-        "shell"
-        {
-            type = "display";
-            compactType =  "original";
-            key = "Resolution";
-        }
-        "de"
-        "wm"
-        "wmtheme"
-        "theme"
-        "icons"
         "terminal"
-        {
-            type = "terminalfont";
-            format = "{/3}{-}{/}{2}{?3} {3}{?}";
-        }
+       # {
+       #     type = "display";
+       #     compactType =  "original";
+       #     key = "Resolution";
+       # }
+        "shell"
+       # "wm"
+       # "wmtheme"
+       # "theme"
+       # "icons"
+        "de"
+       # {
+       #     type = "terminalfont";
+       #     format = "{/3}{-}{/}{2}{?3} {3}{?}";
+       # }
         "cpu"
         {
             type = "gpu";
@@ -47,8 +48,10 @@
             type = "memory";
             format = "{/2}{-}{/}{/2}{-}{/}{} / {}";
         }
+       # "separator"
         "break"
         "colors"
+        "break"
       ];
     };
   };
