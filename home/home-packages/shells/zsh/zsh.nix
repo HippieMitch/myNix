@@ -54,8 +54,6 @@ programs.zsh = {
     };
     
   completionInit = "autoload -U compinit && compinit -i";
-  autosuggestion.enable = true;
-  syntaxHighlighting.enable = true;
 
   oh-my-zsh = {
     enable = true;

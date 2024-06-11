@@ -14,32 +14,32 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/796e67d2-1fc3-41c6-adfa-33f6584a869a";
+    { device = "/dev/disk/by-uuid/0064f478-dbda-4229-af80-d76d2cd60ae4";
       fsType = "btrfs";
       options = [ "subvol=root" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   boot.initrd.luks.devices = {
     nixcrypt = {
-      device = "/dev/disk/by-uuid/5ebe1c4e-380f-4e3e-b14c-2fd6770a7a76";
+      device = "/dev/disk/by-uuid/232dc7a7-d96f-4c37-8dd3-f9f8d6a8bbf4";
       allowDiscards = true;
       };
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/796e67d2-1fc3-41c6-adfa-33f6584a869a";
+    { device = "/dev/disk/by-uuid/0064f478-dbda-4229-af80-d76d2cd60ae4";
       fsType = "btrfs";
       options = [ "subvol=home" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/796e67d2-1fc3-41c6-adfa-33f6584a869a";
+    { device = "/dev/disk/by-uuid/0064f478-dbda-4229-af80-d76d2cd60ae4";
       fsType = "btrfs";
       options = [ "subvol=nix" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/F35C-8644";
+    { device = "/dev/disk/by-uuid/A725-8083";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
@@ -51,7 +51,7 @@
     };
 
   fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/796e67d2-1fc3-41c6-adfa-33f6584a869a";
+    { device = "/dev/disk/by-uuid/0064f478-dbda-4229-af80-d76d2cd60ae4";
       fsType = "btrfs";
       options = [ "subvol=swap" ];
     };
