@@ -38,11 +38,13 @@
     ];
 
   # Enable Virt-Manager
-    virtualisation.libvirtd.enable = true;
     programs.virt-manager.enable = true;
  
-  # Enable Podman
+  # Enable libvirt and Podman
     virtualisation = {
+      # libvirt
+      libvirtd.enable = true;
+      # Podman
       podman = {
         enable = true;
         dockerCompat = true;
