@@ -15,6 +15,7 @@ imports =
   # home-manager
     #../system/system-packages/desktops/xfce/xfce-home.nix
     ./home-packages/browsers/firefox/firefox.nix
+    ./home-packages/btop/btop.nix
     ./home-packages/mpv/mpv.nix
     ./home-packages/fastfetch/fastfetch.nix
     #./home-packages/shells/fish/fish.nix

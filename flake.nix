@@ -1,5 +1,5 @@
 {
-  description = "ghostfish";
+  description = "This is my NixOS flake configuration.";
 
   inputs = {
 
@@ -16,7 +16,7 @@
       nixpkgs-master.url = "github:NixOS/nixpkgs";
 
     # Current Branch
-      nixpkgs.follows = "nixpkgs-stable";
+      nixpkgs.follows = "nixpkgs-unstable";
 
     # Home Manager
       home-manager = {

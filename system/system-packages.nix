@@ -1,6 +1,6 @@
 # System Packages
 
-{ inputs, pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -51,9 +51,6 @@
         };
       };
     };
-
-  # Enable cgroups v.2
-    systemd.enableUnifiedCgroupHierarchy = true;
 
   # Enable Steam
     programs.steam = {
