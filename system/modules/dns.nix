@@ -1,4 +1,4 @@
-# Use Stubby and Quad9 DNS
+# Use Stubby and Cloudflare DNS
 
 { config, ... }:
 
@@ -18,22 +18,6 @@ services.stubby = {
     dnssec = "GETDNS_EXTENSION_TRUE";
     upstream_recursive_servers = [
       {
-        address_data = "9.9.9.9";
-        tls_auth_name = "dns.quad9.net";
-      }
-      {
-        address_data = "149.112.112.112";
-        tls_auth_name = "dns.quad9.net";
-      }
-      {
-        address_data = "2620:fe::fe";
-        tls_auth_name = "dns.quad9.net";
-      }
-      {
-        address_data = "2620:fe::9";
-        tls_auth_name = "dns.quad9.net";
-      }
-      {
         address_data = "1.1.1.2";
         tls_auth_name = "cloudflare-dns.com";
       }
@@ -49,12 +33,28 @@ services.stubby = {
         address_data = "2606:4700:4700::1002";
         tls_auth_name = "cloudflare-dns.com";
       }
+      {
+        address_data = "9.9.9.9";
+        tls_auth_name = "dns.quad9.net";
+      }
+      {
+        address_data = "149.112.112.112";
+        tls_auth_name = "dns.quad9.net";
+      }
+      {
+        address_data = "2620:fe::fe";
+        tls_auth_name = "dns.quad9.net";
+      }
+      {
+        address_data = "2620:fe::9";
+        tls_auth_name = "dns.quad9.net";
+      }
     ];
   };
 };
 networking.nameservers = [ "::1" "127.0.0.1" ];
 services.resolved = {
   enable = true;
-  fallbackDns = [ "2620:fe::fe" "2620:fe::9" "9.9.9.9" "149.112.112.112" ];
+    fallbackDns = [ "2620:fe::fe" "2620:fe::9" "9.9.9.9" "149.112.112.112" ];
   };
 }
