@@ -3,7 +3,6 @@
 { config, ... }:
 
 {
-  ## DNS-over-TLS
 services.stubby = {
   enable = true;
   settings = {
@@ -55,6 +54,6 @@ services.stubby = {
 networking.nameservers = [ "::1" "127.0.0.1" ];
 services.resolved = {
   enable = true;
-    fallbackDns = [ "2620:fe::fe" "2620:fe::9" "9.9.9.9" "149.112.112.112" ];
+  fallbackDns = [ "2620:fe::fe" "2620:fe::9" "9.9.9.9" "149.112.112.112" ];
   };
 }
