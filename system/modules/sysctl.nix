@@ -39,6 +39,6 @@
     "net.ipv4.tcp_rfc1337" = 1;
     "net.ipv4.tcp_fastopen" = 3;
     "net.ipv4.tcp_congestion_control" = "bbr";
-    "net.core.default_qdisc" = "cake";
+    "net.core.default_qdisc" = "fq_codel";
   };
 }
