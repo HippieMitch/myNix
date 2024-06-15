@@ -29,6 +29,7 @@
 
   # Modules
     ./modules/apparmor.nix
+    ./modules/dns.nix
     ./modules/modprobe.nix
     ./modules/sysctl.nix
 
