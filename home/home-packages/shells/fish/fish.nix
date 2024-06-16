@@ -13,7 +13,7 @@
 	kittyconf = "nvim ~/.config/kitty/kitty.conf";
 	inhibitors = "systemd-inhibit --list --mode = block";
 	fishconf = "nvim /home/sean/.config/fish/config.fish";
-	neo = "fastfetch --logo-padding-left 6 --logo-padding-right 6";
+	neo = "fastfetch";
 	npkgs = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
 	server = "ssh -i 'stonerayphoto.pem' ec2-user@ec2-3-86-84-19.compute-1.amazonaws.com";
 	copy2server = "rsync -zaP -e 'ssh -i /mnt/secondary/Documents/Code/html/stonerayphoto.pem' /mnt/secondary/Documents/Code/html/index.html  ec2-user@3.86.84.19:/home/ec2-user";

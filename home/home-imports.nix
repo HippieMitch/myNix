@@ -17,7 +17,8 @@ imports =
     ./home-packages/browsers/firefox/firefox.nix
     ./home-packages/btop/btop.nix
     ./home-packages/mpv/mpv.nix
-    ./home-packages/fastfetch/fastfetch.nix
+    #./home-packages/fastfetch/fastfetch.nix
+    ./home-packages/fastfetch/fastfetch-small.nix
     #./home-packages/shells/fish/fish.nix
     ./home-packages/shells/zsh/zsh.nix
     #./home-packages/terminals/alacritty/alacritty.nix
