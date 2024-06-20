@@ -11,7 +11,7 @@
      # font_family = "UbuntuMono Nerd Font";
      # font_family = "SauceCodePro NFM Medium";
       font_size = 14;
-      initial_window_height = "41c";
+      initial_window_height = "40c";
       initial_window_width = "114c";
       kitty_mod = "ctrl+shift";
       linux_display_server = "x11";

@@ -31,7 +31,7 @@
     lsd
 
   # Development
-    jetbrains.pycharm-community
+    jetbrains.pycharm-community-bin
   ];
 }
 
