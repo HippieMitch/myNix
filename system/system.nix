@@ -135,7 +135,7 @@
   fonts = {
     fontconfig = {
       subpixel = {
-        rgba = "none";
+        rgba = "rgb";
         lcdfilter = "light";
         };
         antialias = true;
