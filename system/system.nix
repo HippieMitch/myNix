@@ -175,9 +175,14 @@
 
   # Security
   security = {
-    sudo = {
+    sudo.enable = false;
+    doas = {
       enable = true;
-      execWheelOnly = true;
+      extraRules = [{
+        groups = ["wheel"];
+        keepEnv = true;
+        persist = true;
+      }];
     };
     # Pipewire Setting
     rtkit.enable = true;
