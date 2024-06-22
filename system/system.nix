@@ -152,7 +152,7 @@
       powerOnBoot = true;
     # Accelerated Video Playback
     };
-    opengl = {
+    graphics = {
       enable = true;
       extraPackages = with pkgs; [
           intel-compute-runtime
@@ -175,15 +175,9 @@
 
   # Security
   security = {
-    sudo.enable = false;
-    doas = {
+    sudo = {
       enable = true;
-      wheelNeedsPassword = true;
-      extraRules = [{
-        groups = ["wheel"];
-        keepEnv = true;
-        persist = true;
-      }];
+      execWheelOnly = true;
     };
     # Pipewire Setting
     rtkit.enable = true;

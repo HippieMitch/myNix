@@ -5,7 +5,7 @@
   programs.kitty = {
     enable = true;
     settings = {
-      background_opacity = "0.85";
+      background_opacity = "0.95";
       confirm_os_window_close = 0;
       font_family = "JetBrainsMono NFM";
      # font_family = "UbuntuMono Nerd Font";
