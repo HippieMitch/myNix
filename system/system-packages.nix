@@ -23,6 +23,7 @@
     wget
 
   # Nix Tools
+    nh
     nix-search-cli
     nvd
 
