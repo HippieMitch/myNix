@@ -32,22 +32,6 @@ services.stubby = {
         address_data = "2606:4700:4700::1002";
         tls_auth_name = "cloudflare-dns.com";
       }
-      {
-        address_data = "9.9.9.9";
-        tls_auth_name = "dns.quad9.net";
-      }
-      {
-        address_data = "149.112.112.112";
-        tls_auth_name = "dns.quad9.net";
-      }
-      {
-        address_data = "2620:fe::fe";
-        tls_auth_name = "dns.quad9.net";
-      }
-      {
-        address_data = "2620:fe::9";
-        tls_auth_name = "dns.quad9.net";
-      }
     ];
   };
 };

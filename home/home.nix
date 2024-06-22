@@ -6,6 +6,13 @@
   # Set User Home dir
   home.username = "sean";
   home.homeDirectory = "/home/sean";
+  home.file = {
+    "Documents".source = config.lib.file.mkOutOfStoreSymlink "/mnt/secondary/Documents";
+    "Downloads".source = config.lib.file.mkOutOfStoreSymlink "/mnt/secondary/Downloads";
+    "Music".source = config.lib.file.mkOutOfStoreSymlink "/mnt/secondary/Music";
+    "Pictures".source = config.lib.file.mkOutOfStoreSymlink "/mnt/secondary/Pictures";
+    "Videos".source = config.lib.file.mkOutOfStoreSymlink "/mnt/secondary/Videos";
+  };
 
   # basic configuration of git, please change to your own
   programs.git = {
