@@ -93,7 +93,7 @@
   networking = {
     hostName = "spaceghost";
     # Enable Firewall
-    nftables.enable = true;
+    firewall.enable = true;
     wireless.iwd = {
       enable = true;
       settings = {
