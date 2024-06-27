@@ -9,8 +9,8 @@
     plugins = {
       barbecue.enable = true;
       dap.enable = true;
-      lightline.enable = true;
       neo-tree.enable = true;
+      lualine.enable = true;
       nix.enable = true;
       rustaceanvim.enable = true;
       surround.enable = true;
@@ -24,7 +24,10 @@
       vim-nix
     ];
     colorschemes = {
-      cyberdream.enable = true;
+      base16 = {
+        enable = true;
+        colorscheme = "horizon-dark";
+      };
     };
     opts = {
       number = true;

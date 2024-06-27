@@ -57,6 +57,6 @@
     ./system-packages/shells/zsh/zsh.nix
 
   # System Applications
-    ./system-packages/neovim/neovim.nix
+    ./system-packages/editors/neovim/neovim.nix
   ];
 }
