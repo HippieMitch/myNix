@@ -58,7 +58,8 @@ programs.zsh = {
   oh-my-zsh = {
     enable = true;
     plugins = [ "git" "history" ];
-    theme = "fino";
+    theme = "gozilla";
+    # theme = "fino";
   };
   };
   programs.direnv = {
