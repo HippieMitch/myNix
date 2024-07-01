@@ -61,7 +61,7 @@ programs.zsh = {
       "git" 
       "history"
       "history-substring-search"
-      "z"
+      "zoxide"
     ];
     theme = "refined";
   };
@@ -87,8 +87,13 @@ programs.zsh = {
     ];
   };
   */
-
   };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.direnv = {
     enableZshIntegration = true;
   };
