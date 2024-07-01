@@ -73,4 +73,7 @@
       open-sans
       ubuntu_font_family
       ];
+
+   # Remove nano
+     programs.nano.enable = false;
     }

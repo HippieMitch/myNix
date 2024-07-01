@@ -55,12 +55,33 @@ programs.zsh = {
     
   completionInit = "autoload -U compinit && compinit -i";
 
-  oh-my-zsh = {
+  /* oh-my-zsh = {
     enable = true;
     plugins = [ "git" "history" ];
     theme = "gozilla";
-    # theme = "fino";
   };
+  */
+
+  prezto = {
+    enable = true;
+    prompt.theme = "sorin";
+    pmodules = [
+      "environment"
+      "terminal"
+      "editor"
+      "history"
+      "directory"
+      "spectrum"
+      "utility"
+      "git"
+      "completion"
+      "syntax-highlighting"
+      "history-substring-search"
+      "autosuggestions"
+      "prompt"
+    ];
+  };
+
   };
   programs.direnv = {
     enableZshIntegration = true;
