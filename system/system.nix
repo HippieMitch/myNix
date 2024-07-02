@@ -141,7 +141,7 @@
       hinting = {
         enable = true;
         autohint = true;
-        style = "full";
+        style = "slight";
       };
       antialias = true;
       useEmbeddedBitmaps = true;
