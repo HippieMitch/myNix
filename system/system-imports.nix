@@ -24,8 +24,10 @@
     #./kernels/cachy-lto.nix
     #./kernels/cachy-sched-ext.nix
     #./kernels/lts.nix
-    ./kernels/vanilla.nix
+    #./kernels/rt.nix
+    #./kernels/vanilla.nix
     #./kernels/xanmod.nix
+    ./kernels/zen.nix
 
   # Modules
     ./modules/apparmor.nix

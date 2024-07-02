@@ -135,10 +135,15 @@
   fonts = {
     fontconfig = {
       subpixel = {
+        lcdfilter = "default";
         rgba = "rgb";
-        lcdfilter = "light";
-        };
-        antialias = true;
+      };
+      hinting = {
+        enable = true;
+        style = "slight";
+      };
+      antialias = true;
+      useEmbeddedBitmaps = true;
       };
     # Fonts in Flatpak
     fontDir.enable = true;
