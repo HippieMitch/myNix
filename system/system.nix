@@ -140,7 +140,8 @@
       };
       hinting = {
         enable = true;
-        style = "slight";
+        autohint = true;
+        style = "full";
       };
       antialias = true;
       useEmbeddedBitmaps = true;
