@@ -26,7 +26,7 @@
     colorschemes = {
       base16 = {
         enable = true;
-        colorscheme = "primer-dark";
+        colorscheme = "tokyodark";
       };
     };
     opts = {
