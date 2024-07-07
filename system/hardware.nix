@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "uas" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "uas" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
@@ -19,12 +19,12 @@
       options = [ "subvol=root" "ssd" "noatime" "compress=zstd:1" ];
     };
 
-    boot.initrd.luks.devices = { 
-      nixcrypt = {
-        device = "/dev/disk/by-uuid/9ce34624-15f9-4f0b-8ada-676157e39a1e";
-        allowDiscards = true;
-        };
+  boot.initrd.luks.devices = { 
+    nixcrypt = {
+      device = "/dev/disk/by-uuid/9ce34624-15f9-4f0b-8ada-676157e39a1e";
+      allowDiscards = true;
       };
+    };
 
   fileSystems."/nix" =
     { device = "/dev/disk/by-uuid/c46f528c-0972-4811-bc5b-601b80a4fe0e";
