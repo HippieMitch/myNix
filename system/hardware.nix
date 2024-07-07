@@ -8,52 +8,52 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "uas" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "uas" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/ccb4fa4b-b4ce-48cf-9772-f4d5a20aee27";
+    { device = "/dev/disk/by-uuid/c46f528c-0972-4811-bc5b-601b80a4fe0e";
       fsType = "btrfs";
       options = [ "subvol=root" "ssd" "noatime" "compress=zstd:1" ];
     };
 
-  boot.initrd.luks.devices = {
-    nixcrypt = {
-      device = "/dev/disk/by-uuid/8c64e743-350b-4c3f-b87a-68b23a219f00";
-      allowDiscards = true;
+    boot.initrd.luks.devices = { 
+      nixcrypt = {
+        device = "/dev/disk/by-uuid/9ce34624-15f9-4f0b-8ada-676157e39a1e";
+        allowDiscards = true;
+        };
       };
-    };
-
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/ccb4fa4b-b4ce-48cf-9772-f4d5a20aee27";
-      fsType = "btrfs";
-      options = [ "subvol=home" "ssd" "noatime" "compress=zstd:1" ];
-    };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/ccb4fa4b-b4ce-48cf-9772-f4d5a20aee27";
+    { device = "/dev/disk/by-uuid/c46f528c-0972-4811-bc5b-601b80a4fe0e";
       fsType = "btrfs";
       options = [ "subvol=nix" "ssd" "noatime" "compress=zstd:1" ];
     };
 
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/c46f528c-0972-4811-bc5b-601b80a4fe0e";
+      fsType = "btrfs";
+      options = [ "subvol=home" "ssd" "noatime" "compress=zstd:1" ];
+    };
+
+  fileSystems."/swap" =
+    { device = "/dev/disk/by-uuid/c46f528c-0972-4811-bc5b-601b80a4fe0e";
+      fsType = "btrfs";
+      options = [ "subvol=swap" ];
+    };
+
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/91A6-5D0B";
+    { device = "/dev/disk/by-uuid/A6A0-2D16";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
   fileSystems."/mnt/secondary" =
-    { device = "/dev/sda1";
+    { device = "/dev/disk/by-uuid/57baa8e9-7e33-4e43-a604-6aa344d86928";
       fsType = "ext4";
       options = [ "noatime" "nosuid" "nodev" "nofail" "x-gvfs-show" "x-udisks-auth" "x-gvfs-name=Secondary" ];
-    };
-
-  fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/ccb4fa4b-b4ce-48cf-9772-f4d5a20aee27";
-      fsType = "btrfs";
-      options = [ "subvol=swap" ];
     };
 
   swapDevices = [ { device = "/swap/swapfile"; } ];
@@ -63,7 +63,7 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp170s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlan0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
