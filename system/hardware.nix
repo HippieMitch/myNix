@@ -19,17 +19,11 @@
       options = [ "subvol=root" "ssd" "noatime" "compress=zstd:1" ];
     };
 
-  boot.initrd.luks.devices = { 
+  boot.initrd.luks.devices = {
     nixcrypt = {
       device = "/dev/disk/by-uuid/9ce34624-15f9-4f0b-8ada-676157e39a1e";
       allowDiscards = true;
       };
-    };
-
-  fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/c46f528c-0972-4811-bc5b-601b80a4fe0e";
-      fsType = "btrfs";
-      options = [ "subvol=nix" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/home" =
@@ -38,10 +32,10 @@
       options = [ "subvol=home" "ssd" "noatime" "compress=zstd:1" ];
     };
 
-  fileSystems."/swap" =
+  fileSystems."/nix" =
     { device = "/dev/disk/by-uuid/c46f528c-0972-4811-bc5b-601b80a4fe0e";
       fsType = "btrfs";
-      options = [ "subvol=swap" ];
+      options = [ "subvol=nix" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/boot" =
@@ -51,9 +45,15 @@
     };
 
   fileSystems."/mnt/secondary" =
-    { device = "/dev/disk/by-uuid/57baa8e9-7e33-4e43-a604-6aa344d86928";
+    { device = "/dev/sda1";
       fsType = "ext4";
       options = [ "noatime" "nosuid" "nodev" "nofail" "x-gvfs-show" "x-udisks-auth" "x-gvfs-name=Secondary" ];
+    };
+
+  fileSystems."/swap" =
+    { device = "/dev/disk/by-uuid/c46f528c-0972-4811-bc5b-601b80a4fe0e";
+      fsType = "btrfs";
+      options = [ "subvol=swap" ];
     };
 
   swapDevices = [ { device = "/swap/swapfile"; } ];
@@ -63,7 +63,7 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlan0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp170s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
