@@ -19,7 +19,7 @@
     kernelParams = [ "quiet" "preempt=full" "split_lock_detect=off" "resume=LABEL=NixOS" "resume_offset=533760" ];
 
     # Resume Device
-    resumeDevice = "/dev/disk/by-uuid/9ce34624-15f9-4f0b-8ada-676157e39a1e";
+    resumeDevice = "/dev/disk/by-uuid/ea126329-7f10-4486-997f-43ffad486bda";
   };
 
   # Systemd
@@ -140,7 +140,6 @@
       };
       hinting = {
         enable = true;
-        autohint = true;
         style = "slight";
       };
       antialias = true;
