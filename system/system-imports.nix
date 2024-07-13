@@ -22,12 +22,13 @@
   # Kernels
     #./kernels/cachy.nix
     #./kernels/cachy-lto.nix
-    #./kernels/cachy-sched-ext.nix
+    ./kernels/cachy-lto-scx.nix
+    #./kernels/cachy-scx.nix
     #./kernels/lts.nix
     #./kernels/rt.nix
     #./kernels/vanilla.nix
     #./kernels/xanmod.nix
-    ./kernels/zen.nix
+    #./kernels/zen.nix
 
   # Modules
     ./modules/apparmor.nix

@@ -1,11 +1,11 @@
   # Ananicy CPP
 
-{ pkgs, ...}:
+{ pkgs, inputs, ...}:
 
 {
   services.ananicy =  {
    enable = true;
-   package = pkgs.ananicy-cpp;
-   rulesProvider = pkgs.ananicy-cpp-rules;
+   package = pkgs.master.ananicy-cpp;
+   rulesProvider = pkgs.ananicy-rules-cachyos;
   };
 }

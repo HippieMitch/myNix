@@ -40,6 +40,7 @@
       shiftwidth = 2;
       wildmode = "longest,list";
       clipboard = "unnamedplus";
+      foldenable = false;
     };
   };
 }

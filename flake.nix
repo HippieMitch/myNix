@@ -33,9 +33,9 @@
     # Gnome 46
     #  nixpkgs-gnome-46.url = "github:NixOS/nixpkgs/gnome-46";
 
+    /*
     # Cosmic
-    /* 
-        nixos-cosmic = {
+      nixos-cosmic = {
         url = "github:lilyinstarlight/nixos-cosmic";
         inputs.nixpkgs.follows = "nixpkgs";
       };
@@ -116,8 +116,8 @@
           # kde2nix Module
          # kde2nix.nixosModules.default
 
+         /*
           # Cosmic Cache and Module
-          /*
           {
           nix.settings = {
             substituters = [ "https://cosmic.cachix.org/" ];

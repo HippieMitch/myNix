@@ -12,6 +12,7 @@ programs.zsh = {
   shellAliases = 
     {
       ls = "lsd";
+      se = "sudoedit";
       errors = "journalctl -p err..alert";
       cpu = ''watch -n.1 "grep \"^[c]pu MHz\" /proc/cpuinfo"'';
       anime = "ani-cli";

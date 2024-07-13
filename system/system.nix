@@ -19,7 +19,7 @@
     kernelParams = [ "quiet" "preempt=full" "split_lock_detect=off" "resume=LABEL=NixOS" "resume_offset=533760" ];
 
     # Resume Device
-    resumeDevice = "/dev/disk/by-uuid/ea126329-7f10-4486-997f-43ffad486bda";
+    resumeDevice = "/dev/disk/by-uuid/944156a7-c9d1-4baa-8aa1-452d9d7cd607";
   };
 
   # Systemd
@@ -47,6 +47,7 @@
     bpftune.enable = true;
     flatpak.enable = true;
     fprintd.enable = true;
+    fprintd.package = pkgs.master.fprintd;
     fstrim.enable = true;
     fwupd.enable = true;
     gvfs.enable = true;
