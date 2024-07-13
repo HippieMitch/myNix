@@ -47,7 +47,6 @@
     bpftune.enable = true;
     flatpak.enable = true;
     fprintd.enable = true;
-    fprintd.package = pkgs.master.fprintd;
     fstrim.enable = true;
     fwupd.enable = true;
     gvfs.enable = true;
