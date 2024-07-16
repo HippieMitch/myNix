@@ -65,6 +65,7 @@ programs.zsh = {
       "zoxide"
     ];
     theme = "refined";
+  #  theme = "gozilla";
   };
 
   /*
@@ -99,3 +100,4 @@ programs.zsh = {
     enableZshIntegration = true;
   };
 }
+

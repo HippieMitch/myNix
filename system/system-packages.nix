@@ -66,6 +66,7 @@
   # System Fonts
     fonts.packages = with pkgs; [
       dejavu_fonts
+      inter
       (nerdfonts.override {
         fonts = [ "JetBrainsMono" "SourceCodePro" "UbuntuMono" ];
       })
