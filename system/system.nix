@@ -22,7 +22,6 @@
     resumeDevice = "/dev/disk/by-uuid/944156a7-c9d1-4baa-8aa1-452d9d7cd607";
   };
 
-
   # Systemd
   systemd = {
     # systemd-boot timeout
