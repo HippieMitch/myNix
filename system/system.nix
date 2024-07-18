@@ -30,7 +30,7 @@
       '';
     # Suspend Options
     sleep.extraConfig = ''
-      HibernateDelaySec=180m
+      HibernateDelaySec=120m
       '';
     # Enable cgroups v.2
     enableUnifiedCgroupHierarchy = true;
