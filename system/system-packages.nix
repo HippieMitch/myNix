@@ -68,7 +68,7 @@
       dejavu_fonts
       inter
       (nerdfonts.override {
-        fonts = [ "JetBrainsMono" "SourceCodePro" "UbuntuMono" ];
+        fonts = [ "CommitMono" "FiraMono" "JetBrainsMono" "SourceCodePro" "UbuntuMono" ];
       })
       noto-fonts
       open-sans
