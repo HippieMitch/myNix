@@ -32,6 +32,7 @@
           "dom.enable_web_task_scheduling" = true;
           "layout.css.has-selector.enabled" = true;
           "dom.security.sanitizer.enabled" = true;
+          "dom.private-attribution.submission.enabled" = false;
           "browser.contentblocking.category" = "strict";
           "urlclassifier.trackingSkipURLs" = "*.reddit.com, *.twitter.com, *.twimg.com, *.tiktok.com";
           "urlclassifier.features.socialtracking.skipURLs" = "*.instagram.com, *.twitter.com, *.twimg.com";

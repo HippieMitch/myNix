@@ -27,6 +27,13 @@
     # Chaotic-CX
       chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
+    # plasma-manager
+      plasma-manager = {
+        url = "github:nix-community/plasma-manager";
+        inputs.nixpkgs.follows = "nixpkgs";
+        inputs.home-manager.follows = "home-manager";
+      };
+
     # kde2nix
     #  kde2nix.url = "github:nix-community/kde2nix";
 
@@ -54,6 +61,7 @@
               nixpkgs-master, 
               home-manager, 
               chaotic,
+              plasma-manager,
              # kde2nix,
              # nixos-cosmic,
               nixvim,
@@ -107,6 +115,8 @@
               useUserPackages = true;
               extraSpecialArgs = {inherit inputs;};
               users.sean = import ./home/home.nix;
+              #plasma-manager
+              sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
             };
           }
 

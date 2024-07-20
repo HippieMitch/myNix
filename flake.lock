@@ -326,11 +326,11 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1721482928,
-        "narHash": "sha256-+Rn2LYKCxmYe3HrJI4v1FyDlZnHyIdLcQMOFfqzTSwM=",
+        "lastModified": 1721504061,
+        "narHash": "sha256-QzSrUrZp3NQ/zb+bkwX1Bo9y6+Hu54F8/er+tlyHsDw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "7ff3f2842c390d444033f7dc1bd599b0d2afefa8",
+        "rev": "63911cd477b27ee05240f565e26dc9a545270430",
         "type": "github"
       },
       "original": {
@@ -373,11 +373,11 @@
     },
     "nixpkgs-unstable-small": {
       "locked": {
-        "lastModified": 1721437558,
-        "narHash": "sha256-Bti/C61GqQTAyO8FhkuhdvEkV7UfCSu1TYqv+mmMTtI=",
+        "lastModified": 1721481798,
+        "narHash": "sha256-GOwbtcTDS7KnVseckF+H8OCRNrwYEqCZ34QOZ+i51e4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8a6b6167bbf6178f9ff150025a4f06a48b02f039",
+        "rev": "a2aeb0fcca8ef063c03ef57fa5de49084d4e9687",
         "type": "github"
       },
       "original": {
@@ -428,6 +428,29 @@
         "type": "github"
       }
     },
+    "plasma-manager": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1720992717,
+        "narHash": "sha256-8j1bZVfKT1vJ0e+U7NYRNBG+DdBj5C/tpwe5krxT4/4=",
+        "owner": "nix-community",
+        "repo": "plasma-manager",
+        "rev": "460b48dc3dcd05df568e27cbb90581d23baec8dc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "plasma-manager",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "chaotic": "chaotic",
@@ -439,7 +462,8 @@
         "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixpkgs-unstable-small": "nixpkgs-unstable-small",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "plasma-manager": "plasma-manager"
       }
     },
     "systems": {
