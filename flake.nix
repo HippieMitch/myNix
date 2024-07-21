@@ -115,7 +115,7 @@
               useUserPackages = true;
               extraSpecialArgs = {inherit inputs;};
               users.sean = import ./home/home.nix;
-              #plasma-manager
+              # plasma-manager
               sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
             };
           }

@@ -81,8 +81,6 @@
       "krunnerrc"."Plugins"."krunner_charrunnerEnabled" = false;
       "krunnerrc"."Plugins"."krunner_shellEnabled" = false;
       "krunnerrc"."Plugins/Favorites"."plugins" = "krunner_services,krunner_systemsettings";
-      "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."Image" = "/home/sean/Downloads/wallhaven-mdjrqy.jpg";
-      "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."PreviewImage" = "/home/sean/Downloads/wallhaven-mdjrqy.jpg";
       "ksplashrc"."KSplash"."Engine" = "none";
       "ksplashrc"."KSplash"."Theme" = "None";
       "kwalletrc"."Wallet"."First Use" = false;
