@@ -8,6 +8,7 @@
   chaotic.scx = {
     enable = true;
   #  scheduler = "scx_rusty";
-    scheduler = "scx_lavd";
+  #  scheduler = "scx_lavd";
+    scheduler = "scx_rustland";
   };
 }

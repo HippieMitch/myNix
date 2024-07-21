@@ -4,7 +4,7 @@
 
 {
   boot.kernel.sysctl = {
-    "net.core.default_qdisc" = "fq_codel";
+    "net.core.default_qdisc" = "cake";
     "net.ipv4.tcp_congestion_control" = "bbr";
     "vm.swappiness" = 100;
     "vm.vfs_cache_pressure" = 50;
