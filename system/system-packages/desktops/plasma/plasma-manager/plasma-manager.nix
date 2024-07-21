@@ -3,6 +3,7 @@
     enable = true;
     shortcuts = {
       "kwin"."Window Close" = "Meta+Q";
+      "kwin"."Edit Tiles" = "Meta+Y";
       "plasmashell"."activate application launcher" = "Meta+Space";
       "services/fedora.desktop"."_launch" = "Meta+U";
       "services/firefox.desktop"."_launch" = "Meta+B";
