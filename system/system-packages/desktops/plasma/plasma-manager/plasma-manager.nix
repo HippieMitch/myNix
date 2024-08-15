@@ -102,5 +102,22 @@
       "plasmanotifyrc"."Applications/org.qbittorrent.qBittorrent"."Seen" = true;
       "plasmanotifyrc"."Applications/thunderbird"."Seen" = true;
     };
+    powerdevil = {
+      AC = {
+        powerButtonAction = "sleep";
+        whenLaptopLidClosed = "sleep";
+        whenSleepingEnter = "standbyThenHibernate";
+      };
+      battery = {
+        powerButtonAction = "sleep";
+        whenLaptopLidClosed = "sleep";
+        whenSleepingEnter = "standbyThenHibernate";
+      };
+      lowBattery = {
+        powerButtonAction = "sleep";
+        whenLaptopLidClosed = "sleep";
+        whenSleepingEnter = "standbyThenHibernate";
+      };
+    };
   };
 }

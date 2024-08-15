@@ -30,10 +30,8 @@
       '';
     # Suspend Options
     sleep.extraConfig = ''
-      HibernateDelaySec=180m
+      HibernateDelaySec=120m
       '';
-    # Enable cgroups v.2
-    enableUnifiedCgroupHierarchy = true;
   };
 
   # Power Management
@@ -203,7 +201,7 @@
   # Nix
   nix = {
     # Use Lix
-    package = pkgs.lix;
+    #package = pkgs.lix;
     # Nix Settings
     settings = {
       # Enable Flakes

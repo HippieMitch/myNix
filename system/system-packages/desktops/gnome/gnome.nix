@@ -12,18 +12,18 @@
   environment.gnome.excludePackages = (with pkgs; [
    epiphany
    gnome-console
-   gnome.cheese
-   gnome.geary
-   gnome.gnome-calendar
+   cheese
+   geary
+   gnome-calendar
    gnome.gnome-characters
    gnome.gnome-clocks
    gnome.gnome-maps
    gnome.gnome-music
    gnome-photos
-   gnome.simple-scan
+   simple-scan
    gnome-tour
-   gnome.totem
-   gnome.yelp
+   totem
+   yelp
    loupe
   ]);
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
@@ -40,8 +40,8 @@
   environment.systemPackages = with pkgs; [
    dconf2nix
    ffmpegthumbnailer
-   gnome.eog
-   gnome.dconf-editor
+   eog
+   dconf-editor
    gnomeExtensions.appindicator
    gnomeExtensions.caffeine
    gnomeExtensions.clipboard-history
@@ -53,8 +53,8 @@
    gnomeExtensions.pop-shell
 #   gnomeExtensions.system76-scheduler
    gnomeExtensions.vitals
-   gnome.gnome-tweaks
-   gnome.nautilus-python
+   gnome-tweaks
+   nautilus-python
 
    # Icon Themes
    papirus-icon-theme

@@ -64,8 +64,9 @@ programs.zsh = {
       "history-substring-search"
       "zoxide"
     ];
-    theme = "refined";
-  #  theme = "gozilla";
+  #  theme = "fino";
+  #  theme = "refined";
+    theme = "gozilla";
   };
 
   /*

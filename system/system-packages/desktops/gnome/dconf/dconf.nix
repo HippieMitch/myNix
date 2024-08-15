@@ -25,7 +25,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "system";
+      last-panel = "applications";
       window-state = mkTuple [ 1332 1012 false ];
     };
 
@@ -202,10 +202,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/caffeine" = {
-      indicator-position-max = 2;
+      indicator-position-max = 1;
       show-notifications = false;
-      toggle-state = true;
-      user-enabled = true;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
@@ -275,9 +273,54 @@ with lib.hm.gvariant;
       window-size = mkTuple [ 1231 902 ];
     };
 
+    "org/virt-manager/virt-manager" = {
+      manager-window-height = 550;
+      manager-window-width = 550;
+    };
+
+    "org/virt-manager/virt-manager/confirm" = {
+      delete-storage = false;
+      forcepoweroff = false;
+    };
+
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
-      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+    };
+
+    "org/virt-manager/virt-manager/conns/qemu:system" = {
+      window-size = mkTuple [ 800 600 ];
+    };
+
+    "org/virt-manager/virt-manager/details" = {
+      show-toolbar = true;
+    };
+
+    "org/virt-manager/virt-manager/urls" = {
+      isos = [ "/mnt/secondary/Downloads/Software/Linux Images/openmandriva.rome-24.07-plasma6.wayland.x86_64.iso" "/mnt/secondary/Downloads/Software/Linux Images/blendOS_35fda9f4.iso" ];
+    };
+
+    "org/virt-manager/virt-manager/vmlist-fields" = {
+      disk-usage = false;
+      network-traffic = false;
+    };
+
+    "org/virt-manager/virt-manager/vms/06e2e290ba704a14840cf08e42ceae26" = {
+      autoconnect = 1;
+      scaling = 1;
+      vm-window-size = mkTuple [ 1805 1137 ];
+    };
+
+    "org/virt-manager/virt-manager/vms/2296bdf496cb4b19b263bef7cce7a5db" = {
+      autoconnect = 1;
+      scaling = 1;
+      vm-window-size = mkTuple [ 1024 810 ];
+    };
+
+    "org/virt-manager/virt-manager/vms/d2caa7b8c65046c89f2d9de43ae3621d" = {
+      autoconnect = 1;
+      scaling = 1;
+      vm-window-size = mkTuple [ 1805 1137 ];
     };
 
   };
