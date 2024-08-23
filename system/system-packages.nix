@@ -76,5 +76,10 @@
       ];
 
    # Remove nano
-     programs.nano.enable = false;
-    }
+    programs.nano.enable = false;
+
+   # Permit olm
+    nixpkgs.config.permittedInsecurePackages = [
+      "olm-3.2.16"
+    ];
+  }
