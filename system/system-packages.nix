@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
 
   # Programs
+    brave
     firefox
     kdePackages.isoimagewriter
     mpv
@@ -72,14 +73,11 @@
       })
       noto-fonts
       open-sans
+      rubik
       ubuntu_font_family
       ];
 
    # Remove nano
     programs.nano.enable = false;
 
-   # Permit olm
-    nixpkgs.config.permittedInsecurePackages = [
-      "olm-3.2.16"
-    ];
   }

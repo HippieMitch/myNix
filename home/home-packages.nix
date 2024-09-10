@@ -8,8 +8,7 @@
   # Programs
     ardour
     discord
-    google-chrome
-    kdePackages.neochat
+    element-desktop
     krita
     lutris
     obs-studio
