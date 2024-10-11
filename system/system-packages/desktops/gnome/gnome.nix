@@ -15,10 +15,10 @@
    cheese
    geary
    gnome-calendar
-   gnome.gnome-characters
-   gnome.gnome-clocks
-   gnome.gnome-maps
-   gnome.gnome-music
+   gnome-characters
+   gnome-clocks
+   gnome-maps
+   gnome-music
    gnome-photos
    simple-scan
    gnome-tour
@@ -26,7 +26,7 @@
    yelp
    loupe
   ]);
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  services.udev.packages = with pkgs; [ gnome-settings-daemon ];
 
   services.gnome = {
     tracker-miners.enable = false;

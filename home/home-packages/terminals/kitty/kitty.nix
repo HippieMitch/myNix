@@ -21,12 +21,12 @@
       remember_window_size = "no";
       term = "xterm-256color";
     };
-#    theme = "Catppuccin-Mocha";
-#    theme = "Modus Vivendi";
-#    theme = "Mishran";
-    theme = "GitHub Dark High Contrast";
-#    theme = "VSCode_Dark";
-#    theme = "Modus Vivendi Tinted";
-#    theme = "Paul Millr";
+#    themeFile = "Catppuccin-Mocha";
+#    themeFile = "Modus_Vivendi";
+#    themeFile = "Mishran";
+    themeFile = "GitHub_Dark_High_Contrast";
+#    themeFile = "VSCode_Dark";
+#    themeFile = "Modus_Vivendi_Tinted";
+#    themeFile = "Paul_Millr";
   };
 }

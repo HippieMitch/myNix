@@ -13,10 +13,11 @@
       lualine.enable = true;
       nix.enable = true;
       rustaceanvim.enable = true;
-      surround.enable = true;
+      vim-surround.enable = true;
       telescope.enable = true;
       treesitter.enable = true;
       which-key.enable = true;
+      web-devicons.enable = true;
     };
     extraPlugins = with pkgs.vimPlugins; [
       nvim-dap-python
