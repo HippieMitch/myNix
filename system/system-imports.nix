@@ -21,8 +21,8 @@
 
   # Kernels
     #./kernels/cachy.nix
-    ./kernels/cachy-lto.nix
-    #./kernels/cachy-lto-scx.nix
+    #./kernels/cachy-lto.nix
+    ./kernels/cachy-lto-scx.nix
     #./kernels/cachy-scx.nix
     #./kernels/lts.nix
     #./kernels/rt.nix
