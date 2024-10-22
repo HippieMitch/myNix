@@ -17,6 +17,7 @@ imports =
     #../system/system-packages/desktops/xfce/xfce-home.nix
     ./home-packages/browsers/firefox/firefox.nix
     ./home-packages/btop/btop.nix
+    ./home-packages/editors/zed/zed.nix
     ./home-packages/mpv/mpv.nix
     #./home-packages/fastfetch/fastfetch.nix
     ./home-packages/fastfetch/fastfetch-small.nix
