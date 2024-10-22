@@ -1,4 +1,4 @@
-# Neovim Configuration
+# Zed-Editor Configuration
 { pkgs, inputs, ... }:
 
 {
