@@ -1,5 +1,5 @@
 # Zed-Editor Configuration
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
 

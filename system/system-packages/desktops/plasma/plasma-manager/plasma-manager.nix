@@ -30,13 +30,13 @@
       "kded5rc"."Module-browserintegrationreminder"."autoload" = false;
       "kded5rc"."Module-device_automounter"."autoload" = false;
       "kdeglobals"."DirSelect Dialog"."DirSelectDialog Size" = "1070,736";
-      "kdeglobals"."General"."AccentColor" = "206,141,22";
+     # "kdeglobals"."General"."AccentColor" = "206,141,22";
       "kdeglobals"."General"."TerminalApplication" = "kitty";
       "kdeglobals"."General"."TerminalService" = "kitty.desktop";
       "kdeglobals"."General"."UseSystemBell" = true;
       "kdeglobals"."General"."XftHintStyle" = "hintslight";
       "kdeglobals"."General"."XftSubPixel" = "rgb";
-      "kdeglobals"."General"."accentColorFromWallpaper" = true;
+     # "kdeglobals"."General"."accentColorFromWallpaper" = true;
       "kdeglobals"."General"."fixed" = "CommitMono Nerd Font Mono,13,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
       "kdeglobals"."General"."font" = "Inter Variable,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
       "kdeglobals"."General"."menuFont" = "Inter Variable,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";

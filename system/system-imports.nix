@@ -15,6 +15,7 @@
   # Overlays
     #./overlays/fprintd-bypass-pam-testing.nix
     #./overlays/mutter-triple-buffering.nix
+    #./overlays/tlp.nix
 
   # System Packages
     ./system-packages.nix

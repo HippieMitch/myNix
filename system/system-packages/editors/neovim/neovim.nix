@@ -1,5 +1,5 @@
 # Neovim Configuration
-{ pkgs, nixvim, ... }:
+{ pkgs, lib, ... }:
 
 {
   environment.systemPackages = [ pkgs.wl-clipboard ];
@@ -18,7 +18,43 @@
       treesitter.enable = true;
       which-key.enable = true;
       web-devicons.enable = true;
+      lsp = {
+        enable = true;
+        servers = {
+          ts_ls.enable = true;
+          pyright.enable = true;
+          nixd = {
+            enable = true;
+            settings = {
+              formatting.command = [ (lib.getExe pkgs.alejandra) ];
+            };
+          };
+        };
+      };
+      none-ls = {
+        enable = true;
+        sources = {
+          code_actions = {
+            statix.enable = true;
+          };
+          formatting = {
+            alejandra.enable = true;
+            nixfmt.enable = true;
+
+            prettier = {
+              enable = true;
+              settings = ''
+              {
+                extra_args = { "--no-semi", "--single-quote" },
+              }
+            '';
+            disableTsServerFormatter = true;
+            };
+          };
+        };
+      };
     };
+
     extraPlugins = with pkgs.vimPlugins; [
       nvim-dap-python
       telescope-fzf-native-nvim
