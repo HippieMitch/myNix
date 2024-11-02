@@ -58,6 +58,7 @@
     extraPlugins = with pkgs.vimPlugins; [
       nvim-dap-python
       telescope-fzf-native-nvim
+      vim-be-good
       vim-nix
     ];
     colorschemes = {

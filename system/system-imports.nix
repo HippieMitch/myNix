@@ -1,6 +1,6 @@
 # System Imports
 
-{ config, ... }:
+{ ... }:
 
 {
  imports =
