@@ -29,8 +29,8 @@
   services.udev.packages = with pkgs; [ gnome-settings-daemon ];
 
   services.gnome = {
-    tracker-miners.enable = false;
-    tracker.enable = false;
+    localsearch.enable = false;
+    tinysparql.enable = false;
   };
 
   # XDG
