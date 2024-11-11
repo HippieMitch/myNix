@@ -35,12 +35,13 @@
     ./modules/apparmor.nix
     ./modules/dns.nix
     ./modules/modprobe.nix
+    ./modules/plymouth.nix
     ./modules/sysctl.nix
 
   # Daemons
     ./daemons/schedulers/ananicy-cpp.nix
     #./daemons/schedulers/system76-scheduler.nix
-    #./daemons/fprintd.nix
+    ./daemons/fprintd.nix
     ./daemons/tlp.nix
 
   # Desktop Environments

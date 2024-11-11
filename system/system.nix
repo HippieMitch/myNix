@@ -13,14 +13,20 @@
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
-      timeout = 1;
+      timeout = 0;
     };
 
     # Kernel Parameters
-    kernelParams = [ "quiet" "preempt=full" "split_lock_detect=off" "resume=LABEL=NixOS" "resume_offset=533760" ];
+    kernelParams = [ 
+      "preempt=full" 
+      "split_lock_detect=off" 
+      "resume=LABEL=NixOS" 
+      "resume_offset=533760"
+    ];
 
     # Resume Device
     resumeDevice = "/dev/disk/by-uuid/09582357-7ae5-4a4f-a5be-9ac28dc3fb76";
+
   };
 
   # Systemd
@@ -45,7 +51,6 @@
     avahi.enable = false;
     bpftune.enable = true;
     flatpak.enable = true;
-    fprintd.enable = true;
     fstrim.enable = true;
     fwupd.enable = true;
     gvfs.enable = true;
