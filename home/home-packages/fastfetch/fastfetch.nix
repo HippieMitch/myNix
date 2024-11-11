@@ -1,6 +1,6 @@
 # fastfetch config
 
-{ config, ... }:
+{ ... }:
 
 {
   programs.fastfetch = {

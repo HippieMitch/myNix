@@ -1,5 +1,5 @@
 # Kitty Configuration
-{ config, ... }:
+{ ... }:
 
 {
   programs.kitty = {

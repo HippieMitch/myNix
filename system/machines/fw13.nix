@@ -1,6 +1,6 @@
 # Framework 13
 
-{ lib, pkgs, config, ... }: 
+{ lib, pkgs, ... }: 
 
 {
 

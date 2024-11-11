@@ -1,5 +1,5 @@
 # TLP Fix
-{ config, pkgs, lib, ... }:
+{ ... }:
 
 {
 nixpkgs.overlays = [

@@ -58,7 +58,6 @@
 
    # Icon Themes
    papirus-icon-theme
-   qogir-icon-theme
    tela-icon-theme
    ];
  

@@ -24,8 +24,25 @@ with lib.hm.gvariant;
       style-variant = "dark";
     };
 
+    "org/gnome/calculator" = {
+      accuracy = 9;
+      angle-units = "degrees";
+      base = 10;
+      button-mode = "basic";
+      number-format = "automatic";
+      show-thousands = false;
+      show-zeroes = false;
+      source-currency = "";
+      source-units = "degree";
+      target-currency = "";
+      target-units = "radian";
+      window-maximized = false;
+      window-size = mkTuple [ 360 503 ];
+      word-size = 64;
+    };
+
     "org/gnome/control-center" = {
-      last-panel = "applications";
+      last-panel = "system";
       window-state = mkTuple [ 1332 1012 false ];
     };
 
@@ -68,17 +85,17 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/interface" = {
-      color-scheme = "default";
+      color-scheme = "prefer-dark";
       cursor-size = 24;
-      cursor-theme = "Qogir";
+      cursor-theme = "Adwaita";
       document-font-name = "Noto Sans 12";
       enable-animations = true;
       enable-hot-corners = false;
       font-antialiasing = "rgba";
       font-hinting = "slight";
-      font-name = "Ubuntu 11";
-      icon-theme = "Papirus-Light";
-      monospace-font-name = "JetBrainsMono Nerd Font Medium 13";
+      font-name = "Inter Variable 11";
+      icon-theme = "Tela-ubuntu-dark";
+      monospace-font-name = "JetBrainsMono Nerd Font Mono Semi-Bold 13";
       scaling-factor = mkUint32 1;
       show-battery-percentage = false;
       text-scaling-factor = 1.0;
@@ -87,7 +104,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "thunderbird" "firefox" "gnome-power-panel" ];
+      application-children = [ "thunderbird" "firefox" "gnome-power-panel" "org-gnome-settings" "org-gnome-nautilus" ];
     };
 
     "org/gnome/desktop/notifications/application/firefox" = {
@@ -96,6 +113,14 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/notifications/application/gnome-power-panel" = {
       application-id = "gnome-power-panel.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-gnome-nautilus" = {
+      application-id = "org.gnome.Nautilus.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-gnome-settings" = {
+      application-id = "org.gnome.Settings.desktop";
     };
 
     "org/gnome/desktop/notifications/application/org-qbittorrent-qbittorrent" = {
@@ -172,8 +197,18 @@ with lib.hm.gvariant;
       initial-size = mkTuple [ 1347 974 ];
     };
 
+    "org/gnome/photos" = {
+      window-maximized = false;
+      window-position = [ 20 20 ];
+      window-size = [ 890 568 ];
+    };
+
     "org/gnome/portal/filechooser/kitty" = {
       last-folder-path = "/home/sean/Pictures/Wallpapers";
+    };
+
+    "org/gnome/settings-daemon/plugins/color" = {
+      night-light-schedule-automatic = false;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -237,7 +272,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1715040181;
+      check-timestamp = mkInt64 1731263767;
       first-run = false;
     };
 
@@ -264,7 +299,7 @@ with lib.hm.gvariant;
       show-hidden = false;
       show-size-column = true;
       show-type-column = true;
-      sidebar-width = 161;
+      sidebar-width = 167;
       sort-column = "name";
       sort-directories-first = false;
       sort-order = "ascending";
@@ -284,8 +319,8 @@ with lib.hm.gvariant;
     };
 
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
-      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      autoconnect = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
+      uris = [ "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" "qemu:///system" ];
     };
 
     "org/virt-manager/virt-manager/conns/qemu:system" = {

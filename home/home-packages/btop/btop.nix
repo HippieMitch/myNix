@@ -1,6 +1,6 @@
 # btop config
 
-{ config, ... }:
+{ ... }:
 
 {
   programs.btop = {

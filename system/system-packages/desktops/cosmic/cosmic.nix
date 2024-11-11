@@ -1,6 +1,6 @@
 # Cosmic Desktop
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   services = {

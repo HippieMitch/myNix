@@ -20,8 +20,8 @@ imports =
     ./home-packages/editors/vscodium/vscodium.nix
     #./home-packages/editors/zed/zed.nix
     ./home-packages/mpv/mpv.nix
-    #./home-packages/fastfetch/fastfetch.nix
-    ./home-packages/fastfetch/fastfetch-small.nix
+    ./home-packages/fastfetch/fastfetch.nix
+    #./home-packages/fastfetch/fastfetch-small.nix
     #./home-packages/shells/fish/fish.nix
     ./home-packages/shells/zsh/zsh.nix
     #./home-packages/terminals/alacritty/alacritty.nix

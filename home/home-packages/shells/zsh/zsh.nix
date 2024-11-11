@@ -1,6 +1,6 @@
 # ZSH
 
-{config, pkgs, ... }:
+{ ... }:
 
 {
 programs.zsh = {

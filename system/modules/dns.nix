@@ -1,6 +1,6 @@
 # Use Stubby and Cloudflare DNS
 
-{ config, ... }:
+{ ... }:
 
 {
 services.stubby = {

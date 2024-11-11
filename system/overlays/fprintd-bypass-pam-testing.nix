@@ -1,5 +1,5 @@
 # Bypass PAM Testing
-{ config, pkgs, lib, ... }:
+{ ... }:
 
 {
 nixpkgs.overlays = [

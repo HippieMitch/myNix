@@ -1,5 +1,5 @@
 # Allow Mutter Triple Buffering
-{ config, pkgs, lib, ...}:
+{ pkgs, ...}:
 
 {
 nixpkgs.overlays = [

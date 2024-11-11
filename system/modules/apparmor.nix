@@ -1,6 +1,6 @@
 # Enable AppArmor
 
-{ config, ... }:
+{ ... }:
 
 {
   security.apparmor = {

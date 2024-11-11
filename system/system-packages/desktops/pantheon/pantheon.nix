@@ -1,6 +1,6 @@
 # Use Pantheon
 
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 
 { 	
 	  # Enable Pantheon

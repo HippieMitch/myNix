@@ -1,5 +1,5 @@
 # Fish Configuration
-{ config, inputs, ... }:
+{ ... }:
 
 {
   programs.fish = {
