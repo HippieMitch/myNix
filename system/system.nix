@@ -85,7 +85,6 @@
     # X11
     xserver = {
       enable = true;
-      videoDrivers = [ "intel" ];
       xkb = {
         layout = "us";
         variant = "";
@@ -161,16 +160,6 @@
       powerOnBoot = true;
     # Accelerated Video Playback
     };
-    graphics = {
-      enable = true;
-      extraPackages = with pkgs; [
-          intel-compute-runtime
-          intel-media-driver
-          vaapiIntel
-          vaapiVdpau
-          libvdpau-va-gl
-        ];
-      };
     # Disable PulseAudio
     pulseaudio.enable = false;
   };
@@ -200,10 +189,6 @@
   # nixpkgs Config
   nixpkgs.config = {
     allowUnfree = true;
-    # Enable Hybrid Video Playback Codec
-    packageOverrides = pkgs: {
-      vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
-    };
   };
 
   # Initial System State Version

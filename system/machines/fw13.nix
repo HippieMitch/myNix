@@ -21,39 +21,48 @@
     # Module is not used for Framework EC but causes boot time error log.
     blacklistedKernelModules = [ "cros-usbpd-charger" "hid-sensor-hub" ];
 
-    # Fix TRRS headphones missing mic
-#    extraModprobeConfig = lib.mkIf (lib.versionOlder pkgs.linux.version "6.6.8") ''
- #     options snd-hda-intel model=dell-headset-multi
- #     '';
   };
 
-  # Custom udev rules
-  /* services.udev.extraRules = ''
-    # Fix headphone noise when on powersave
-    SUBSYSTEM=="pci", ATTR{vendor}=="0x8086", ATTR{device}=="0xa0e0", ATTR{power/control}="on"
-    
-    # Ethernet expansion card support
-    ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8156", ATTR{power/autosuspend}="20"
-
-    # Power Management
-    SUBSYSTEM!="pci", GOTO="power_runtime_rules_end"
-    ACTION!="add", GOTO="power_runtime_rules_end"
-
-    KERNEL=="????:??:??.?"
-    PROGRAM="/run/current-system/sw/bin/sleep 0.1"
-    
-    ATTR{power/control}=="*", ATTR{power/control}="auto"
-    
-    LABEL="power_runtime_rules_end"
-  '';
-*/
   hardware = {
+
+    # Intel Graphics
+    graphics = {
+      enable = true;
+      extraPackages = with pkgs; [
+            intel-compute-runtime  
+            intel-media-driver
+            vaapiIntel  
+            vaapiVdpau 
+            libvdpau-va-gl    
+      ];
+    };
 
     # Needed for desktop environments to detect/manage display brightness
     sensor.iio.enable = lib.mkDefault true;
 
     # Mis-detected by nixos-generate-config
     acpilight.enable = lib.mkDefault true;
+  };
+
+  # Enable Hybrid Video Playback Codec
+  nixpkgs.config = {
+    packageOverrides = pkgs: {
+      vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+    };
+  };
+
+  # Services
+  services = {
+    # X11
+    xserver = {
+      videoDrivers = [ "intel" ];
+    };
+    # Ethernet Expansion Card Support
+    udev.extraRules = ''
+      # Ethernet expansion card support
+      ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8156", ATTR{power/autosuspend}="20"
+      '';
+
   };
 
   # This adds a patched ectool, to interact with the Embedded Controller
