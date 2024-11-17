@@ -19,7 +19,8 @@
     # Kernel Parameters
     kernelParams = [ 
       "preempt=full" 
-      "split_lock_detect=off" 
+      "split_lock_detect=off"
+      "nowatchdog"
       "resume=LABEL=NixOS" 
       "resume_offset=533760"
     ];
@@ -55,6 +56,7 @@
     fwupd.enable = true;
     gvfs.enable = true;
     mullvad-vpn.enable = true;
+    openssh.enable = false;
     power-profiles-daemon.enable = false;
     printing.enable = false;
     thermald.enable = true;

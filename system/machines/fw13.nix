@@ -7,19 +7,18 @@
   boot = {
 
     kernelParams = [
-    # Fixes a regression in s2idle, making it more power efficient than deep sleep
-    "acpi_osi=\"!Windows 2020\""
     # For Power consumption
     "nvme.noacpi=1"
     # Use deep suspension by default
     "mem_sleep_default=deep"
     # Intel GPU configuration
     "i915.enable_guc=3"
+    "i915.enable_fbc=1"
     "i915.enable_psr=1"
     ];
 
-    # Module is not used for Framework EC but causes boot time error log.
-    blacklistedKernelModules = [ "cros-usbpd-charger" "hid-sensor-hub" ];
+    # Blacklisted kernel modules
+    blacklistedKernelModules = [ "cros-usbpd-charger" "hid-sensor-hub" "iTCO_wdt" ];
 
   };
 
@@ -29,11 +28,11 @@
     graphics = {
       enable = true;
       extraPackages = with pkgs; [
-            intel-compute-runtime  
-            intel-media-driver
-            vaapiIntel  
-            vaapiVdpau 
-            libvdpau-va-gl    
+        intel-compute-runtime  
+        intel-media-driver
+        vaapiIntel  
+        vaapiVdpau 
+        libvdpau-va-gl    
       ];
     };
 
@@ -56,13 +55,29 @@
     # X11
     xserver = {
       videoDrivers = [ "intel" ];
+      config = ''
+        Section "Device"
+          Identifier "Intel Graphics"
+          Driver "modesetting"
+        EndSection
+
+        Option      "AccelMethod"  "sna"
+        Option      "DRI"  "iris"
+        Option      "TearFree"        "false"
+        Option      "TripleBuffer"    "false"
+        Option      "SwapbuffersWait" "false"
+        '';
+      exportConfiguration = true;
     };
+
     # Ethernet Expansion Card Support
     udev.extraRules = ''
-      # Ethernet expansion card support
+      # Ethernet Expansion Card Support
       ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8156", ATTR{power/autosuspend}="20"
-      '';
 
+      # Fix Headphone Noise While on Powersave
+      SUBSYSTEM=="pci", ATTR{vendor}=="0x8086", ATTR{device}=="0xa0e0", ATTR{power/control}="on";
+      '';
   };
 
   # This adds a patched ectool, to interact with the Embedded Controller

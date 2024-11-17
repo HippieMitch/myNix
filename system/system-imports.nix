@@ -58,8 +58,8 @@
     #./system-packages/window-managers/sway/sway.nix
 
   # Shells
-    #./system-packages/shells/fish/fish.nix
-    ./system-packages/shells/zsh/zsh.nix
+    ./system-packages/shells/fish/fish.nix
+    #./system-packages/shells/zsh/zsh.nix
 
   # System Applications
     ./system-packages/editors/neovim/neovim.nix

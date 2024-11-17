@@ -56,6 +56,7 @@ programs.zsh = {
     
   completionInit = "autoload -U compinit && compinit -i";
 
+/*
   oh-my-zsh = {
     enable = true;
     plugins = [ 
@@ -68,8 +69,9 @@ programs.zsh = {
     theme = "refined";
   #  theme = "gozilla";
   };
+*/
 
-  /*
+/*
   prezto = {
     enable = true;
     prompt.theme = "sorin";
@@ -89,7 +91,7 @@ programs.zsh = {
       "prompt"
     ];
   };
-  */
+*/
   };
 
   programs.zoxide = {
@@ -98,6 +100,11 @@ programs.zsh = {
   };
 
   programs.direnv = {
+    enableZshIntegration = true;
+  };
+
+  programs.starship = {
+    enable = true;
     enableZshIntegration = true;
   };
 }
