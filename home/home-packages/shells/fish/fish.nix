@@ -57,7 +57,7 @@
     starship = {
       enable = true;
       enableFishIntegration = true;
-      settings = ( import ../../prompts/starship/presets/pure.nix).starshipSettings;
+      settings = ( import ../prompts/starship/presets/pure.nix).starshipSettings;
      };
     zoxide = {
       enable = true;
