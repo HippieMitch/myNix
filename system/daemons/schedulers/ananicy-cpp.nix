@@ -1,6 +1,6 @@
   # Ananicy CPP
 
-{ pkgs, inputs, ...}:
+{ pkgs, ...}:
 
 {
   services.ananicy =  {

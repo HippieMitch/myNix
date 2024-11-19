@@ -1,6 +1,6 @@
   # Use Cachy Kernel (default)
 
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   # Kernel

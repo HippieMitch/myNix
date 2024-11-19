@@ -1,6 +1,6 @@
   # Use Cachy Kernel (sched-ext)
 
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   # Kernel

@@ -1,6 +1,6 @@
   # Use Cachy Kernel (LTO)
 
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   # Kernel
