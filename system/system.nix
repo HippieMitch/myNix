@@ -11,7 +11,10 @@
   boot = {
 
     loader = {
-      systemd-boot.enable = true;
+      systemd-boot = {
+        enable = true;
+        editor = false;
+      };
       efi.canTouchEfiVariables = true;
       timeout = 0;
     };
@@ -175,7 +178,9 @@
 
   # Security
   security = {
-    sudo.enable = false;
+    sudo = {
+      enable = false;
+    };
     doas = {
       enable = true;
       extraRules = [{
@@ -188,13 +193,11 @@
     rtkit.enable = true;
   };
 
-  # nixpkgs Config
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
-
   # Initial System State Version
   system.stateVersion = "24.05";
+
+  # nixpkgs Allow Unfree
+  nixpkgs.config.allowUnfree = true;
 
   # Nix
   nix = {
@@ -206,6 +209,13 @@
       experimental-features = [ "nix-command" "flakes" ];
       # Store Optimisation
       auto-optimise-store = true;
+      substituters = [
+        "https://nix-community.cachix.org"
+        "https://cache.nixos.org/"
+      ];
+      trusted-public-keys = [
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      ];
     };
 
     # Garbage Collection

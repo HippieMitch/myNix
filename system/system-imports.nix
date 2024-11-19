@@ -39,9 +39,10 @@
     ./modules/sysctl.nix
 
   # Daemons
+    ./daemons/fprintd.nix
     ./daemons/schedulers/ananicy-cpp.nix
     #./daemons/schedulers/system76-scheduler.nix
-    ./daemons/fprintd.nix
+    #./daemons/sshd.nix
     ./daemons/tlp.nix
 
   # Desktop Environments

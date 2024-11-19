@@ -35,7 +35,7 @@
         libvdpau-va-gl    
       ];
     };
-
+    
     # Needed for desktop environments to detect/manage display brightness
     sensor.iio.enable = lib.mkDefault true;
 

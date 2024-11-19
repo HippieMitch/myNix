@@ -53,7 +53,7 @@
 
   };
 
-  outputs = { self, 
+  outputs = { self,
               nixpkgs, 
               nixpkgs-unstable, 
               nixpkgs-unstable-small, 
@@ -66,7 +66,9 @@
              # nixos-cosmic,
               nixvim,
               ... } @ inputs:
-    let
+
+      let
+      inherit (self) outputs;
       system = "x86_64-linux";
       overlay-unstable = final: prev: {
          unstable = import nixpkgs-unstable {
@@ -94,52 +96,54 @@
       };
 
     in {
-      nixosConfigurations."spaceghost" = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [
-          ({ config, pkgs, ... }: { nixpkgs.overlays = [
-            overlay-unstable 
-            overlay-unstable-small 
-            overlay-stable 
-            overlay-master
-           ]; })
+      nixosConfigurations = {
+        spaceghost = nixpkgs.lib.nixosSystem {
+          specialArgs = {inherit inputs outputs;};
+          modules = [
+            ({ ... }: { nixpkgs.overlays = [
+              overlay-unstable 
+              overlay-unstable-small 
+              overlay-stable 
+              overlay-master
+            ]; })
 
-          # System Configuration File
-          ./system/system.nix
+            # System Configuration File
+            ./system/system.nix
           
-          # Home Manager Module
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = {inherit inputs;};
-              users.sean = import ./home/home.nix;
-              # plasma-manager
-              sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+            # Home Manager Module
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = {inherit inputs outputs;};
+                users.sean = import ./home/home.nix;
+                # plasma-manager
+                sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+              };
+            }
+
+            # Chaotic-CX Module
+            chaotic.nixosModules.default
+
+            # kde2nix Module
+            # kde2nix.nixosModules.default
+
+            /*
+            # Cosmic Cache and Module
+            {
+            nix.settings = {
+              substituters = [ "https://cosmic.cachix.org/" ];
+              trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
             };
-          }
+            }
+            nixos-cosmic.nixosModules.default 
+            */
 
-          # Chaotic-CX Module
-          chaotic.nixosModules.default
-
-          # kde2nix Module
-         # kde2nix.nixosModules.default
-
-         /*
-          # Cosmic Cache and Module
-          {
-          nix.settings = {
-            substituters = [ "https://cosmic.cachix.org/" ];
-            trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-          };
-        }
-          nixos-cosmic.nixosModules.default 
-          */
-
-          # NixVim Module
-          nixvim.nixosModules.nixvim
-        ];
+            # NixVim Module
+            nixvim.nixosModules.nixvim
+          ];
+        };
       };
     };
 }
