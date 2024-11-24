@@ -5,6 +5,9 @@
 {
 programs.zsh = {
   enable = true;
+  interactiveShellInit = ''
+    export MANPAGER='nvim +Man!'
+  '';
   sessionVariables = {
     EDITOR = "/run/current-system/sw/bin/nvim";
     ZSH_DISABLE_COMPFIX=true;
@@ -24,6 +27,7 @@ programs.zsh = {
       npkgs = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
       server = "ssh -i 'stonerayphoto.pem' ec2-user@ec2-3-86-84-19.compute-1.amazonaws.com";
       copy2server = "rsync -zaP -e 'ssh -i /mnt/secondary/Documents/Code/html/stonerayphoto.pem' /mnt/secondary/Documents/Code/html/index.html  ec2-user@3.86.84.19:/home/ec2-user";
+      nconf = "doas nvim /etc/nixos";
       sconf = "doas nvim /etc/nixos/system/system.nix";
       fconf = "doas nvim /etc/nixos/flake.nix";
       hconf = "doas nvim /etc/nixos/home/home.nix";
