@@ -40,7 +40,7 @@
 
   # Daemons
     ./daemons/fprintd.nix
-    ./daemons/schedulers/ananicy-cpp.nix
+    #./daemons/schedulers/ananicy-cpp.nix
     #./daemons/schedulers/system76-scheduler.nix
     #./daemons/sshd.nix
     ./daemons/tlp.nix

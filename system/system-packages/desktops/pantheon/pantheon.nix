@@ -7,9 +7,8 @@
 	  services.xserver.displayManager.lightdm.enable = true;
 	  services.xserver.desktopManager.pantheon.enable = true;
 	  services.xserver.desktopManager.pantheon.extraWingpanelIndicators = with pkgs; [ monitor ];
-          services.xserver.displayManager.defaultSession = "pantheon";
+          services.displayManager.defaultSession = "pantheon";
           services.pantheon.contractor.enable = true;
-          programs.pantheon-tweaks.enable = true;
 
           # XDG 
           xdg.portal.enable = true;
