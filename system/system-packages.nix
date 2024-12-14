@@ -68,9 +68,11 @@
     fonts.packages = with pkgs; [
       dejavu_fonts
       inter
-      (nerdfonts.override {
-        fonts = [ "CommitMono" "FiraMono" "JetBrainsMono" "SourceCodePro" "UbuntuMono" ];
-      })
+      nerd-fonts.commit-mono
+      nerd-fonts.fira-mono
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.sauce-code-pro
+      nerd-fonts.ubuntu-mono
       noto-fonts
       open-sans
       rubik
