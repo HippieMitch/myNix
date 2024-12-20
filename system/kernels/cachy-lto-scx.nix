@@ -10,12 +10,14 @@
     package = pkgs.master.scx.full;
   #  package = pkgs.scx_git.full;
   #  scheduler = "scx_rusty";
+  /*
     scheduler = "scx_lavd";
     extraArgs = [
       "--autopower"
       ];
+  */
   #  scheduler = "scx_rustland";
-  #  scheduler = "scx_bpfland";
+    scheduler = "scx_bpfland";
   #  scheduler = "scx_flash";
   };
 }
