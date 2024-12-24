@@ -5,8 +5,9 @@
 {
   # Kernel
   boot.kernelPackages =  pkgs.linuxPackages_cachyos;
-  chaotic.scx = {
+  services.scx = {
     enable = true;
-    scheduler = "scx_rusty";
+    package = pkgs.master.scx.full;
+    scheduler = "scx_bpfland";
   };
 }
