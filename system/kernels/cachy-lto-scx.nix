@@ -18,6 +18,10 @@
   */
   #  scheduler = "scx_rustland";
     scheduler = "scx_bpfland";
+    extraArgs = [
+  #    "-m"
+  #    "performance"
+    ];
   #  scheduler = "scx_flash";
   };
 }

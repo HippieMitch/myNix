@@ -54,7 +54,10 @@
   services = {
     # X11
     xserver = {
-      videoDrivers = [ "intel" ];
+      videoDrivers = [ 
+        "modesetting"
+        "fbdev"
+      ];
       config = ''
         Section "Device"
           Identifier "Intel Graphics"
