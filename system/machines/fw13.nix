@@ -15,11 +15,16 @@
     "i915.enable_guc=3"
     "i915.enable_fbc=1"
     "i915.enable_psr=1"
+    "i915.force_probe=!a7a0"
+    "xe.force_probe=a7a0"
+    "dev.i915.perf_stream_paranoid=0"
     ];
 
     # Blacklisted kernel modules
-    blacklistedKernelModules = [ "cros-usbpd-charger" "hid-sensor-hub" "iTCO_wdt" ];
-
+    blacklistedKernelModules = [ 
+      "cros-usbpd-charger"
+      "iTCO_wdt" 
+    ];
   };
 
   hardware = {
@@ -73,13 +78,20 @@
       exportConfiguration = true;
     };
 
+    # Firmware Update Manager
+    fwupd = {
+      enable = true;
+      extraRemotes = [ "lvfs-testing" ];
+      uefiCapsuleSettings.DisableCapsuleUpdateOnDisk = true;
+    };
+
     # Ethernet Expansion Card Support
     udev.extraRules = ''
       # Ethernet Expansion Card Support
       ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8156", ATTR{power/autosuspend}="20"
 
       # Fix Headphone Noise While on Powersave
-      SUBSYSTEM=="pci", ATTR{vendor}=="0x8086", ATTR{device}=="0xa0e0", ATTR{power/control}="on";
+      SUBSYSTEM=="pci", ATTR{vendor}=="0x8086", ATTR{device}=="0xa0e0", ATTR{power/control}="on"
       '';
   };
 

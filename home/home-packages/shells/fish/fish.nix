@@ -7,6 +7,7 @@
     interactiveShellInit = ''
       set -U "fish_greeting";
       set -Ux "LIBVA_DRIVER_NAME" "iHD";
+      set -Ux "SYSTEMD_EDITOR" "nvim";
       export MANPAGER='nvim +Man!'
     '';
     shellAliases = 

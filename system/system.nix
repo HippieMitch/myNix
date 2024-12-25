@@ -56,7 +56,6 @@
     bpftune.enable = true;
     flatpak.enable = true;
     fstrim.enable = true;
-    fwupd.enable = true;
     gvfs.enable = true;
     mullvad-vpn.enable = true;
     openssh.enable = false;
