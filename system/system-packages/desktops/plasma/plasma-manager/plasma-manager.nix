@@ -107,16 +107,19 @@
         powerButtonAction = "sleep";
         whenLaptopLidClosed = "sleep";
         whenSleepingEnter = "standbyThenHibernate";
+        displayBrightness = 100;
       };
       battery = {
         powerButtonAction = "sleep";
         whenLaptopLidClosed = "sleep";
         whenSleepingEnter = "standbyThenHibernate";
+        displayBrightness = 70;
       };
       lowBattery = {
         powerButtonAction = "sleep";
         whenLaptopLidClosed = "sleep";
         whenSleepingEnter = "standbyThenHibernate";
+        displayBrightness = 50;
       };
     };
   };

@@ -9,15 +9,22 @@
     kernelParams = [
     # For Power consumption
     "nvme.noacpi=1"
+
     # Use deep suspension by default
     "mem_sleep_default=deep"
+
     # Intel GPU configuration
     "i915.enable_guc=3"
     "i915.enable_fbc=1"
     "i915.enable_psr=1"
+    "dev.i915.perf_stream_paranoid=0"
+
+    # Experimental Xe driver
+    /*
     "i915.force_probe=!a7a0"
     "xe.force_probe=a7a0"
-    "dev.i915.perf_stream_paranoid=0"
+    */
+
     ];
 
     # Blacklisted kernel modules
