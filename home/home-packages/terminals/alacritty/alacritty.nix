@@ -31,6 +31,13 @@ programs.alacritty = {
       };
     };
 
+    cursor = {
+      style = {
+        shape = "Beam";
+        blinking = "Always";
+      };
+    };
+
     scrolling = {
       history = 10000;
       multiplier = 3;
