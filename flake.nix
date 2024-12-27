@@ -51,6 +51,8 @@
     # NixVim
       nixvim.url = "github:nix-community/nixvim";
 
+    # Alacritty Themes
+      alacritty-theme.url = "github:alexghr/alacritty-theme.nix";
   };
 
   outputs = { self,
@@ -65,6 +67,7 @@
              # kde2nix,
              # nixos-cosmic,
               nixvim,
+              alacritty-theme,
               ... } @ inputs:
 
       let
@@ -142,6 +145,12 @@
 
             # NixVim Module
             nixvim.nixosModules.nixvim
+
+            # Alacritty Themes Module
+            ({ config, pkgs, ...}: {
+              nixpkgs.overlays = [ alacritty-theme.overlays.default ];
+            })
+
           ];
         };
       };

@@ -24,8 +24,8 @@ imports =
     #./home-packages/fastfetch/fastfetch-small.nix
     ./home-packages/shells/fish/fish.nix
     #./home-packages/shells/zsh/zsh.nix
-    #./home-packages/terminals/alacritty/alacritty.nix
-    ./home-packages/terminals/kitty/kitty.nix
+    ./home-packages/terminals/alacritty/alacritty.nix
+    #./home-packages/terminals/kitty/kitty.nix
     #./home-packages/window-managers/hyprland/hyprland.nix
     ./home-packages/virtualization/virt-manager/virt-manager.nix
   ];

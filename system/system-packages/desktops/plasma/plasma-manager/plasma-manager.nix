@@ -7,7 +7,8 @@
       "plasmashell"."activate application launcher" = "Meta+Space";
       "services/fedora.desktop"."_launch" = "Meta+U";
       "services/firefox.desktop"."_launch" = "Meta+B";
-      "services/kitty.desktop"."_launch" = "Meta+T";
+      "services/Alacritty.desktop"."_launch" = "Meta+T";
+      #"services/kitty.desktop"."_launch" = "Meta+T";
       "services/org.kde.dolphin.desktop"."_launch" = "Meta+F";
       "services/org.kde.kate.desktop"."_launch" = "Meta+E";
       "services/org.kde.krunner.desktop"."_launch" = "Meta";
