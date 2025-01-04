@@ -32,8 +32,8 @@
       "kded5rc"."Module-device_automounter"."autoload" = false;
       "kdeglobals"."DirSelect Dialog"."DirSelectDialog Size" = "1070,736";
      # "kdeglobals"."General"."AccentColor" = "206,141,22";
-      "kdeglobals"."General"."TerminalApplication" = "kitty";
-      "kdeglobals"."General"."TerminalService" = "kitty.desktop";
+      "kdeglobals"."General"."TerminalApplication" = "alacritty";
+      "kdeglobals"."General"."TerminalService" = "Alacritty.desktop";
       "kdeglobals"."General"."UseSystemBell" = true;
       "kdeglobals"."General"."XftHintStyle" = "hintslight";
       "kdeglobals"."General"."XftSubPixel" = "rgb";

@@ -34,7 +34,7 @@ programs.alacritty = {
     cursor = {
       style = {
         shape = "Beam";
-        blinking = "Always";
+        blinking = "On";
       };
     };
 

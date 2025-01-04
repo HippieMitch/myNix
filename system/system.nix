@@ -61,6 +61,7 @@
     openssh.enable = false;
     power-profiles-daemon.enable = false;
     printing.enable = false;
+    pulseaudio.enable = false;
     thermald.enable = true;
 
     # Limit Journal Size
@@ -164,8 +165,6 @@
       powerOnBoot = true;
     # Accelerated Video Playback
     };
-    # Disable PulseAudio
-    pulseaudio.enable = false;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
