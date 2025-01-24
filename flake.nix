@@ -40,13 +40,11 @@
     # Gnome 46
     #  nixpkgs-gnome-46.url = "github:NixOS/nixpkgs/gnome-46";
 
-    /*
     # Cosmic
       nixos-cosmic = {
         url = "github:lilyinstarlight/nixos-cosmic";
         inputs.nixpkgs.follows = "nixpkgs";
       };
-    */
 
     # NixVim
       nixvim.url = "github:nix-community/nixvim";
@@ -65,7 +63,7 @@
               chaotic,
               plasma-manager,
              # kde2nix,
-             # nixos-cosmic,
+              nixos-cosmic,
               nixvim,
               alacritty-theme,
               ... } @ inputs:
@@ -113,6 +111,9 @@
             # System Configuration File
             ./system/system.nix
           
+            # Set $NIX_PATH
+            { nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ]; }
+
             # Home Manager Module
             home-manager.nixosModules.home-manager
             {
@@ -132,7 +133,6 @@
             # kde2nix Module
             # kde2nix.nixosModules.default
 
-            /*
             # Cosmic Cache and Module
             {
             nix.settings = {
@@ -141,7 +141,6 @@
             };
             }
             nixos-cosmic.nixosModules.default 
-            */
 
             # NixVim Module
             nixvim.nixosModules.nixvim

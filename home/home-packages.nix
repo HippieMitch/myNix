@@ -6,7 +6,7 @@
   home.packages = with pkgs; [
 
   # Programs
-    ardour
+    stable.ardour
     discord
     element-desktop
     krita

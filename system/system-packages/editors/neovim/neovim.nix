@@ -79,7 +79,8 @@
       wildmode = "longest,list";
       clipboard = "unnamedplus";
       foldenable = false;
-      guicursor = "a:ver100";
+      smartindent = true;
+     # guicursor = "a:ver100";
     };
   };
 }

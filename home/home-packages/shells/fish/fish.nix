@@ -13,7 +13,8 @@
     shellAliases = 
       {
 	errors = "journalctl -p err..alert";
-	cpu = ''watch -n.1 "grep \"^[c]pu MHz\" /proc/cpuinfo"'';
+	cpu = ''watch -n .1 "grep \"^[c]pu MHz\" /proc/cpuinfo"'';
+        temp = "watch -n .1 sensors";
 	anime = "ani-cli";
 	alaconf = "nvim ~/.config/alacritty/alacritty.yml";
 	kittyconf = "nvim ~/.config/kitty/kitty.conf";

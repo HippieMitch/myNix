@@ -200,7 +200,7 @@
   # Nix
   nix = {
     # Use Lix
-    package = pkgs.lix;
+    # package = pkgs.lix;
     # Nix Settings
     settings = {
       # Enable Flakes
