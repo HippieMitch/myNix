@@ -18,7 +18,6 @@
     curl
     distrobox
     duf
-    git
     lm_sensors
     mesa-demos
     tree

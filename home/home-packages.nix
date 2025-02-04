@@ -19,6 +19,7 @@
 
   # Command Line Tools
     ani-cli
+    git-credential-manager
     lsd
 
   # Development

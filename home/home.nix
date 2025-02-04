@@ -17,8 +17,16 @@
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
-    userName = "RazTheCat";
+    userName = "HippieMitch";
     userEmail = "razthecat@posteo.net";
+    extraConfig = {
+      credential = {
+        helper = "manager";
+        "https://github.com".HippieMitch = "HippieMitch";
+        credentialStore = "cache";
+      };
+    };
+
   };
 
   # Setup Bash
