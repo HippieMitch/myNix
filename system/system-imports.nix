@@ -22,12 +22,12 @@
 
   # Kernels
     #./kernels/cachy-lto.nix
-    ./kernels/cachy-lto-scx.nix
+    #./kernels/cachy-lto-scx.nix
     #./kernels/cachy.nix
     #./kernels/cachy-scx.nix
     #./kernels/lts.nix
     #./kernels/rt.nix
-    #./kernels/vanilla.nix
+    ./kernels/vanilla.nix
     #./kernels/xanmod.nix
     #./kernels/zen.nix
 
@@ -47,8 +47,8 @@
 
   # Desktop Environments
     #./system-packages/desktops/gnome/gnome.nix
-    ./system-packages/desktops/plasma/plasma6.nix
-    #./system-packages/desktops/cosmic/cosmic.nix
+    #./system-packages/desktops/plasma/plasma6.nix
+    ./system-packages/desktops/cosmic/cosmic.nix
     #./system-packages/desktops/cinnamon/cinnamon.nix
     #./system-packages/desktops/xfce/xfce.nix
     #./system-packages/desktops/pantheon/pantheon.nix
