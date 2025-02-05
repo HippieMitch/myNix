@@ -27,9 +27,9 @@
     #./kernels/cachy-scx.nix
     #./kernels/lts.nix
     #./kernels/rt.nix
-    ./kernels/vanilla.nix
+    #./kernels/vanilla.nix
     #./kernels/xanmod.nix
-    #./kernels/zen.nix
+    ./kernels/zen.nix
 
   # Modules
     ./modules/apparmor.nix
