@@ -34,7 +34,7 @@
       vulkan-tools
 
     # Icon Themes
-      tela-icon-theme 
+      stable.tela-icon-theme 
 
     ];
 }

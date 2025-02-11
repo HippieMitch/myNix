@@ -8,7 +8,7 @@
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
       github.github-vscode-theme
-      vadimcn.vscode-lldb
+    #  vadimcn.vscode-lldb
       golang.go
     ];
   };

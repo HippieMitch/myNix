@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{ ... }:
 
 {
   imports = [ ./system-imports.nix ];
@@ -29,7 +29,7 @@
     ];
 
     # Resume Device
-    resumeDevice = "/dev/disk/by-uuid/09582357-7ae5-4a4f-a5be-9ac28dc3fb76";
+    resumeDevice = "/dev/disk/by-uuid/f64d1e26-a984-47fd-99d5-edf672c724d3";
 
   };
 
