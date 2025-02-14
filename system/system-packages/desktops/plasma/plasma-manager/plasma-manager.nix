@@ -23,7 +23,7 @@
       "dolphinrc"."General"."ViewPropsTimestamp" = "2024,7,10,20,48,59.027";
       "dolphinrc"."KFileDialog Settings"."Places Icons Auto-resize" = false;
       "dolphinrc"."KFileDialog Settings"."Places Icons Static Size" = 22;
-      "dolphinrc"."PreviewSettings"."Plugins" = "appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,directorythumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,opendocumentthumbnail,svgthumbnail,windowsexethumbnail,windowsimagethumbnail,fontthumbnail,blenderthumbnail,ffmpegthumbs,gsthumbnail,mobithumbnail,rawthumbnail";
+      "dolphinrc"."PreviewSettings"."Plugins" = "appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,opendocumentthumbnail,svgthumbnail,windowsexethumbnail,windowsimagethumbnail,fontthumbnail,blenderthumbnail,ffmpegthumbs,gsthumbnail,mobithumbnail,rawthumbnail";
       "dolphinrc"."Search"."What" = "Content";
       "kactivitymanagerdrc"."activities"."e88ab34a-73ae-4914-b9f1-83c316665cbf" = "Default";
       "kactivitymanagerdrc"."main"."currentActivity" = "e88ab34a-73ae-4914-b9f1-83c316665cbf";

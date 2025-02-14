@@ -21,15 +21,13 @@
     ./system-packages.nix
 
   # Kernels
-    #./kernels/cachy-lto.nix
-    #./kernels/cachy-lto-scx.nix
+    ./kernels/cachy-lto.nix
     #./kernels/cachy.nix
-    #./kernels/cachy-scx.nix
     #./kernels/lts.nix
     #./kernels/rt.nix
     #./kernels/vanilla.nix
     #./kernels/xanmod.nix
-    ./kernels/zen.nix
+    #./kernels/zen.nix
 
   # Modules
     ./modules/apparmor.nix
