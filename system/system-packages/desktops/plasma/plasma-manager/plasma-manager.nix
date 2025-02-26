@@ -37,7 +37,7 @@
       "kdeglobals"."General"."UseSystemBell" = true;
       "kdeglobals"."General"."XftHintStyle" = "hintslight";
       "kdeglobals"."General"."XftSubPixel" = "rgb";
-     # "kdeglobals"."General"."accentColorFromWallpaper" = true;
+      "kdeglobals"."General"."accentColorFromWallpaper" = true;
       "kdeglobals"."General"."fixed" = "CommitMono Nerd Font Mono,13,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
       "kdeglobals"."General"."font" = "Inter Variable,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
       "kdeglobals"."General"."menuFont" = "Inter Variable,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
@@ -123,5 +123,81 @@
         displayBrightness = 50;
       };
     };
-  };
+   panels = [
+          {
+            location = "bottom";
+            widgets = [
+              {
+                kickoff = {
+                  sortAlphabetically = true;
+                 # icon = "nix-snowflake-white";
+                };
+              }
+              {
+                iconTasks = {
+                  launchers = [
+                    "applications:org.kde.dolphin.desktop"
+                    "applications:firefox.desktop"
+                    "applications:discord.desktop"
+                    "applications:element-desktop.desktop"
+                    "applications:steam.desktop"
+                    "applications:net.lutris.Lutris.desktop"
+                    "applications:ardour8.desktop"
+                    "applications:com.obsproject.Studio.desktop"
+                    "applications:org.kde.krita.desktop"
+                    "applications:pycharm-community.desktop"
+                    "applications:codium.desktop"
+                    "applications:virt-manager.desktop"
+                  ];
+                  behavior = {
+                    showTasks = {
+                      onlyInCurrentScreen = true;
+                      onlyInCurrentDesktop = true;
+                      onlyInCurrentActivity = true;
+                    };
+                  };
+                };
+              }
+              "org.kde.plasma.marginsseparator"
+              {
+                systemTray.items = {
+                  shown = [
+                    "org.kde.plasma.battery"
+                  ];
+                  hidden = [
+                    "org.kde.plasma.addons.katesessions"
+                    "org.kde.plasma.devicenotifier"
+                  ];
+                  configs = {
+                    battery.showPercentage = false;
+                  };
+                };
+              }
+              {
+                digitalClock = {
+                  time = {
+                    showSeconds = "onlyInTooltip";
+                    format = "12h";
+                  };
+                  date = {
+                    enable = false;
+                  };
+                  calendar = {
+                    firstDayOfWeek = "sunday";
+                    showWeekNumbers = true;
+                    plugins = [ "holidaysevents" "astronomicalevents" ];
+                  };
+                };
+              }
+            ];
+            hiding = "none";
+            floating = false;
+            lengthMode = "fill";
+            opacity = "adaptive";
+          }
+        ];
+        workspace = {
+          wallpaper = "/etc/nixos/system/system-packages/desktops/plasma/plasma-manager/wallpapers/wall-575.jpg";
+        };
+      };
 }
