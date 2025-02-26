@@ -1,6 +1,7 @@
 {
   programs.plasma = {
     enable = true;
+
     shortcuts = {
       "kwin"."Window Close" = "Meta+Q";
       "kwin"."Edit Tiles" = "Meta+Y";
@@ -13,6 +14,7 @@
       "services/org.kde.kate.desktop"."_launch" = "Meta+E";
       "services/org.kde.krunner.desktop"."_launch" = "Meta";
     };
+
     configFile = {
       "baloofilerc"."Basic Settings"."Indexing-Enabled" = false;
       "baloofilerc"."General"."dbVersion" = 2;
@@ -103,6 +105,7 @@
       "plasmanotifyrc"."Applications/org.qbittorrent.qBittorrent"."Seen" = true;
       "plasmanotifyrc"."Applications/thunderbird"."Seen" = true;
     };
+
     powerdevil = {
       AC = {
         powerButtonAction = "sleep";
@@ -123,6 +126,7 @@
         displayBrightness = 50;
       };
     };
+
    panels = [
           {
             location = "bottom";
