@@ -28,7 +28,7 @@
       kdePackages.kate
       kdePackages.kcalc
       kdePackages.kpmcore
-      partition-manager
+      kdePackages.partitionmanager
       clinfo
       wayland-utils
       vulkan-tools
