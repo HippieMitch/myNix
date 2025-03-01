@@ -129,7 +129,7 @@
 
    panels = [
           {
-            location = "bottom";
+            location = "top";
             widgets = [
               {
                 kickoff = {
@@ -196,7 +196,7 @@
               }
             ];
             hiding = "none";
-            floating = false;
+            floating = true;
             lengthMode = "fill";
             opacity = "adaptive";
           }

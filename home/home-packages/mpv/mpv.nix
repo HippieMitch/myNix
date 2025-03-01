@@ -14,7 +14,6 @@
       sub-font-size = 44;
       sub-border-size = 1;
       sub-color = "#CDCDCD";
-      sub-shadow = 3;
       sub-shadow-color = "#000000";
       sub-shadow-offset = 2;
     };
