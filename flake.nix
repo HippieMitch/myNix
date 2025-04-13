@@ -40,12 +40,6 @@
     # Gnome 46
     #  nixpkgs-gnome-46.url = "github:NixOS/nixpkgs/gnome-46";
 
-    # Cosmic
-      nixos-cosmic = {
-        url = "github:lilyinstarlight/nixos-cosmic";
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
-
     # NixVim
       nixvim.url = "github:nix-community/nixvim";
 
@@ -63,7 +57,6 @@
               chaotic,
               plasma-manager,
              # kde2nix,
-              nixos-cosmic,
               nixvim,
               alacritty-theme,
               ... } @ inputs:
@@ -132,15 +125,6 @@
 
             # kde2nix Module
             # kde2nix.nixosModules.default
-
-            # Cosmic Cache and Module
-            {
-            nix.settings = {
-              substituters = [ "https://cosmic.cachix.org/" ];
-              trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-            };
-            }
-            nixos-cosmic.nixosModules.default 
 
             # NixVim Module
             nixvim.nixosModules.nixvim
