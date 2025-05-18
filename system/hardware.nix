@@ -50,14 +50,6 @@
       options = [ "noatime" "nosuid" "nodev" "nofail" "x-gvfs-show" "x-udisks-auth" "x-gvfs-name=Secondary" ];
     };
 
-  fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/f64d1e26-a984-47fd-99d5-edf672c724d3";
-      fsType = "btrfs";
-      options = [ "subvol=swap" ];
-    };
-
-  swapDevices = [ { device = "/swap/swapfile"; } ];
-
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction

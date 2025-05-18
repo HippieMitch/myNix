@@ -24,14 +24,12 @@
       "preempt=full" 
       "split_lock_detect=off"
       "nowatchdog"
-      "resume=LABEL=NixOS" 
-      "resume_offset=533760"
     ];
 
-    # Resume Device
-    resumeDevice = "/dev/disk/by-uuid/f64d1e26-a984-47fd-99d5-edf672c724d3";
+    };
 
-  };
+  # ZRAM
+  zramSwap.enable = true;
 
   # Systemd
   systemd = {
@@ -40,9 +38,9 @@
       DefaultTimeoutStopSec=1s
       '';
     # Suspend Options
-    sleep.extraConfig = ''
-      HibernateDelaySec=120m
-      '';
+   # sleep.extraConfig = ''
+     # HibernateDelaySec=120m
+     # '';
   };
 
   # Power Management
