@@ -4,11 +4,15 @@
 
 {
   services = {
-    desktopManager.cosmic.enable = true;
+    desktopManager = {
+      cosmic = {
+        enable = true;
+        xwayland.enable = true;
+      };
+    };
     displayManager.cosmic-greeter.enable = true;
   };
   environment = {
     systemPackages = [ pkgs.loupe ];
-    sessionVariables.COSMIC_DATA_CONTROL_ENABLED = 1;
   };
 }
