@@ -72,10 +72,10 @@
 
     # Lid Switch and Power Button Options
     logind = {
-      lidSwitch = "suspend-then-hibernate";
+      lidSwitch = "suspend";
       extraConfig = ''
-        HandlePowerKey=suspend-then-hibernate
-        IdleAction=suspend-then-hibernate
+        HandlePowerKey=suspend
+        IdleAction=suspend
         IdleActionSec=12m
       '';
     };
@@ -163,8 +163,19 @@
     # Enable Bluetooth
     bluetooth = {
       enable = true;
-      powerOnBoot = true;
+
     # Accelerated Video Playback
+    };
+    graphics = {
+      enable = true;
+      extraPackages = with pkgs; [
+          intel-compute-runtime
+          intel-media-driver
+          vaapiIntel
+          vaapiVdpau
+          libvdpau-va-gl
+          vpl-gpu-rt
+      ];
     };
   };
 
@@ -201,7 +212,13 @@
   system.stateVersion = "24.05";
 
   # nixpkgs Allow Unfree
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    # Enable Hybrid Video Playback Codec
+    packageOverrides = pkgs: {
+      vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+    };
+  };
 
   # Nix
   nix = {
