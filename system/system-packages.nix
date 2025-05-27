@@ -24,7 +24,7 @@
 
   # Nix Tools
     nh
-    nix-search-cli
+    nix-search
     nvd
 
   # Multimedia Codecs
