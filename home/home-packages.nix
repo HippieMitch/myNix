@@ -23,7 +23,8 @@
     lsd
 
   # Development
-    jetbrains.pycharm-community-bin
+    pixelflasher
+    stable.jetbrains.pycharm-community-bin
   ];
 }
 

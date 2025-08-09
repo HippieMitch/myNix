@@ -7,8 +7,8 @@
       "kwin"."Edit Tiles" = "Meta+Y";
       "plasmashell"."activate application launcher" = "Meta+Space";
       "services/fedora.desktop"."_launch" = "Meta+U";
-      "services/firefox.desktop."."_launch" = "Meta+B";
-      #"services/brave-browser.desktop"."_launch" = "Meta+B";
+      #"services/firefox.desktop."."_launch" = "Meta+B";
+      "services/brave-browser.desktop"."_launch" = "Meta+B";
       "services/Alacritty.desktop"."_launch" = "Meta+T";
       #"services/kitty.desktop"."_launch" = "Meta+T";
       "services/org.kde.dolphin.desktop"."_launch" = "Meta+F";
@@ -142,8 +142,8 @@
                 iconTasks = {
                   launchers = [
                     "applications:org.kde.dolphin.desktop"
-                    "applications:firefox.desktop"
-                    #"applications:brave-browser.desktop"
+                    #"applications:firefox.desktop"
+                    "applications:brave-browser.desktop"
                     "applications:thunderbird.desktop"
                     "applications:discord.desktop"
                     "applications:element-desktop.desktop"

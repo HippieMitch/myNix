@@ -34,9 +34,10 @@
   # Systemd
   systemd = {
     # systemd-boot timeout
-    extraConfig = ''
-      DefaultTimeoutStopSec=1s
-      '';
+    settings.Manager = 
+    {
+      DefaultTimeoutStopSec = "1s";
+    };
     # Suspend Options
    # sleep.extraConfig = ''
      # HibernateDelaySec=120m
