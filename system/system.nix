@@ -73,12 +73,14 @@
 
     # Lid Switch and Power Button Options
     logind = {
-      lidSwitch = "suspend";
-      extraConfig = ''
-        HandlePowerKey=suspend
-        IdleAction=suspend
-        IdleActionSec=12m
-      '';
+      settings = {
+        Login = {
+          HandleLidSwitch = "suspend";
+          HandlePowerKey = "suspend";
+          IdleAction = "suspend";
+          IdleActionSec = "12m";
+        };
+      };
     };
 
     # Pipewire
