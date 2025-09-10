@@ -1,6 +1,6 @@
-# Use Stubby and Cloudflare DNS
+# Use Stubby and NextDNS
 
-{ ... }:
+{ lib, ... }:
 
 {
 services.stubby = {
@@ -14,30 +14,33 @@ services.stubby = {
     idle_timeout = 10000;
     round_robin_upstreams = 1;
     tls_min_version = "GETDNS_TLS1_3";
-    dnssec = "GETDNS_EXTENSION_TRUE";
     upstream_recursive_servers = [
       {
-        address_data = "1.1.1.2";
-        tls_auth_name = "cloudflare-dns.com";
+        address_data = "45.90.28.0";
+        tls_auth_name = "424879.dns.nextdns.io";
       }
       {
-        address_data = "1.0.0.2";
-        tls_auth_name = "cloudflare-dns.com";
+        address_data = "2a07:a8c0::0";
+        tls_auth_name = "424879.dns.nextdns.io";
       }
       {
-        address_data = "2606:4700:4700::1112";
-        tls_auth_name = "cloudflare-dns.com";
+        address_data = "45.90.30.0";
+        tls_auth_name = "424879.dns.nextdns.io";
       }
       {
-        address_data = "2606:4700:4700::1002";
-        tls_auth_name = "cloudflare-dns.com";
+        address_data = "2a07:a8c1::0";
+        tls_auth_name = "424879.dns.nextdns.io";
       }
     ];
   };
+  };
+
+networking = {
+  nameservers = [ "127.0.0.1" "::1"];
+  networkmanager.dns = lib.mkDefault"none";
 };
-networking.nameservers = [ "::1" "127.0.0.1" ];
 services.resolved = {
-  enable = true;
-  fallbackDns = [ "2606:4700:4700::1112" "2606:4700:4700::1002" "1.1.1.2" "1.0.0.2" ];
+  enable = false;
+  fallbackDns = [ "45.90.28.0" "2a07:a8c0::0" "45.90.30.0" "2a07:a8c1::0" ];
   };
 }

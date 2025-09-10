@@ -6,7 +6,6 @@
   environment.systemPackages = with pkgs; [
 
   # Programs
-    brave
     firefox
     kdePackages.isoimagewriter
     mpv

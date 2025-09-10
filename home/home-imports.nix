@@ -15,8 +15,8 @@ imports =
 
   # home-manager
     #../system/system-packages/desktops/xfce/xfce-home.nix
-    ./home-packages/browsers/firefox/firefox.nix
-    #./home-packages/browsers/vivaldi/vivaldi.nix
+    #./home-packages/browsers/firefox/firefox.nix
+    ./home-packages/browsers/vivaldi/vivaldi.nix
     ./home-packages/btop/btop.nix
     ./home-packages/editors/vscodium/vscodium.nix
     #./home-packages/editors/zed/zed.nix
