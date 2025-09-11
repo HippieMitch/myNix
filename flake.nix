@@ -117,7 +117,7 @@
                 extraSpecialArgs = {inherit inputs outputs;};
                 users.sean = import ./home/home.nix;
                 # plasma-manager
-                sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+                sharedModules = [ plasma-manager.homeModules.plasma-manager ];
               };
             }
 
