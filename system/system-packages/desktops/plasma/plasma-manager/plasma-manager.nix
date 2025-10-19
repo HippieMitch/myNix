@@ -206,7 +206,7 @@
           }
         ];
         workspace = {
-          wallpaper = "/etc/nixos/system/system-packages/desktops/plasma/plasma-manager/wallpapers/wall-501.jpg";
+          wallpaper = "/etc/nixos/system/system-packages/desktops/plasma/plasma-manager/wallpapers/wall-576.jpg";
         };
       };
 }
