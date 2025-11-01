@@ -73,7 +73,7 @@
       noto-fonts
       open-sans
       rubik
-      ubuntu_font_family
+      ubuntu-classic
       ];
 
    # Remove nano
