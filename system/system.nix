@@ -167,7 +167,6 @@
     bluetooth = {
       enable = true;
 
-    # Accelerated Video Playback
     };
   };
 
