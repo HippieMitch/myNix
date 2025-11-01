@@ -22,7 +22,6 @@
     wget
 
   # Nix Tools
-    nh
     nix-search
     nvd
 

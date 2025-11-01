@@ -241,12 +241,14 @@
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
     };
+  };
 
-    # Garbage Collection
-    gc = {
-     automatic = true;
-     dates = "weekly";
-     options = "--delete-older-than 7d";
+  # nh
+  programs.nh = {
+    enable = true;
+    clean = {
+      enable = true;
+      extraArgs = "--keep 5 --keep-since 7d";
     };
   };
 }
