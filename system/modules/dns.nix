@@ -42,5 +42,10 @@ networking = {
 services.resolved = {
   enable = false;
   fallbackDns = [ "45.90.28.0" "2a07:a8c0::0" "45.90.30.0" "2a07:a8c1::0" ];
-  };
+};
+
+programs.captive-browser = {
+  enable = true;
+  interface = "wlan0";
+};
 }
