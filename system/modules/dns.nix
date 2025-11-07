@@ -33,12 +33,13 @@ services.stubby = {
       }
     ];
   };
-  };
+};
 
 networking = {
   nameservers = [ "127.0.0.1" "::1"];
   networkmanager.dns = lib.mkDefault"none";
 };
+
 services.resolved = {
   enable = false;
   fallbackDns = [ "45.90.28.0" "2a07:a8c0::0" "45.90.30.0" "2a07:a8c1::0" ];
