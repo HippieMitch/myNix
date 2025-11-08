@@ -6,7 +6,6 @@
   environment.systemPackages = with pkgs; [
 
   # Programs
-    firefox
     kdePackages.isoimagewriter
     mpv
 
