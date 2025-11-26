@@ -148,7 +148,7 @@
                     #"applications:brave-browser.desktop"
                     "applications:thunderbird.desktop"
                     "applications:discord.desktop"
-                    "applications:element-desktop.desktop"
+                    #"applications:element-desktop.desktop"
                     "applications:steam.desktop"
                     "applications:net.lutris.Lutris.desktop"
                     "applications:ardour8.desktop"
