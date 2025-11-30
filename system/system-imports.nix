@@ -43,7 +43,8 @@
     #./daemons/schedulers/system76-scheduler.nix
     ./daemons/scx.nix
     #./daemons/sshd.nix
-    ./daemons/tlp.nix
+    #./daemons/tlp.nix
+    ./daemons/tuned.nix
 
   # Desktop Environments
     #./system-packages/desktops/gnome/gnome.nix

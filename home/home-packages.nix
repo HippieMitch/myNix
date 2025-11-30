@@ -24,7 +24,6 @@
 
   # Development
     pixelflasher
-    stable.jetbrains.pycharm-community-bin
   ];
 }
 

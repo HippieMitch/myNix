@@ -14,48 +14,55 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/f64d1e26-a984-47fd-99d5-edf672c724d3";
+    { device = "/dev/mapper/nixcrypt";
       fsType = "btrfs";
-      options = [ "subvol=root" "ssd" "noatime" "compress=zstd:1" ];
+      options = [ "subvol=@" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   boot.initrd.luks.devices = {
     nixcrypt = {
-      device = "/dev/disk/by-uuid/1c14dafb-3c99-4e9e-839d-0df4219e9a27";
+      device = "/dev/disk/by-uuid/ad2f1896-0337-4a43-ac69-f8de0750a68f";
       allowDiscards = true;
     };
   };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/f64d1e26-a984-47fd-99d5-edf672c724d3";
+    { device = "/dev/mapper/nixcrypt";
       fsType = "btrfs";
-      options = [ "subvol=home" "ssd" "noatime" "compress=zstd:1" ];
+      options = [ "subvol=@home" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/f64d1e26-a984-47fd-99d5-edf672c724d3";
+    { device = "/dev/mapper/nixcrypt";
       fsType = "btrfs";
-      options = [ "subvol=nix" "ssd" "noatime" "compress=zstd:1" ];
+      options = [ "subvol=@nix" "ssd" "noatime" "compress=zstd:1" ];
+    };
+
+  fileSystems."/etc/nixos" =
+    { device = "/dev/mapper/nixcrypt";
+      fsType = "btrfs";
+      options = [ "subvol=@nixos-config" "ssd" "noatime" "compress=zstd:1" ];
+    };
+
+  fileSystems."/var/log" =
+    { device = "/dev/mapper/nixcrypt";
+      fsType = "btrfs";
+      options = [ "subvol=@log" "ssd" "noatime" "compress=zstd:1" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/0CA1-87D4";
+    { device = "/dev/disk/by-uuid/258C-D5E4";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  fileSystems."/mnt/secondary" =
+  fileSystems."/mnt/secondary" = 
     { device = "/dev/sda1";
-      fsType = "ext4";
-      options = [ "noatime" "nosuid" "nodev" "nofail" "x-gvfs-show" "x-udisks-auth" "x-gvfs-name=Secondary" ];
+      fsType = "btrfs";
+      options = [ "noatime" "compress=zstd:1" ];
     };
 
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp170s0.useDHCP = lib.mkDefault true;
+  swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

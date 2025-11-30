@@ -154,7 +154,6 @@
                     "applications:ardour8.desktop"
                     "applications:com.obsproject.Studio.desktop"
                     "applications:org.kde.krita.desktop"
-                    "applications:pycharm-community.desktop"
                     "applications:codium.desktop"
                     "applications:virt-manager.desktop"
                   ];
@@ -206,7 +205,7 @@
           }
         ];
         workspace = {
-          wallpaper = "/etc/nixos/system/system-packages/desktops/plasma/plasma-manager/wallpapers/wall-576.jpg";
+          wallpaper = "/etc/nixos/system/system-packages/desktops/plasma/plasma-manager/wallpapers/wall-540.jpg";
         };
       };
 }
