@@ -52,7 +52,7 @@
   # Daemons/Services
   services = {
     avahi.enable = false;
-    bpftune.enable = true;
+    # bpftune.enable = true;
     flatpak.enable = true;
     fstrim.enable = true;
     gvfs.enable = true;
@@ -97,6 +97,15 @@
       xkb = {
         layout = "us";
         variant = "";
+      };
+    };
+
+    # BTRFS auto-scrub
+    btrfs = {
+      autoScrub = {
+        enable = true;
+        interval = "monthly";
+        fileSystems = [ "/" ];
       };
     };
   };

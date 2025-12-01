@@ -5,12 +5,12 @@
   services.tuned = {
     enable = true;
     ppdSettings = {
-      main = {
-        default = "performance";
-      };
-      settings = {
-      dynamic_tuning = true;
-      };
+      profiles =
+        {
+          balanced = "desktop";
+          performance = "latency-performance";
+          power-saver = "balanced-battery";
+        };
     };
   };
 }
