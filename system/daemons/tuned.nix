@@ -7,9 +7,9 @@
     ppdSettings = {
       profiles =
         {
-          balanced = "desktop";
+          balanced = "balanced";
           performance = "latency-performance";
-          power-saver = "balanced-battery";
+          power-saver = "powersave";
         };
     };
   };

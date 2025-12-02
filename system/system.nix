@@ -52,7 +52,7 @@
   # Daemons/Services
   services = {
     avahi.enable = false;
-    # bpftune.enable = true;
+    bpftune.enable = true;
     flatpak.enable = true;
     fstrim.enable = true;
     gvfs.enable = true;
@@ -237,6 +237,8 @@
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
+      # Limit Access
+      allowed-users = [ "@wheel" ];
     };
   };
 
