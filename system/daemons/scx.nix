@@ -9,5 +9,7 @@
   #  scheduler = "scx_bpfland";
   #  scheduler = "scx_flash";
     scheduler = "scx_lavd";
+    extraArgs = [ "--balanced" ];
+  #  scheduler = "scx_cosmos";
   };
 }
