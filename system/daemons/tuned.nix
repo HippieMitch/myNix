@@ -12,5 +12,8 @@
           power-saver = "powersave";
         };
     };
+    settings = {
+      dynamic_tuning = true;
+    };
   };
 }

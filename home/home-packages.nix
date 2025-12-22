@@ -7,6 +7,7 @@
 
   # Programs
     stable.ardour
+    brave
     discord
   #  element-desktop
     krita
