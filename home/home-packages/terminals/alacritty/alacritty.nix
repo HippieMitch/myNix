@@ -22,7 +22,7 @@ programs.alacritty = {
       dynamic_padding = true;
       dimensions = {
         columns = 108;
-        lines = 41;
+        lines = 40;
       };
       opacity = 0.85;
       padding = {

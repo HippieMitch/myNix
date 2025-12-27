@@ -4,11 +4,17 @@
 
 { 	
 	  # Enable Pantheon
-	  services.xserver.displayManager.lightdm.enable = true;
-	  services.xserver.desktopManager.pantheon.enable = true;
-	  services.xserver.desktopManager.pantheon.extraWingpanelIndicators = with pkgs; [ monitor ];
-          services.displayManager.defaultSession = "pantheon";
-          services.pantheon.contractor.enable = true;
+          services.xserver.enable = true;
+          services.desktopManager.pantheon = {
+            enable = true;
+            extraWingpanelIndicators = with pkgs; [ monitor ];
+          };
+          services.displayManager.defaultSession = "pantheon-wayland";
+          services.xserver.displayManager.lightdm = {
+            enable = true;
+            greeters.pantheon.enable = true;
+          };
+        #  services.pantheon.contractor.enable = true;
 
           # XDG 
           xdg.portal.enable = true;

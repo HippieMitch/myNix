@@ -43,10 +43,10 @@
       "kdeglobals"."General"."XftSubPixel" = "rgb";
       "kdeglobals"."General"."accentColorFromWallpaper" = true;
       "kdeglobals"."General"."fixed" = "Maple Mono Normal NF,13,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
-      "kdeglobals"."General"."font" = "Rubik,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
-      "kdeglobals"."General"."menuFont" = "Rubik,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
-      "kdeglobals"."General"."smallestReadableFont" = "Rubik,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
-      "kdeglobals"."General"."toolBarFont" = "Rubik,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+      "kdeglobals"."General"."font" = "Inter Variable,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+      "kdeglobals"."General"."menuFont" = "Inter Variable,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+      "kdeglobals"."General"."smallestReadableFont" = "Inter Variable,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+      "kdeglobals"."General"."toolBarFont" = "Inter Variable,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
       "kdeglobals"."Icons"."Theme" = "Tela-nord";
       "kdeglobals"."KDE"."SingleClick" = true;
       "kdeglobals"."KFileDialog Settings"."Allow Expansion" = false;
@@ -70,7 +70,7 @@
       "kdeglobals"."PreviewSettings"."MaximumRemoteSize" = 0;
       "kdeglobals"."WM"."activeBackground" = "227,229,231";
       "kdeglobals"."WM"."activeBlend" = "227,229,231";
-      "kdeglobals"."WM"."activeFont" = "Rubik,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+      "kdeglobals"."WM"."activeFont" = "Inter Variable,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
       "kdeglobals"."WM"."activeForeground" = "35,38,41";
       "kdeglobals"."WM"."inactiveBackground" = "239,240,241";
       "kdeglobals"."WM"."inactiveBlend" = "239,240,241";
