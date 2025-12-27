@@ -22,7 +22,7 @@ programs.alacritty = {
       dynamic_padding = true;
       dimensions = {
         columns = 108;
-        lines = 38;
+        lines = 41;
       };
       opacity = 0.85;
       padding = {
@@ -44,7 +44,7 @@ programs.alacritty = {
     };
 
     font = {
-      size = 14;
+      size = 13.5;
       normal = {
         family = "Maple Mono Normal NF";
         style = "Regular";
