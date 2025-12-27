@@ -64,6 +64,7 @@
     fonts.packages = with pkgs; [
       dejavu_fonts
       inter
+      maple-mono.Normal-NF
       nerd-fonts.commit-mono
       nerd-fonts.fira-mono
       nerd-fonts.jetbrains-mono

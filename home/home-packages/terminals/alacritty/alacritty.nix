@@ -22,7 +22,7 @@ programs.alacritty = {
       dynamic_padding = true;
       dimensions = {
         columns = 108;
-        lines = 46;
+        lines = 38;
       };
       opacity = 0.85;
       padding = {
@@ -46,19 +46,19 @@ programs.alacritty = {
     font = {
       size = 14;
       normal = {
-        family = "CommitMono Nerd Font Mono";
+        family = "Maple Mono Normal NF";
         style = "Regular";
       };
       bold = {
-        family = "CommitMono Nerd Font Mono";
+        family = "Maple Mono Normal NF";
         style = "Bold";
       };
       italic = {
-        family = "CommitMono Nerd Font Mono";
+        family = "Maple Mono Normal NF";
         style = "Italic";
       };
       bold_italic = {
-        family = "CommitMono Nerd Font Mono";
+        family = "Maple Mono Normal NF";
         style = "Italic";
       };
     };
