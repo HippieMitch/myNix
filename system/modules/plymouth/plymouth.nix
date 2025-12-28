@@ -22,8 +22,8 @@
     plymouth = { 
       enable = true;
       font = "${pkgs.maple-mono.Normal-NF}/share/fonts/truetype/MapleMonoNormal-NF-Regular.ttf";
-    #  logo = "${pkgs.nixos-icons}/share/icons/hicolor/128x128/apps/nix-snowflake-white.png";
-      logo = ./assets/nixos-logo-rainbow-gradient-white-regular-vertical.png;
+     # logo = "${pkgs.nixos-icons}/share/icons/hicolor/128x128/apps/nix-snowflake-white.png";
+      logo = ./assets/nixos-rainbow-snowflake.png;
     };
   };
 }
