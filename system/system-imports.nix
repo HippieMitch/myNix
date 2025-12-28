@@ -33,7 +33,7 @@
     ./modules/autoupgrade.nix
     ./modules/dns.nix
     ./modules/modprobe.nix
-    ./modules/plymouth.nix
+    ./modules/plymouth/plymouth.nix
     ./modules/security.nix
     ./modules/sysctl.nix
 
