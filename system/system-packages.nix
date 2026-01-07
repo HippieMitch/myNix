@@ -57,9 +57,6 @@
       extraCompatPackages = with pkgs; [ proton-ge-bin ];
     };
 
-  # Enable ADB
-    programs.adb.enable = true;
-
   # System Fonts
     fonts.packages = with pkgs; [
       dejavu_fonts

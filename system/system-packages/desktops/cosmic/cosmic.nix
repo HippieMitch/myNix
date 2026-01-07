@@ -12,7 +12,4 @@
     };
     displayManager.cosmic-greeter.enable = true;
   };
-  environment = {
-    systemPackages = [ pkgs.loupe ];
-  };
 }
