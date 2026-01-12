@@ -51,7 +51,6 @@
 
   # Daemons/Services
   services = {
-    avahi.enable = false;
     bpftune.enable = true;
     flatpak.enable = true;
     fstrim.enable = true;
@@ -61,8 +60,6 @@
       package = pkgs.master.mullvad-vpn;
     };
     openssh.enable = false;
-    power-profiles-daemon.enable = false;
-    printing.enable = false;
     pulseaudio.enable = false;
     thermald.enable = true;
 

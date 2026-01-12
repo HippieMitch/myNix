@@ -22,17 +22,18 @@
 
   # Kernels
     #./kernels/cachy-lto.nix
-    #./kernels/cachy.nix
+    ./kernels/cachy.nix
     #./kernels/lts.nix
     #./kernels/rt.nix
     #./kernels/vanilla.nix
     #./kernels/xanmod.nix
-    ./kernels/zen.nix
+    #./kernels/zen.nix
 
   # Modules
     ./modules/autoupgrade.nix
     ./modules/dns.nix
     ./modules/modprobe.nix
+    #./modules/printing.nix
     ./modules/plymouth/plymouth.nix
     ./modules/security.nix
     ./modules/sysctl.nix
