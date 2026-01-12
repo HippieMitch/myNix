@@ -3,7 +3,7 @@
 {
   programs.firefox = {
     enable = true;
-    package = pkgs.stable.firefox;
+    package = pkgs.firefox-bin;
     profiles = {
       default = {
         id = 0;

@@ -14,7 +14,6 @@
     obs-studio
     qbittorrent
     qpwgraph
-    thunderbird
     wineWowPackages.staging
 
   # Command Line Tools
