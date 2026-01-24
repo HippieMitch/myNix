@@ -7,7 +7,8 @@
     [ 
 
   # Hardware Config
-    ./hardware.nix
+    ./hardware/disko.nix
+    ./hardware/hardware.nix
 
   # Machines
     ./machines/fw13.nix

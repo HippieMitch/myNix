@@ -5,7 +5,9 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./system-imports.nix ];
+  imports = [ 
+    ./system-imports.nix
+  ];
 
   # Bootloader.
   boot = {
@@ -26,7 +28,12 @@
       "nowatchdog"
     ];
 
+    # Put /tmp on RAM
+    tmp = {
+      useTmpfs = true;
+      tmpfsSize = "50%";
     };
+  };
 
   # ZRAM
   zramSwap.enable = true;
@@ -101,7 +108,7 @@
     btrfs = {
       autoScrub = {
         enable = true;
-        interval = "monthly";
+        interval = "weekly";
         fileSystems = [ "/" ];
       };
     };
