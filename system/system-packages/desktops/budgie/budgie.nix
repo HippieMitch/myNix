@@ -5,15 +5,17 @@
 {
 
   # Enable the Budgie Desktop Environment
-  services.xserver.desktopManager.budgie.enable = true;
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  services.xserver.enable = true;
+  services.desktopManager.budgie.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
+  services.displayManager.defaultSession = "budgie-desktop";
+  services.udev.packages = with pkgs; [ pkgs.gnome-settings-daemon ];
 
   # XDG
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
-      #xdg-desktop-portal-gtk
-      xdg-desktop-portal-kde
+      xdg-desktop-portal-gtk
     ];
   };
 

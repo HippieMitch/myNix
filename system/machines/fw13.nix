@@ -19,11 +19,11 @@
     "i915.enable_psr=1"
     "dev.i915.perf_stream_paranoid=0"
 
-    /*
+/*
     # Experimental Xe driver
     "i915.force_probe=!a7a0"
     "xe.force_probe=a7a0"
-    */
+*/
 
     ];
 
@@ -65,6 +65,8 @@
   # Services
   services = {
     # X11
+
+/*    
     xserver = {
       videoDrivers = [ 
         "modesetting"
@@ -84,6 +86,7 @@
         '';
       exportConfiguration = true;
     };
+*/
 
     # Firmware Update Manager
     fwupd = {

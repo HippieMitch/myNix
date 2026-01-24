@@ -104,7 +104,7 @@
       "kwinrc"."Xwayland"."Scale" = 1.35;
       "plasma-localerc"."Formats"."LANG" = "en_US.UTF-8";
       "plasmanotifyrc"."Applications/org.qbittorrent.qBittorrent"."Seen" = true;
-      "plasmanotifyrc"."Applications/thunderbird"."Seen" = true;
+    #  "plasmanotifyrc"."Applications/thunderbird"."Seen" = true;
     };
 
     powerdevil = {
@@ -145,7 +145,7 @@
                     "applications:vivaldi-stable.desktop"
                     #"applications:firefox.desktop"
                     #"applications:brave-browser.desktop"
-                    "applications:thunderbird.desktop"
+                    # "applications:thunderbird.desktop"
                     "applications:discord.desktop"
                     #"applications:element-desktop.desktop"
                     "applications:steam.desktop"
@@ -204,7 +204,7 @@
           }
         ];
         workspace = {
-          wallpaper = "/etc/nixos/system/system-packages/desktops/plasma/plasma-manager/wallpapers/wall-575.jpg";
+          wallpaper = "/etc/nixos/system/system-packages/desktops/plasma/plasma-manager/wallpapers/wall-380.jpg";
         };
       };
 }
