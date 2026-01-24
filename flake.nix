@@ -60,6 +60,7 @@
               nixpkgs-stable, 
               nixpkgs-master, 
               home-manager, 
+              disko,
               chaotic,
               plasma-manager,
              # kde2nix,
@@ -128,7 +129,7 @@
             }
 
             # disko Module
-            inputs.disko.nixosModules.disko
+            disko.nixosModules.disko
 
             # Chaotic-CX Module
             chaotic.nixosModules.default
