@@ -24,6 +24,12 @@
         inputs.nixpkgs.follows = "nixpkgs";
       };
 
+    # disko
+      disko = {
+        url = "github:nix-community/disko/latest";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
+    
     # Chaotic-CX
       chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
@@ -120,6 +126,9 @@
                 sharedModules = [ plasma-manager.homeModules.plasma-manager ];
               };
             }
+
+            # disko Module
+            inputs.disko.nixosModules.disko
 
             # Chaotic-CX Module
             chaotic.nixosModules.default

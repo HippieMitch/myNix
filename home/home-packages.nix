@@ -7,6 +7,7 @@
 
   # Programs
     stable.ardour
+    cockatrice
     discord
   #  element-desktop
     krita
