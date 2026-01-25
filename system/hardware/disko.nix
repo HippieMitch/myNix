@@ -34,35 +34,35 @@
                     "@root" = {
                       mountpoint = "/";
                       mountOptions = [
-                        "compress=zstd"
+                        "compress=zstd:1"
                         "noatime"
                       ];
                     };
                     "@home" = {
                       mountpoint = "/home";
                       mountOptions = [
-                        "compress=zstd"
+                        "compress=zstd:1"
                         "noatime"
                       ];
                     };
                     "@nix" = {
                       mountpoint = "/nix";
                       mountOptions = [
-                        "compress=zstd"
+                        "compress=zstd:1"
                         "noatime"
                       ];
                     };
                     "@log" = {
                       mountpoint = "/var/log";
                       mountOptions = [
-                        "compress=zstd"
+                        "compress=zstd:1"
                         "noatime"
                       ];
                     };
                     "@lib" = {
                       mountpoint = "/var/lib";
                       mountOptions = [
-                        "compress=zstd"
+                        "compress=zstd:1"
                         "noatime"
                       ];
                     };
