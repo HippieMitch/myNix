@@ -30,9 +30,6 @@
         inputs.nixpkgs.follows = "nixpkgs";
       };
     
-    # Chaotic-CX
-      chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-
     # plasma-manager
       plasma-manager = {
         url = "github:nix-community/plasma-manager";
@@ -61,7 +58,6 @@
               nixpkgs-master, 
               home-manager, 
               disko,
-              chaotic,
               plasma-manager,
              # kde2nix,
               nixvim,
@@ -130,9 +126,6 @@
 
             # disko Module
             disko.nixosModules.disko
-
-            # Chaotic-CX Module
-            chaotic.nixosModules.default
 
             # kde2nix Module
             # kde2nix.nixosModules.default
