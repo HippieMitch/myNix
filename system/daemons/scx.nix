@@ -13,7 +13,7 @@
 
     scheduler = "scx_lavd";
     extraArgs = [ 
-      "--autopower" 
+      "--balanced" 
     ];
 
   #  scheduler = "scx_cosmos";

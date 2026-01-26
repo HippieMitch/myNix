@@ -117,8 +117,14 @@
   # Networking Options
   networking = {
     hostName = "spaceghost";
-    # Enable Firewall
-    firewall.enable = true;
+
+    # Enable firewall
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 443 ];
+    };
+
+    # Use iwd
     wireless.iwd = {
       enable = true;
       settings = {
