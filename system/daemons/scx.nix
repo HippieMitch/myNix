@@ -12,11 +12,9 @@
   #  scheduler = "scx_flash";
 
     scheduler = "scx_lavd";
-/*
     extraArgs = [ 
-      "--autopilot" 
+      "--autopower" 
     ];
-*/
 
   #  scheduler = "scx_cosmos";
   };
