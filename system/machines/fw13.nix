@@ -64,29 +64,6 @@
 
   # Services
   services = {
-    # X11
-
-/*    
-    xserver = {
-      videoDrivers = [ 
-        "modesetting"
-        "fbdev"
-      ];
-      config = ''
-        Section "Device"
-          Identifier "Intel Graphics"
-          Driver "modesetting"
-        EndSection
-
-        Option      "AccelMethod"  "sna"
-        Option      "DRI"  "iris"
-        Option      "TearFree"        "false"
-        Option      "TripleBuffer"    "false"
-        Option      "SwapbuffersWait" "false"
-        '';
-      exportConfiguration = true;
-    };
-*/
 
     # Firmware Update Manager
     fwupd = {
