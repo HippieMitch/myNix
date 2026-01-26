@@ -118,7 +118,7 @@
   networking = {
     hostName = "spaceghost";
 
-    # Enable firewall
+    # Enable Firewall
     firewall = {
       enable = true;
       allowedTCPPorts = [ 443 ];
