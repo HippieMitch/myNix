@@ -31,7 +31,7 @@
                   type = "btrfs";
                   extraArgs = [ "-L" "NixOS" "-f" ];
                   subvolumes = {
-                    "@root" = {
+                    "@" = {
                       mountpoint = "/";
                       mountOptions = [
                         "compress=zstd:1"
@@ -52,15 +52,22 @@
                         "noatime"
                       ];
                     };
-                    "@log" = {
-                      mountpoint = "/var/log";
+                    "@tmp" = {
+                      mountpoint = "/tmp";
                       mountOptions = [
                         "compress=zstd:1"
                         "noatime"
                       ];
                     };
-                    "@lib" = {
-                      mountpoint = "/var/lib";
+                    "@srv" = {
+                      mountpoint = "/srv";
+                      mountOptions = [
+                        "compress=zstd:1"
+                        "noatime"
+                      ];
+                    };
+                    "@var" = {
+                      mountpoint = "/var";
                       mountOptions = [
                         "compress=zstd:1"
                         "noatime"
@@ -76,6 +83,7 @@
     };
   };
 
-  fileSystems."/var/log".neededForBoot = true;
-  fileSystems."/var/lib".neededForBoot = true;
+  fileSystems."/tmp".neededForBoot = true;
+  fileSystems."/srv".neededForBoot = true;
+  fileSystems."/var".neededForBoot = true;
 }
