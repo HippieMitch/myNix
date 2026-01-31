@@ -9,8 +9,8 @@
     plugins = {
       barbecue.enable = true;
       dap.enable = true;
-      neo-tree.enable = true;
       lualine.enable = true;
+      neo-tree.enable = true;
       nix.enable = true;
       rustaceanvim.enable = true;
       vim-surround.enable = true;

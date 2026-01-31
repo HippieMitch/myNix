@@ -24,9 +24,9 @@
   # Kernels
     #./kernels/lts.nix
     #./kernels/rt.nix
-    ./kernels/vanilla.nix
+    #./kernels/vanilla.nix
     #./kernels/xanmod.nix
-    #./kernels/zen.nix
+    ./kernels/zen.nix
 
   # Modules
     ./modules/autoupgrade.nix

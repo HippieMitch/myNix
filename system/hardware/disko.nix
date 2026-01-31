@@ -16,7 +16,7 @@
                 type = "filesystem";
                 format = "vfat";
                 mountpoint = "/boot";
-                mountOptions = [ "defaults" ];
+                mountOptions = [ "umask=0077" ];
               };
             };
             luks = {
@@ -31,43 +31,29 @@
                   type = "btrfs";
                   extraArgs = [ "-L" "NixOS" "-f" ];
                   subvolumes = {
-                    "@" = {
+                    "root" = {
                       mountpoint = "/";
                       mountOptions = [
                         "compress=zstd:1"
                         "noatime"
                       ];
                     };
-                    "@home" = {
+                    "home" = {
                       mountpoint = "/home";
                       mountOptions = [
                         "compress=zstd:1"
                         "noatime"
                       ];
                     };
-                    "@nix" = {
+                    "nix" = {
                       mountpoint = "/nix";
                       mountOptions = [
                         "compress=zstd:1"
                         "noatime"
                       ];
                     };
-                    "@tmp" = {
-                      mountpoint = "/tmp";
-                      mountOptions = [
-                        "compress=zstd:1"
-                        "noatime"
-                      ];
-                    };
-                    "@srv" = {
-                      mountpoint = "/srv";
-                      mountOptions = [
-                        "compress=zstd:1"
-                        "noatime"
-                      ];
-                    };
-                    "@var" = {
-                      mountpoint = "/var";
+                    "log" = {
+                      mountpoint = "/var/log";
                       mountOptions = [
                         "compress=zstd:1"
                         "noatime"
@@ -83,7 +69,5 @@
     };
   };
 
-  fileSystems."/tmp".neededForBoot = true;
-  fileSystems."/srv".neededForBoot = true;
-  fileSystems."/var".neededForBoot = true;
+  fileSystems."/var/log".neededForBoot = true;
 }
