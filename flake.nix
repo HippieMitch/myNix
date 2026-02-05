@@ -10,7 +10,7 @@
       nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
 
     # Nixpkgs Stable
-      nixpkgs-stable.url = "github:NixOS/nixpkgs/24.05";
+      nixpkgs-stable.url = "github:NixOS/nixpkgs/25.11";
 
     # Nixpkgs Master
       nixpkgs-master.url = "github:NixOS/nixpkgs";
