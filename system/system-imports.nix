@@ -32,7 +32,6 @@
     ./modules/autoupgrade.nix
     ./modules/dns.nix
     ./modules/modprobe.nix
-    ./modules/ntp.nix
     #./modules/printing.nix
     ./modules/plymouth/plymouth.nix
     ./modules/security.nix

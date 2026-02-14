@@ -15,7 +15,7 @@
     obs-studio
     qbittorrent
     qpwgraph
-    wineWowPackages.staging
+    wineWow64Packages.staging
 
   # Command Line Tools
     ani-cli

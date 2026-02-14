@@ -28,11 +28,6 @@
       "nowatchdog"
     ];
 
-    # Put /tmp on RAM
-    tmp = {
-      useTmpfs = true;
-      tmpfsSize = "50%";
-    };
   };
 
   # ZRAM
